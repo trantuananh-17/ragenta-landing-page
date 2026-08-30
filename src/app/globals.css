@@ -228,7 +228,9 @@
   .prose-document h3,
   .prose-document h4 {
     font-family: var(--font-heading), sans-serif;
-    @apply font-semibold tracking-normal text-ink;
+    /* scroll-mt: headings are anchor targets for the table of contents, and the
+       navbar is fixed — without it a jumped-to heading lands underneath it. */
+    @apply scroll-mt-28 font-semibold tracking-normal text-ink;
   }
   .prose-document h1 {
     @apply text-3xl leading-tight;

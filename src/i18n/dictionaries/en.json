@@ -926,6 +926,7 @@
     "showingAllOther": "Showing all {count} articles.",
     "backToBlog": "Back to the blog",
     "readingTime": "{count} min read",
+    "tableOfContents": "On this page",
     "topics": "Topics",
     "relatedPostsTitle": "Related articles",
     "ctaTitle": "Try Ragenta on your own documents.",

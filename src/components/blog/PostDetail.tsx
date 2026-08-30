@@ -3,11 +3,13 @@ import { ArrowLeft } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Markdown } from "@/components/Markdown";
 import { PostCard } from "@/components/blog/PostCard";
+import { TableOfContents } from "@/components/blog/TableOfContents";
 import { CtaButtons } from "@/components/sections/CtaButtons";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizedHref } from "@/i18n/links";
 import { formatDate } from "@/lib/format";
+import { extractTocHeadings } from "@/lib/markdown";
 import type { Post, PostSummary } from "@/content/types";
 
 export function PostDetail({
@@ -25,41 +27,56 @@ export function PostDetail({
     "{count}",
     String(post.readingMinutes),
   );
+  // Only h2/h3 belong in the rail — a post's h1 is the title above the body.
+  const tocHeadings = extractTocHeadings(post.bodyMd).filter(
+    (heading) => heading.level >= 2,
+  );
 
   return (
     <>
       <article className="pt-32 pb-16">
-        <Container width="narrow">
-          <Link
-            href={localizedHref(lang, "/blog")}
-            className="mb-8 inline-flex items-center gap-1.5 text-sm font-medium text-ink-subtle transition-colors hover:text-brand-600"
-          >
-            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-            {t.backToBlog}
-          </Link>
-
-          <div className="mb-4 flex flex-wrap gap-1.5">
-            {post.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full bg-brand-50 px-2.5 py-1 text-xs font-medium text-brand-600"
+        <Container width="medium">
+          <div className="flex gap-12">
+            {/* max-w-3xl keeps the reading measure the post had before the rail
+                existed: below lg the rail is hidden and flex-1 alone would let the
+                column stretch to the full max-w-5xl container. */}
+            <div className="min-w-0 max-w-3xl flex-1">
+              <Link
+                href={localizedHref(lang, "/blog")}
+                className="mb-8 inline-flex items-center gap-1.5 text-sm font-medium text-ink-subtle transition-colors hover:text-brand-600"
               >
-                {tag}
-              </span>
-            ))}
+                <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+                {t.backToBlog}
+              </Link>
+
+              <div className="mb-4 flex flex-wrap gap-1.5">
+                {post.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full bg-brand-50 px-2.5 py-1 text-xs font-medium text-brand-600"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <h1 className="mb-4 text-3xl leading-[1.15] font-semibold tracking-tight text-ink sm:text-4xl">
+                {post.title}
+              </h1>
+
+              <div className="mb-10 flex items-center gap-2 font-mono text-xs text-ink-faint">
+                {post.publishedAt && (
+                  <span>{formatDate(post.publishedAt, lang)}</span>
+                )}
+                <span className="text-ink-ghost">·</span>
+                <span>{readingTimeLabel}</span>
+              </div>
+
+              <Markdown>{post.bodyMd}</Markdown>
+            </div>
+
+            <TableOfContents headings={tocHeadings} label={t.tableOfContents} />
           </div>
-
-          <h1 className="mb-4 text-3xl leading-[1.15] font-semibold tracking-tight text-ink sm:text-4xl">
-            {post.title}
-          </h1>
-
-          <div className="mb-10 flex items-center gap-2 font-mono text-xs text-ink-faint">
-            {post.publishedAt && <span>{formatDate(post.publishedAt, lang)}</span>}
-            <span className="text-ink-ghost">·</span>
-            <span>{readingTimeLabel}</span>
-          </div>
-
-          <Markdown>{post.bodyMd}</Markdown>
         </Container>
       </article>
 
