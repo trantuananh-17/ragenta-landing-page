@@ -83,12 +83,12 @@
       "grounded": "Grounded · every claim cited"
     },
     "trustStrip": {
-      "eyebrow": "Built for enterprise security",
+      "eyebrow": "Built for sensitive internal knowledge",
       "items": [
-        { "label": "SOC 2 Type II", "sub": "Audited annually" },
-        { "label": "ISO 27001", "sub": "Certified" },
-        { "label": "Permission-aware retrieval", "sub": "Filtered in the query" },
-        { "label": "Private deployment", "sub": "Your data stays yours" }
+        { "label": "Permission-aware retrieval", "sub": "Inherited from every source" },
+        { "label": "Private deployment", "sub": "Your VPC or on-premise" },
+        { "label": "Never trained on", "sub": "Your content stays yours" },
+        { "label": "Auditable answers", "sub": "Sources, scores, full trace" }
       ]
     },
     "partners": {

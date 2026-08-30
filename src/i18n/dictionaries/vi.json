@@ -83,12 +83,12 @@
       "grounded": "Bám nguồn · mọi khẳng định đều có trích dẫn"
     },
     "trustStrip": {
-      "eyebrow": "Xây cho yêu cầu bảo mật doanh nghiệp",
+      "eyebrow": "Xây cho tri thức nội bộ nhạy cảm",
       "items": [
-        { "label": "SOC 2 Type II", "sub": "Kiểm toán hằng năm" },
-        { "label": "ISO 27001", "sub": "Đã chứng nhận" },
-        { "label": "Truy hồi theo phân quyền", "sub": "Lọc ngay trong truy vấn" },
-        { "label": "Triển khai riêng", "sub": "Dữ liệu vẫn là của bạn" }
+        { "label": "Truy hồi theo phân quyền", "sub": "Kế thừa từ từng nguồn" },
+        { "label": "Triển khai riêng", "sub": "VPC của bạn hoặc on-premise" },
+        { "label": "Không dùng để huấn luyện", "sub": "Nội dung vẫn là của bạn" },
+        { "label": "Câu trả lời kiểm toán được", "sub": "Nguồn, điểm số, trace đầy đủ" }
       ]
     },
     "partners": {

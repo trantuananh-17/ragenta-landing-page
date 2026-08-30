@@ -1,11 +1,11 @@
 "use client";
 
-import { ShieldCheck, BadgeCheck, KeyRound, Server } from "lucide-react";
+import { KeyRound, Server, ShieldCheck, FileSearch } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { useTranslations } from "@/i18n/useTranslations";
 
 // Icons stay in code, ordered to match the dictionary `items` array.
-const TRUST_ICONS = [ShieldCheck, BadgeCheck, KeyRound, Server];
+const TRUST_ICONS = [KeyRound, Server, ShieldCheck, FileSearch];
 
 export function TrustStrip() {
   const { t, raw } = useTranslations("home.trustStrip");

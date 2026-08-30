@@ -45,18 +45,29 @@ JSON-LD for Organization, WebSite, FAQPage and BlogPosting.
 
 ## Known gaps and open questions
 
-1. **The domain is an assumption.** `SITE_URL` defaults to `https://ragenta.ai`
-   and the OG/canonical URLs use it. Staging serves
-   `ragenta.tranhtuananh-anhtt.site`. Confirm the real production domain before
-   launch, then set `SITE_URL` on the environment.
-2. **The legal documents are drafting placeholders**, not reviewed text.
-   `src/content/fixtures/legal.ts` says so at the top. Replace before launch.
-3. **Testimonials are illustrative**, not attributed to real customers. Decide
+1. **Staging is the only environment.** There is no production VM, no production
+   GitHub Environment, and no production domain. `SITE_URL` falls back to
+   `http://localhost:3000` on purpose: staging sets its own, and an environment
+   that forgets to set it should produce obviously broken URLs rather than
+   plausible ones pointing at a host nobody owns. `environments/production` in
+   `ragenta-deployment` is kept in shape-parity with staging but runs nowhere.
+2. **Testimonials are illustrative**, not attributed to real customers. Decide
    whether to source real ones or reword them as personas before launch.
-4. **SOC 2 / ISO 27001 appear in the trust strip.** If those certifications do
-   not exist yet, that copy has to change — it is a factual claim.
-5. Blog posts have no author byline and no hero images. The `PostSummary` type
+3. Blog posts have no author byline and no hero images. The `PostSummary` type
    already carries `heroImageUrl`; nothing populates it.
+
+Settled, so nobody re-opens them:
+
+- **No certification claims.** SOC 2 and ISO 27001 were placeholder copy in the
+  trust strip and are gone. Ragenta holds neither, and a certification is a
+  third-party attestation that either exists or does not — unlike a product
+  claim, it cannot be softened into honesty. What replaced them are four claims
+  the software and the terms actually stand behind. Do not put a certification
+  back until one is genuinely held. The SOC 2 wording still on /solutions is a
+  customer use case — Ragenta assembling *your* evidence package — not a claim
+  about Ragenta.
+- **The legal documents ship as written.** They are not counsel-reviewed and the
+  owner has accepted that for now.
 
 ## How to verify a change
 

@@ -5,8 +5,9 @@ import type { LegalDocument } from "@/content/types";
  * Fixture behind `GET /v1/public/legal/:slug`. Vecura fetches these from
  * Confluence; Ragenta keeps them in the repo until a source of record exists.
  *
- * These are drafting placeholders, not reviewed legal text. Replace the bodies
- * with counsel-approved copy before launch.
+ * Not counsel-reviewed. That is a known and accepted state, not an oversight —
+ * see .claude/docs/STATE.md. Edit the bodies here; when the content backend
+ * lands they move to GET /v1/public/legal/:slug with no code change.
  */
 const PRIVACY_EN = `## 1. Who we are
 

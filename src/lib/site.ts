@@ -1,7 +1,12 @@
 export const SITE_NAME = "Ragenta";
 
+// Every canonical, hreflang and OG URL is built from this, so a plausible but
+// wrong value indexes the site under a host nobody owns. There is no production
+// domain yet — staging is the only live environment and sets SITE_URL itself —
+// so the fallback is the local one. An environment that forgets to set it then
+// produces obviously broken URLs rather than quietly convincing ones.
 export const SITE_URL =
-  process.env.SITE_URL?.replace(/\/$/, "") ?? "https://ragenta.ai";
+  process.env.SITE_URL?.replace(/\/$/, "") ?? "http://localhost:3000";
 
 export const CONTENT_REVALIDATE_SECONDS = 300;
 
