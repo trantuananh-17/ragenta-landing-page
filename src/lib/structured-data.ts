@@ -6,6 +6,11 @@ import type { Locale } from "@/i18n/config";
 // them into a single knowledge-graph node rather than duplicating.
 const ORG_ID = `${SITE_URL}/#organization`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
+const SOFTWARE_ID = `${SITE_URL}/#software`;
+
+// Every plan is quoted in USD in both locales — only the symbol's position
+// changes — so the currency is a constant rather than a per-locale value.
+const PRICE_CURRENCY = "USD";
 
 type SchemaNode = Record<string, unknown>;
 
@@ -74,6 +79,37 @@ export function blogPostingNode(post: {
     ...(post.imageUrl ? { image: post.imageUrl } : {}),
     publisher: { "@id": ORG_ID },
     author: { "@id": ORG_ID },
+  };
+}
+
+/**
+ * SoftwareApplication node — the product itself, carrying one Offer per plan
+ * with a published price. Deliberately no aggregateRating: the site shows
+ * testimonials but collects no ratings, and a rating asserted in markup that
+ * nothing on the page backs up is what Google issues manual actions over.
+ */
+export function softwareApplicationNode(input: {
+  locale: Locale;
+  description: string;
+  plans: { name: string; monthlyPrice: number }[];
+}): SchemaNode {
+  return {
+    "@type": "SoftwareApplication",
+    "@id": SOFTWARE_ID,
+    name: SITE_NAME,
+    url: SITE_URL,
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    description: input.description,
+    publisher: { "@id": ORG_ID },
+    offers: input.plans.map((plan) => ({
+      "@type": "Offer",
+      name: plan.name,
+      price: plan.monthlyPrice,
+      priceCurrency: PRICE_CURRENCY,
+      category: "subscription",
+      url: `${SITE_URL}/${input.locale}/pricing`,
+    })),
   };
 }
 
