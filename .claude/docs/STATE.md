@@ -1,6 +1,6 @@
 # Current State
 
-Last verified: 2026-08-30.
+Last verified: 2026-08-30, against the deployed v0.1.0rc1.
 
 Read this first in a new session. Keep it honest — if you find reality differs,
 fix this file in the same change. A stale STATE.md is worse than none.
@@ -90,10 +90,31 @@ problems while building this:
 
 ## Deployment
 
-Staging is `https://ragenta.tranhtuananh-anhtt.site`, on the shared VM described
-in the workspace `.claude/docs/STATUS.md`. The compose service and the nginx
-server block live in `ragenta-deployment`; this repository only publishes an
-image and tells the VM which version to run.
+**Staging is live at https://ragenta.tranhtuananh-anhtt.site**, running
+`v0.1.0rc1` since 2026-08-30. It shares a VM with the backend and the
+dev-infra datastores — see the workspace `.claude/docs/STATUS.md`.
 
-Release by tag: `v0.1.0rc1` goes to staging, `v0.1.0` to production. Rollback is
-the manual **Deploy** workflow with the previous tag — no rebuild, no revert.
+The compose service (`landing`), the variables and the nginx server block live
+in `ragenta-deployment`. This repository only publishes an image and tells the
+VM which version to run: the deploy rewrites `IMAGE_TAG_LANDING_PAGE` and
+recreates `landing` alone, so it cannot move the backend's version.
+
+Release by tag — `v0.1.0rc1` to staging, `v0.1.0` to production. Rollback is
+the manual **Deploy** workflow with the previous tag; no rebuild, no revert.
+
+Production exists as configuration only. There is no production VM, no GitHub
+Environment for it, and `SITE_URL` there is a placeholder — see gap 1 above.
+
+### What staging is running with
+
+| Variable | Value | Effect |
+| --- | --- | --- |
+| `SITE_URL` | the staging host | canonical, hreflang and OG URLs |
+| `APP_URL` | from the backend's `APP_BASE_URL` | where signup CTAs go |
+| `RAGENTA_CONTENT_API_URL` | unset | serves the bundled fixtures |
+| `CONTACT_WEBHOOK_URL` | unset | `/api/contact` answers 503 |
+| `POSTHOG_KEY` | unset | PostHog is not loaded |
+
+The container gets those and nothing else — deliberately no `env_file`, so the
+most exposed container in the environment never sees the database password or
+any provider key.
