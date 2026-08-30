@@ -7,7 +7,11 @@ import { PricingFAQ } from "@/components/sections/PricingFAQ";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { JsonLd } from "@/components/JsonLd";
-import { jsonLdGraph, faqPageNode } from "@/lib/structured-data";
+import {
+  jsonLdGraph,
+  faqPageNode,
+  breadcrumbListNode,
+} from "@/lib/structured-data";
 import { getDictionary } from "@/i18n/dictionaries";
 import type { Locale } from "@/i18n/config";
 import { pageMetadata } from "@/lib/seo";
@@ -34,7 +38,14 @@ export default async function PricingPage({
   return (
     <SignupFlowProvider>
       <main className="min-h-screen bg-page">
-        <JsonLd data={jsonLdGraph(faqPageNode(faqItems))} />
+        <JsonLd
+          data={jsonLdGraph(
+            faqPageNode(faqItems),
+            breadcrumbListNode(lang, [
+              { name: dict.footer.pricing, path: "/pricing" },
+            ]),
+          )}
+        />
         <Navbar />
         <PricingPlans />
         <Testimonials />

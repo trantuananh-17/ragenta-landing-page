@@ -6,6 +6,8 @@ import { SignupFlowProvider } from "@/lib/SignupFlowContext";
 import { BlogHero } from "@/components/blog/BlogHero";
 import { PostList } from "@/components/blog/PostList";
 import { Container } from "@/components/ui/Container";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbListNode, jsonLdGraph } from "@/lib/structured-data";
 import { getPostPage, POSTS_PAGE_SIZE } from "@/content/posts";
 import { getDictionary } from "@/i18n/dictionaries";
 import type { Locale } from "@/i18n/config";
@@ -117,6 +119,13 @@ export default async function BlogPage({
   return (
     <SignupFlowProvider>
       <main className="min-h-screen bg-page">
+        <JsonLd
+          data={jsonLdGraph(
+            breadcrumbListNode(lang, [
+              { name: dict.footer.blog, path: BASE_PATH },
+            ]),
+          )}
+        />
         <Navbar />
         <BlogHero />
         <section className="pb-16 md:pb-24">

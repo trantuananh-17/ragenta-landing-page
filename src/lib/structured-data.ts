@@ -78,6 +78,28 @@ export function blogPostingNode(post: {
 }
 
 /**
+ * BreadcrumbList node — the trail a result can show in place of the raw URL.
+ * The home crumb is prepended here so every page emits the same first item, and
+ * the current page stays in the list: Google expects the full path including
+ * the page itself, not just its ancestors.
+ */
+export function breadcrumbListNode(
+  locale: Locale,
+  trail: { name: string; path: string }[],
+): SchemaNode {
+  const crumbs = [{ name: SITE_NAME, path: "/" }, ...trail];
+  return {
+    "@type": "BreadcrumbList",
+    itemListElement: crumbs.map((crumb, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: crumb.name,
+      item: `${SITE_URL}/${locale}${crumb.path === "/" ? "" : crumb.path}`,
+    })),
+  };
+}
+
+/**
  * Wrap one or more nodes in a single `@graph` document. Emitting related nodes
  * in one graph (rather than separate script tags) lets their `@id` cross-
  * references resolve within the same document.

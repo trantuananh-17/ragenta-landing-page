@@ -5,7 +5,11 @@ import { Footer } from "@/components/Footer";
 import { SignupFlowProvider } from "@/lib/SignupFlowContext";
 import { PostDetail } from "@/components/blog/PostDetail";
 import { JsonLd } from "@/components/JsonLd";
-import { blogPostingNode, jsonLdGraph } from "@/lib/structured-data";
+import {
+  blogPostingNode,
+  breadcrumbListNode,
+  jsonLdGraph,
+} from "@/lib/structured-data";
 import { getAllPosts, getPost, getRelatedPosts } from "@/content/posts";
 import { getDictionary } from "@/i18n/dictionaries";
 import { locales, type Locale } from "@/i18n/config";
@@ -85,6 +89,10 @@ export default async function BlogPostPage({
       updatedAt: post.updatedAt,
       imageUrl: post.heroImageUrl,
     }),
+    breadcrumbListNode(lang, [
+      { name: dict.footer.blog, path: "/blog" },
+      { name: post.title, path: `/blog/${post.slug}` },
+    ]),
   );
 
   return (

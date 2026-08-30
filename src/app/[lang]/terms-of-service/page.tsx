@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { LegalDocumentPage } from "@/components/legal/LegalDocumentPage";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbListNode, jsonLdGraph } from "@/lib/structured-data";
+import { getDictionary } from "@/i18n/dictionaries";
 import type { Locale } from "@/i18n/config";
 import { pageMetadata } from "@/lib/seo";
 
@@ -21,5 +24,17 @@ export default async function TermsOfServicePage({
   params: Promise<{ lang: Locale }>;
 }) {
   const { lang } = await params;
-  return <LegalDocumentPage slug="terms-of-service" lang={lang} />;
+  const dict = await getDictionary(lang);
+  return (
+    <>
+      <JsonLd
+        data={jsonLdGraph(
+          breadcrumbListNode(lang, [
+            { name: dict.footer.termsOfService, path: "/terms-of-service" },
+          ]),
+        )}
+      />
+      <LegalDocumentPage slug="terms-of-service" lang={lang} />
+    </>
+  );
 }

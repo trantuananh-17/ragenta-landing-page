@@ -11,6 +11,9 @@ import { ProductExtend } from "@/components/product/ProductExtend";
 import { ProductChangelog } from "@/components/product/ProductChangelog";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbListNode, jsonLdGraph } from "@/lib/structured-data";
+import { getDictionary } from "@/i18n/dictionaries";
 import type { Locale } from "@/i18n/config";
 import { pageMetadata } from "@/lib/seo";
 
@@ -28,9 +31,17 @@ export default async function ProductPage({
   params: Promise<{ lang: Locale }>;
 }) {
   const { lang } = await params;
+  const dict = await getDictionary(lang);
   return (
     <SignupFlowProvider>
       <main className="min-h-screen bg-page">
+        <JsonLd
+          data={jsonLdGraph(
+            breadcrumbListNode(lang, [
+              { name: dict.footer.product, path: "/product" },
+            ]),
+          )}
+        />
         <Navbar />
         <ProductHero />
         <ProductSurfaces />
