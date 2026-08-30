@@ -14,8 +14,33 @@ pnpm start          # serve the built app on :8020
 pnpm lint           # eslint (next/core-web-vitals + next/typescript)
 ```
 
-There is no test suite yet. `pnpm build` catches TypeScript errors and
-`pnpm lint` catches the React Compiler / hooks rules; both are green.
+There is no test suite yet. `pnpm lint`, `pnpm build` and `pnpm typecheck` are
+the whole gate, and `.github/workflows/check.yml` runs the three of them on
+every pull request and every push to main. Typecheck runs *after* the build,
+because `next build` writes `next-env.d.ts` and `.next/types` — both of which
+tsconfig includes, so running it first would typecheck a different program than
+the one that ships.
+
+## Releasing
+
+A tag is the release. `v1.2.0` goes to production, `v1.2.0rc1` to staging — the
+tag shape is the only thing that selects the environment. `release.yml` re-runs
+the check gate, builds the image, pushes it to GHCR under that exact version,
+and calls `deploy-template.yml`, which rewrites only this repository's own
+`IMAGE_TAG_LANDING_PAGE` line in the VM's `.env` and brings up only the
+`landing` service. Nothing else in the shared environment moves.
+
+There is no `latest` and no moving `staging` pointer (ADR-009), so a rollback is
+the manual **Deploy** workflow with the previous tag — no rebuild, no revert.
+
+After each deploy the workflow polls `/api/health` on the VM and requires
+`{"status":"ok"}`. That route sits under `/api/` deliberately: `src/proxy.ts`
+would otherwise redirect a bare `/health` into the locale-prefixed router and
+404 it.
+
+`deploy-template.yml` is a copy of the one in `ragenta-backend`, differing only
+in the default `health_url`. Keep the two in step — the divergence to avoid is
+one repository fixing a deploy bug the other still has.
 
 Docker: `docker compose up --build` builds the standalone image and serves on
 :8020. Public config is read at **runtime** (`src/lib/public-env.ts` +

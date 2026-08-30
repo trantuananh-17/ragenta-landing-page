@@ -23,6 +23,12 @@ function localeOf(value: string | undefined): string {
   return value ?? defaultLocale;
 }
 
+// Polled by the deploy workflow after every release, and by the container
+// healthcheck. It answers from this process alone: reaching the content backend
+// is not a precondition for serving the site, so making it one here would fail
+// a deploy that is in fact fine.
+app.get("/health", (c) => c.json({ status: "ok" }));
+
 app.get("/announcement", async (c) => {
   try {
     return c.json(await fetchAnnouncement(localeOf(c.req.query("locale"))));
