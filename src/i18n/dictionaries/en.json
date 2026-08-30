@@ -1,0 +1,991 @@
+{
+  "common": {
+    "tryRagenta": "Start for free",
+    "contactUs": "Contact us",
+    "requestDemo": "Book a demo"
+  },
+  "nav": {
+    "product": "Product",
+    "solutions": "Solutions",
+    "pricing": "Pricing",
+    "resources": "Resources",
+    "resourceLinks": {
+      "blog": { "label": "Blog" },
+      "changelog": { "label": "Changelog" },
+      "docs": { "label": "Documentation" },
+      "community": { "label": "Community" }
+    },
+    "languageSwitcher": { "label": "Change language" },
+    "theme": {
+      "label": "Appearance",
+      "light": "Light",
+      "dark": "Dark",
+      "toggle": "Toggle light and dark mode"
+    },
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu"
+  },
+  "announcement": {
+    "badge": "New",
+    "full": "Agent Skills are here — reusable playbooks your whole workspace can run",
+    "short": "Agent Skills are here",
+    "dismiss": "Dismiss announcement"
+  },
+  "footer": {
+    "product": "Product",
+    "overview": "Overview",
+    "solutions": "Solutions",
+    "pricing": "Pricing",
+    "changelog": "Changelog",
+    "company": "Company",
+    "contactUs": "Contact us",
+    "blog": "Blog",
+    "resources": "Resources",
+    "docs": "Documentation",
+    "community": "Community",
+    "status": "Status",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "© {year} Ragenta. All rights reserved.",
+    "systemsOperational": "All systems operational",
+    "followLinkedin": "Follow Ragenta on LinkedIn",
+    "followX": "Follow Ragenta on X",
+    "followGithub": "Ragenta on GitHub"
+  },
+  "home": {
+    "hero": {
+      "headline": "The AI workspace that turns your knowledge into",
+      "subhead": "Grounded chat and autonomous agents over your own documents, apps and databases.",
+      "words": [
+        "answers",
+        "agents",
+        "workflows",
+        "decisions",
+        "automations",
+        "reports",
+        "assistants"
+      ],
+      "previewAlt": "Ragenta chat with cited sources"
+    },
+    "preview": {
+      "windowTitle": "Ragenta — Workspace",
+      "question": "What is our refund window for annual enterprise contracts?",
+      "answerLead": "Annual enterprise contracts carry a 30-day refund window",
+      "answerRest": "from the invoice date. After that, credits roll to the next term instead of being refunded.",
+      "sourcesLabel": "3 sources",
+      "sources": [
+        "Master Services Agreement · §7.2",
+        "Finance Handbook · Refunds",
+        "Enterprise Order Form template"
+      ],
+      "composer": "Ask anything about your workspace…",
+      "grounded": "Grounded · every claim cited"
+    },
+    "trustStrip": {
+      "eyebrow": "Built for enterprise security",
+      "items": [
+        { "label": "SOC 2 Type II", "sub": "Audited annually" },
+        { "label": "ISO 27001", "sub": "Certified" },
+        { "label": "Permission-aware retrieval", "sub": "Filtered in the query" },
+        { "label": "Private deployment", "sub": "Your data stays yours" }
+      ]
+    },
+    "partners": {
+      "supportedBy": "Runs on the models you already trust"
+    },
+    "featureOrchestration": {
+      "heading": "Agents turn questions into cited answers",
+      "description": "Ask in plain language. Ragenta plans the retrieval, picks the right tools, checks its own work, and answers with every claim linked back to the passage it came from.",
+      "cta": "See how agents work →",
+      "windowTitle": "Ragenta — Agent",
+      "query": "Which customers are affected by the Q3 pricing change, and what did we promise them?",
+      "workflowLabel": "Running {count}-step plan",
+      "agentSteps": [
+        {
+          "tool": "Retrieve",
+          "action": "Searched 4 sources — 38 candidate passages",
+          "time": "0.9s",
+          "windowTitle": "Retrieval — 38 candidates"
+        },
+        {
+          "tool": "Rerank",
+          "action": "Reranked to 6 passages above the relevance threshold",
+          "time": "0.4s",
+          "windowTitle": "Context — 6 passages in scope"
+        },
+        {
+          "tool": "Verify",
+          "action": "Checking every claim against its source…",
+          "time": "~2s",
+          "windowTitle": "Verification — groundedness report"
+        }
+      ],
+      "summaryHighlight": "14 accounts",
+      "summaryRest": "affected. Commitments extracted from 3 contract clauses.",
+      "agentStatus": "Agent is running · step 3 of 3",
+      "retrieval": {
+        "caption": "Top 5 of 38 candidates · hybrid score",
+        "colSource": "Source",
+        "colPassage": "Passage",
+        "colScore": "Score",
+        "colUsed": "In context",
+        "used": "Used",
+        "skipped": "Below cut",
+        "rows": [
+          { "source": "MSA v4 · §7", "passage": "Pricing changes take effect at renewal…", "score": 0.94, "used": true },
+          { "source": "Q3 pricing memo", "passage": "Grandfathering applies to annual plans signed before…", "score": 0.91, "used": true },
+          { "source": "Account notes · Nordwind", "passage": "Promised no increase before FY27…", "score": 0.88, "used": true },
+          { "source": "Sales FAQ", "passage": "How to explain a mid-term price change…", "score": 0.62, "used": false },
+          { "source": "Q1 pricing memo", "passage": "Superseded by the Q3 memo…", "score": 0.48, "used": false }
+        ],
+        "footer": "33 more candidates · export the full trace"
+      },
+      "context": {
+        "caption": "6 passages · 4,120 tokens in context",
+        "tokensLabel": "tokens",
+        "rows": [
+          { "label": "Master Services Agreement", "value": "2 passages · §7.1, §7.2" },
+          { "label": "Q3 pricing memo", "value": "2 passages · grandfathering" },
+          { "label": "Account notes", "value": "1 passage · Nordwind" },
+          { "label": "Order form template", "value": "1 passage · renewal terms" }
+        ]
+      },
+      "verification": {
+        "caption": "Verifying 9 claims · live",
+        "rows": [
+          { "property": "Claims with a source", "value": "9 / 9", "flag": false },
+          { "property": "Groundedness", "value": "0.96", "flag": false },
+          { "property": "Citation coverage", "value": "100%", "flag": false },
+          { "property": "Conflicting sources", "value": "1 pair flagged", "flag": true },
+          { "property": "Stale source (>12 months)", "value": "None", "flag": false },
+          { "property": "Permission check", "value": "All passages in scope", "flag": false }
+        ]
+      }
+    },
+    "featurePipeline": {
+      "heading": "Works across every kind of knowledge work",
+      "description": "Support, legal, sales, internal ops — describe the outcome and Ragenta assembles the right agent for it. No fixed templates. Or wire each step by hand when you need exact control.",
+      "cta": "Explore capabilities →",
+      "windowTitle": "Ragenta — Active runs",
+      "statusRunning": "Running",
+      "statusComplete": "Complete",
+      "workflowLabel": "{tag} · Run",
+      "planLabel": "Plan · {count} steps",
+      "inProgress": "Running…",
+      "runs": [
+        {
+          "query": "Answer this customer's question about our data retention policy",
+          "tag": "Support",
+          "steps": ["Classify intent", "Retrieve policy", "Draft reply", "Check tone"],
+          "result": "Draft ready · 3 citations",
+          "detail": [
+            { "step": "Classify the ticket", "sub": "Intent: data retention · Priority: normal · Language: English" },
+            { "step": "Retrieve the governing policy", "sub": "Security policy §4, DPA appendix B, help-centre article 218" },
+            { "step": "Draft the reply", "sub": "Answer written against the retrieved passages only" },
+            { "step": "Check tone and policy fit", "sub": "3 citations attached · no unsupported claim · ready for review" }
+          ]
+        },
+        {
+          "query": "Review this vendor MSA against our standard positions",
+          "tag": "Legal",
+          "steps": ["Parse clauses", "Compare to playbook", "Flag deviations"],
+          "result": "In progress…",
+          "detail": [
+            { "step": "Parse the agreement into clauses", "sub": "64 clauses extracted · headings and cross-references preserved" },
+            { "step": "Compare against the negotiation playbook", "sub": "Matching each clause to its standard position · running…" },
+            { "step": "Flag deviations and propose language", "sub": "Fallback wording drafted per deviation · pending comparison" }
+          ]
+        },
+        {
+          "query": "Fill the security questionnaire for the Nordwind RFP",
+          "tag": "Sales",
+          "steps": ["Parse questions", "Match prior answers", "Draft the gaps"],
+          "result": "112 / 118 answered",
+          "detail": [
+            { "step": "Parse the questionnaire", "sub": "118 questions across 9 sections" },
+            { "step": "Match against answered questions", "sub": "112 matched to a previously approved answer with its source" },
+            { "step": "Draft the remaining 6", "sub": "Drafted from the security policy and routed to the owning team" }
+          ]
+        },
+        {
+          "query": "Summarise what changed in engineering last week",
+          "tag": "Internal",
+          "steps": ["Collect sources", "Cluster by theme", "Write the digest"],
+          "result": "Digest · 5 themes",
+          "detail": [
+            { "step": "Collect the week's material", "sub": "Merged pull requests, incident notes, decision docs, standup threads" },
+            { "step": "Cluster by theme", "sub": "5 themes · duplicates and reverted work removed" },
+            { "step": "Write the digest", "sub": "One paragraph per theme, each linked to its source thread" }
+          ]
+        }
+      ]
+    },
+    "featureKnowledge": {
+      "heading": "One knowledge base across every source",
+      "description": "Drive, Notion, Confluence, Slack, your ticket system, your warehouse — indexed into a single knowledge base that keeps each source's own permissions. Ragenta pulls the right context per question, so the model reasons over everything the asker is allowed to see.",
+      "cta": "See the connectors →",
+      "windowTitle": "Ragenta — Knowledge base",
+      "evidenceStream": "Indexing",
+      "evidenceStreamSuffix": " · 4 connectors · live",
+      "live": "live",
+      "conflictsInternal": "conflicts",
+      "contextBundleSuffix": " · retrieval scope",
+      "sourcesLinked": "18,402 chunks",
+      "streamTitles": [
+        "Refund policy updated — supersedes the 2025 version",
+        "Data retention commitments per contract tier",
+        "Ticket #4821 — customer promised a 60-day window",
+        "Renewal terms and grandfathering rules"
+      ],
+      "panel": [
+        { "label": "Sources", "value": "4 connected" },
+        { "label": "Documents", "value": "3,164 indexed" },
+        { "label": "Chunks", "value": "18,402" },
+        { "label": "Embedding", "value": "bge-m3 · multilingual" },
+        { "label": "Freshness", "value": "synced 4 min ago" },
+        { "label": "Permissions", "value": "inherited per source" }
+      ],
+      "tags": {
+        "wiki": "wiki",
+        "drive": "drive",
+        "ticket": "ticket",
+        "contract": "contract",
+        "synced": "synced"
+      }
+    },
+    "featureCatalogue": {
+      "heading": "Models and tools, always current",
+      "description": "Ragenta is not tied to one provider. Pick a model per agent, swap it without rewriting a prompt, and give agents the tools and connectors they need — including any MCP server you already run.",
+      "cta": "Browse the catalogue →",
+      "windowTitle": "Ragenta — Catalogue",
+      "panelTitle": "Models, tools & connectors",
+      "panelSubtitle": "Everything an agent can be given",
+      "searchPlaceholder": "Search the catalogue…",
+      "featured": "Popular",
+      "noMatch": "Nothing matches “{query}”",
+      "erroredSuffix": " · couldn’t refresh",
+      "prev": "Prev",
+      "next": "Next",
+      "counterResult": "{count} result for “{query}”",
+      "counterResults": "{count} results for “{query}”",
+      "counterTotal": "{count} in the catalogue · more added regularly"
+    },
+    "testimonials": {
+      "title": "From the teams running it every day"
+    },
+    "blogHighlights": {
+      "title": "From the blog",
+      "viewAll": "Read the blog →"
+    },
+    "finalCta": {
+      "title": "Put an agent on your knowledge today"
+    }
+  },
+  "testimonials": {
+    "items": [
+      {
+        "quote": "We had three separate search tools and none of them could answer a question. Ragenta replaced all three in a month, and the citations are the reason people actually trust it.",
+        "name": "Head of Operations",
+        "org": "Logistics, 900 staff"
+      },
+      {
+        "quote": "Support deflection went from a slide in a strategy deck to a number on a dashboard. The retrieval trace is what let us debug it ourselves instead of filing tickets.",
+        "name": "Customer Support Lead",
+        "org": "B2B SaaS"
+      },
+      {
+        "quote": "Permission-aware retrieval was the whole deal for us. Legal would not sign off on anything that indexed HR files into one bucket.",
+        "name": "IT Director",
+        "org": "Financial services"
+      },
+      {
+        "quote": "Our documentation is half Vietnamese, half English. One index handles both and an English question still finds the Vietnamese paragraph.",
+        "name": "Engineering Manager",
+        "org": "Fintech, Ho Chi Minh City"
+      },
+      {
+        "quote": "The agent does not just retrieve — it decides what to look up next. Watching it re-query after a weak first result was the moment this clicked for the team.",
+        "name": "Head of Data",
+        "org": "Healthcare group"
+      },
+      {
+        "quote": "We swapped the underlying model twice in a quarter without touching a single prompt. That flexibility is worth more than any single model benchmark.",
+        "name": "Principal Engineer",
+        "org": "Enterprise software"
+      }
+    ]
+  },
+  "pricing": {
+    "heading": "Pricing",
+    "subheading": "Start free, then scale seats and usage as adoption grows.",
+    "billing": {
+      "monthly": "Monthly",
+      "yearly": "Yearly (−20%)"
+    },
+    "proYearlyNote": "Equivalent to $23/month/person.",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "price": { "monthly": "$0", "yearly": "$0" },
+        "priceSuffix": "",
+        "intro": "Includes:",
+        "cta": "Start for free",
+        "features": [
+          "1 knowledge base, up to 200 documents",
+          "500 chat messages per month",
+          "Standard models and hybrid retrieval",
+          "1 seat"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "price": { "monthly": "$29", "yearly": "$276" },
+        "priceSuffix": "/month/person",
+        "priceSuffixYearly": "/year/person",
+        "intro": "Everything in Free, plus:",
+        "cta": "Start for free",
+        "features": [
+          "Unlimited knowledge bases and documents",
+          "10,000 messages per person per month",
+          "All models, including reranking and long context",
+          "Agents with tools, scheduling and the API",
+          "Retrieval trace and answer evaluation",
+          "Usage top-ups available"
+        ]
+      },
+      "team": {
+        "name": "Team",
+        "price": { "monthly": "$59", "yearly": "$564" },
+        "priceSuffix": "/month/person",
+        "priceSuffixYearly": "/year/person",
+        "intro": "Everything in Pro, plus:",
+        "cta": "Start a trial",
+        "features": [
+          "Permission-aware retrieval synced from each source",
+          "Shared Agent Skills and workspace rules",
+          "SSO (SAML, OIDC) and SCIM provisioning",
+          "Audit log and per-project usage reporting"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": { "monthly": "Custom", "yearly": "Custom" },
+        "priceSuffix": "",
+        "intro": "Everything in Team, plus:",
+        "cta": "Contact us",
+        "features": [
+          "Private cloud (VPC) or on-premise deployment",
+          "Bring your own model endpoints and vector store",
+          "Custom connectors and data-residency guarantees",
+          "Security review, DPA and a named success engineer"
+        ]
+      }
+    },
+    "notes": [
+      {
+        "title": "Usage, not seats alone",
+        "body": "Seats cover access; messages and agent runs are metered. The dashboard shows both as they accrue."
+      },
+      {
+        "title": "No surprise bills",
+        "body": "Hit the monthly cap and runs pause cleanly rather than silently overrunning your budget."
+      },
+      {
+        "title": "Move plans anytime",
+        "body": "Upgrade, downgrade or top up usage per person. Annual billing saves roughly 20%."
+      }
+    ],
+    "faq": {
+      "heading": "Pricing questions",
+      "items": [
+        {
+          "question": "What counts as a message?",
+          "answer": "One question and its answer, including the retrieval and any tool calls the agent made to produce it. A multi-step agent run counts as one message plus its tool usage."
+        },
+        {
+          "question": "What happens when I run out of monthly usage?",
+          "answer": "Runs pause cleanly. You can top up on Pro and above, upgrade the plan, or wait for the next cycle — Ragenta never silently overruns your budget."
+        },
+        {
+          "question": "Do you train models on our data?",
+          "answer": "No. Your documents and conversations are used to serve your workspace and nothing else. Enterprise plans can pin inference to a private deployment so content never leaves your network."
+        },
+        {
+          "question": "Can I change plans later?",
+          "answer": "Yes. Upgrade, downgrade, or move between monthly and annual billing at any time. Annual saves roughly 20% against month-to-month."
+        },
+        {
+          "question": "How are documents counted?",
+          "answer": "By source document, not by chunk. A 400-page PDF is one document however many chunks it produces."
+        },
+        {
+          "question": "How does Enterprise pricing work?",
+          "answer": "Enterprise is scoped per deployment — usage allocation, security review, data residency and invoice billing. Contact us and we will size it with you."
+        }
+      ]
+    }
+  },
+  "product": {
+    "hero": {
+      "eyebrow": "Agents",
+      "title": "Delegate the work, keep the judgement.",
+      "subtitle": "Agents that read your sources, use your tools, and show their work — so your team reviews decisions instead of assembling context.",
+      "ctaPrimary": "Start for free",
+      "ctaSecondary": "Book a demo →",
+      "dashboardTitle": "Ragenta — Agent dashboard",
+      "panelHeading": "Agents",
+      "activeCount": "7 active",
+      "todayLabel": "Today",
+      "todayAgents": [
+        { "title": "Support triage — inbox #general", "sub": "Retrieving", "meta": "38 tickets" },
+        { "title": "Vendor MSA review — Nordwind", "sub": "Comparing clauses", "meta": "64 clauses" },
+        { "title": "RFP security questionnaire", "sub": "Drafting gaps", "meta": "112 / 118" },
+        { "title": "Weekly engineering digest", "sub": "Complete", "meta": "5 themes" }
+      ],
+      "weekLabel": "This week",
+      "weekAgents": [
+        { "title": "Onboarding FAQ refresh", "sub": "42 answers updated" },
+        { "title": "Contract renewal watchlist", "sub": "9 accounts flagged" },
+        { "title": "Help-centre gap analysis", "sub": "17 missing articles" }
+      ],
+      "inputPlaceholder": "Describe what you want an agent to do…"
+    },
+    "surfaces": {
+      "title": "Meet your team where they work",
+      "subtitle": "The same agents, the same knowledge, wherever the question is asked.",
+      "items": {
+        "webApp": {
+          "label": "Web app",
+          "headline": "A workspace for chat, sources, agents and evaluation in one place.",
+          "cta": "Open the app →"
+        },
+        "api": {
+          "label": "API & SDK",
+          "headline": "Call an agent from your own product with a few lines of code.",
+          "cta": "Read the docs →"
+        },
+        "widget": {
+          "label": "Embedded widget",
+          "headline": "Drop a grounded assistant into your app or help centre.",
+          "cta": "See the widget →",
+          "previewMessage": "Ask about your account…"
+        },
+        "slackTeams": {
+          "label": "Slack & Teams",
+          "headline": "Answers in-thread, with the same citations and permissions.",
+          "cta": "Add to Slack →",
+          "previewMessage": "Retention is 90 days on Team plans — see Security policy §4."
+        }
+      }
+    },
+    "understands": {
+      "title": "It understands your organisation, not just your documents",
+      "subtitle": "Context, conventions and permissions carry into every run.",
+      "learnMore": "Learn more",
+      "subagentsTitle": "run · parallel",
+      "subagentsHeading": "Parallel subagents",
+      "subagentsBody": "A broad question fans out across subagents, each answering one part and streaming findings back as it finishes.",
+      "subagents": [
+        { "name": "Contract terms", "status": "done", "model": "opus-4.5" },
+        { "name": "Account history", "status": "running", "model": "gpt-5" },
+        { "name": "Support tickets", "status": "running", "model": "gpt-5" },
+        { "name": "Billing records", "status": "queued", "model": "qwen3" }
+      ],
+      "knowledgeTitle": "retrieval · trace",
+      "knowledgeQuery": "“What did we commit to Nordwind on pricing?”",
+      "knowledgeHeading": "Knowledge with provenance",
+      "knowledgeBody": "Every passage carries its source, its permissions and its freshness — so an answer can be audited, not just read.",
+      "sources": [
+        { "tool": "MSA v4", "value": "§7.2 — renewal pricing" },
+        { "tool": "Notes", "value": "no increase before FY27" },
+        { "tool": "Q3 memo", "value": "grandfathering rule" },
+        { "tool": "Order form", "value": "signed 12 Mar 2026" }
+      ],
+      "rulesTitle": "workspace · rules",
+      "rulesHeading": "Rules your team writes once",
+      "rulesBody": "Tone, mandatory disclaimers, forbidden sources, escalation thresholds — written once and applied to every future run.",
+      "teamRules": [
+        { "rule": "Never quote an unapproved price", "scope": "all agents" },
+        { "rule": "Cite the contract, not the summary", "scope": "legal, sales" },
+        { "rule": "Escalate below 0.8 groundedness", "scope": "support" },
+        { "rule": "Reply in the customer's language", "scope": "support" }
+      ]
+    },
+    "lifecycle": {
+      "title": "The whole loop, in one system",
+      "subtitle": "Ingest, retrieve, evaluate — and the evaluation feeds back into the first two.",
+      "learnMore": "Learn more",
+      "planChrome": "ingest · pipeline",
+      "planHeading": "Ingest",
+      "planBody": "Connect a source and Ragenta parses layout, chunks on structure, embeds and keeps it in sync — with the source's permissions attached.",
+      "planSteps": [
+        "Parse — layout-aware, tables preserved",
+        "Chunk — on structure, not character count",
+        "Embed — multilingual, one vector space",
+        "Sync — incremental, permissions carried"
+      ],
+      "skip": "Configure",
+      "continue": "Run",
+      "designChrome": "retrieve · hybrid",
+      "designHeading": "Retrieve",
+      "designBody": "Vector similarity and keyword matching run together, then a reranker orders what actually reaches the model's context.",
+      "retrievalRows": [
+        { "stage": "Vector", "detail": "top 50 by similarity", "value": "50" },
+        { "stage": "Keyword", "detail": "BM25, exact identifiers", "value": "24" },
+        { "stage": "Merge", "detail": "deduplicated candidates", "value": "38" },
+        { "stage": "Rerank", "detail": "above relevance threshold", "value": "6" }
+      ],
+      "validateChrome": "evaluate · run",
+      "validateHeading": "Evaluate",
+      "validateBody": "Groundedness, citation coverage and retrieval hit rate are scored on every change, so a regression surfaces before a user reports it.",
+      "validateSteps": [
+        { "action": "score", "target": "30 reference questions", "result": "groundedness 0.94 (+0.06)" },
+        { "action": "check", "target": "citation coverage", "result": "98% of claims linked" },
+        { "action": "diff", "target": "against last configuration", "result": "2 answers changed" }
+      ],
+      "rootCauseLabel": "Weakest area:",
+      "rootCauseValue": "retrieval on scanned PDFs"
+    },
+    "capabilities": {
+      "title": "What an agent can actually do",
+      "subtitle": "Read, act, and leave a trail you can follow.",
+      "learnMore": "Learn more",
+      "terminal": {
+        "title": "ragenta · run · sandboxed",
+        "retrieving": "retrieving across 4 sources…",
+        "reranking": "reranked 38 → 6 passages",
+        "toolCall": "sql: revenue by region, last 4 quarters",
+        "done": "answer drafted · 9 claims · 9 citations"
+      },
+      "runToolsHeading": "Run tools, not just prompts",
+      "runToolsBody": "Query a warehouse, call an internal API, run Python in a sandbox, search the web — with credentials held server-side and never shown to the model.",
+      "composeChrome": "compose · context",
+      "composeAttach": "Compare {chip1} against our {chip2} and apply {chip3}",
+      "composeFollow": "Use only sources newer than {chip1}",
+      "addContextHeading": "Point at exactly what matters",
+      "addContextBody": "Mention a document, a folder, a connector or a saved filter inline, and the agent scopes its retrieval to it for that run.",
+      "snapshotsChrome": "history · versions",
+      "snapshotsHeading": "Every run is reproducible",
+      "snapshotsBody": "Model, prompt, retrieved passages and tool outputs are versioned together, so any answer can be replayed exactly as it was produced.",
+      "snapshots": [
+        { "label": "Knowledge base re-indexed", "date": "24 Aug · 09:12" },
+        { "label": "Reranker enabled", "date": "24 Aug · 11:40" },
+        { "label": "Model switched to opus-4.5", "date": "25 Aug · 08:05" },
+        { "label": "Current configuration", "date": "26 Aug · 14:22" }
+      ]
+    },
+    "extend": {
+      "title": "Extend it without forking it",
+      "subtitle": "Connectors, skills and your own tools — all first-class.",
+      "learnMore": "Learn more",
+      "connectorsChrome": "connectors · workspace",
+      "connectorsHeading": "Connectors",
+      "connectorsBody": "Managed sync for the systems your knowledge already lives in, with each source's permissions carried through to retrieval.",
+      "connectorTags": ["synced", "synced", "synced", "syncing", "synced"],
+      "skillsChrome": "skills · shared",
+      "skillsHeading": "Agent Skills",
+      "skillsBody": "Turn a prompt that works into a named, versioned skill with its sources, tools and output format fixed — then let the whole workspace run it.",
+      "skillDescs": [
+        "Draft a support reply grounded in policy",
+        "Compare a contract against the playbook",
+        "Answer a security questionnaire from prior answers",
+        "Summarise a week of engineering activity",
+        "Find every document that mentions a clause"
+      ],
+      "mcpChrome": "mcp · servers",
+      "mcpHeading": "Your own tools",
+      "mcpBody": "Attach any Model Context Protocol server, or register a plain HTTP tool, and it appears to your agents alongside the built-in ones.",
+      "mcpConnections": [
+        { "name": "internal-crm", "status": "connected" },
+        { "name": "warehouse-sql", "status": "connected" },
+        { "name": "ticketing", "status": "connected" },
+        { "name": "billing-api", "status": "connected" },
+        { "name": "custom-search", "status": "connected" }
+      ]
+    },
+    "changelog": {
+      "heading": "Recently shipped",
+      "seeMore": "See the full changelog →"
+    }
+  },
+  "solutions": {
+    "hero": {
+      "eyebrow": "Solutions",
+      "titlePrefix": "One platform for grounded AI,",
+      "titleBuiltFor": "built for",
+      "subtitle": "Your team asks the questions and makes the calls. Ragenta does the reading, the retrieval and the drafting.",
+      "ctaPrimary": "Start for free",
+      "ctaSecondary": "Talk to us",
+      "industries": ["Support", "Legal", "Sales", "Operations"],
+      "previewAlt": "Ragenta solutions preview"
+    },
+    "groups": [
+      {
+        "label": "Knowledge & Search",
+        "items": [
+          {
+            "id": "doc-search",
+            "num": "01",
+            "title": "Enterprise search",
+            "blurb": "One search box across every system, answering in sentences instead of link lists.",
+            "challenge": "Knowledge is spread across a wiki, a drive, a ticket system and three chat workspaces. People give up before they find it.",
+            "solution": "Ragenta indexes all of them into one permission-aware knowledge base and answers the question directly, with the passage it used attached."
+          },
+          {
+            "id": "research-assistant",
+            "num": "02",
+            "title": "Research assistant",
+            "blurb": "Broad questions answered across many sources, with the evidence laid out.",
+            "challenge": "Answering \"what do we know about X\" means reading twenty documents and hoping nothing was missed.",
+            "solution": "An agent fans out across sources, covers each facet of the question, and shows which source supports which part of the answer."
+          }
+        ]
+      },
+      {
+        "label": "Customer-facing",
+        "items": [
+          {
+            "id": "support-agent",
+            "num": "03",
+            "title": "Support deflection",
+            "blurb": "Resolve repeat questions in-channel, escalate the rest with context attached.",
+            "challenge": "Most tickets are answered by an article that already exists — but customers do not find it and agents retype it.",
+            "solution": "A grounded agent answers from your help centre and policies, cites the article, and escalates with a summary when confidence is low."
+          },
+          {
+            "id": "sales-enablement",
+            "num": "04",
+            "title": "RFPs & security questionnaires",
+            "blurb": "Reuse every answer your team has already approved.",
+            "challenge": "Each questionnaire repeats questions answered five times before, and the approved wording lives in someone's inbox.",
+            "solution": "Ragenta matches each question to a previously approved answer with its source, and drafts only the genuine gaps for review."
+          }
+        ]
+      },
+      {
+        "label": "Internal operations",
+        "items": [
+          {
+            "id": "helpdesk",
+            "num": "05",
+            "title": "IT & HR helpdesk",
+            "blurb": "Policy answers in Slack, without exposing what the asker cannot see.",
+            "challenge": "HR and IT answer the same policy questions constantly, and the source of truth changes without anyone noticing.",
+            "solution": "Retrieval inherits each source's permissions, so an answer is assembled only from documents that person could already open."
+          },
+          {
+            "id": "data-analyst",
+            "num": "06",
+            "title": "Analytics agent",
+            "blurb": "Ask a metric question in words, get the query, the numbers and the caveats.",
+            "challenge": "Every ad-hoc metric question becomes a ticket for the data team, and the backlog decides what gets answered.",
+            "solution": "The agent writes read-only SQL against approved tables, runs it, and explains the result alongside the query it used."
+          }
+        ]
+      },
+      {
+        "label": "Risk & Compliance",
+        "items": [
+          {
+            "id": "contract-review",
+            "num": "07",
+            "title": "Contract review",
+            "blurb": "Every clause compared against your playbook, deviations ranked by risk.",
+            "challenge": "First-pass review is slow, repetitive, and the thing that gets skipped when a deal is urgent.",
+            "solution": "Ragenta parses the agreement into clauses, compares each against your standard position, and ranks deviations by exposure."
+          },
+          {
+            "id": "compliance-report",
+            "num": "08",
+            "title": "Compliance reporting",
+            "blurb": "Evidence packages assembled from the systems of record.",
+            "challenge": "Audit season means chasing screenshots and policy versions across half a dozen tools.",
+            "solution": "An agent gathers the evidence, maps it to each control, and produces the package with a link to every underlying document."
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "statement": "Your organisation already knows the answer. Ragenta makes it findable.",
+      "ctaPrimary": "Start for free",
+      "ctaSecondary": "Talk to us"
+    },
+    "demo": {
+      "challengeLabel": "Challenge",
+      "solutionLabel": "Ragenta",
+      "status": {
+        "pass": "Pass",
+        "caution": "Review",
+        "fail": "Blocker",
+        "high": "High",
+        "medium": "Medium",
+        "low": "Low"
+      },
+      "docSearch": {
+        "windowTitle": "Enterprise search — “data retention policy”",
+        "eyebrow": "Hybrid retrieval · 4 sources · 18,402 chunks",
+        "legendVector": "vector",
+        "legendKeyword": "keyword",
+        "rows": [
+          { "source": "Security policy §4", "system": "Confluence", "score": "0.94" },
+          { "source": "DPA appendix B", "system": "Drive", "score": "0.91" },
+          { "source": "Help centre #218", "system": "Zendesk", "score": "0.86" },
+          { "source": "Onboarding FAQ", "system": "Notion", "score": "0.71" },
+          { "source": "Retention policy (2025)", "system": "Drive", "score": "0.55" }
+        ],
+        "supersededLabel": "superseded",
+        "footer": "38 candidates · 6 passages used · answered in 1.4s"
+      },
+      "researchAssistant": {
+        "windowTitle": "Research assistant — evidence coverage",
+        "eyebrow": "Facet coverage by source",
+        "working": "synthesising",
+        "columns": {
+          "wiki": "wiki",
+          "drive": "drive",
+          "tickets": "tickets",
+          "chat": "chat",
+          "web": "web"
+        },
+        "facets": [
+          "Current policy",
+          "Contractual commitments",
+          "Customer exceptions",
+          "Historical changes",
+          "Open questions",
+          "Regulatory context"
+        ],
+        "coverage": "24 passages across 5 sources"
+      },
+      "supportAgent": {
+        "windowTitle": "Support deflection — inbox #general",
+        "eyebrow": "Last 24 hours",
+        "metrics": [
+          { "label": "Resolved in-channel", "value": "68%" },
+          { "label": "Median first reply", "value": "22s" },
+          { "label": "Escalated", "value": "32%" }
+        ],
+        "rows": [
+          { "topic": "Refund window on annual plans", "state": "resolved", "detail": "cited MSA §7.2" },
+          { "topic": "SSO setup for Okta", "state": "resolved", "detail": "cited help centre #142" },
+          { "topic": "Invoice in a different currency", "state": "resolved", "detail": "cited billing FAQ" },
+          { "topic": "Custom data-residency request", "state": "escalated", "detail": "no approved source" },
+          { "topic": "Bug — export stalls at 90%", "state": "escalated", "detail": "routed to engineering" }
+        ],
+        "states": { "resolved": "Resolved", "escalated": "Escalated" },
+        "footer": "Escalations arrive with a summary and the sources already checked"
+      },
+      "salesEnablement": {
+        "windowTitle": "Security questionnaire — Nordwind RFP",
+        "eyebrow": "118 questions · 9 sections",
+        "generating": "drafting gaps",
+        "sections": [
+          { "name": "Access control", "matched": 22, "state": "done" },
+          { "name": "Data protection", "matched": 31, "state": "done" },
+          { "name": "Incident response", "matched": 18, "state": "done" },
+          { "name": "Subprocessors", "matched": 6, "state": "running" }
+        ],
+        "matchedLabel": "{count} answered from approved sources",
+        "runningLabel": "{count} matched · drafting the rest",
+        "topLabel": "Needs an owner",
+        "gaps": [
+          { "id": "Q-084", "topic": "Data residency in Vietnam", "owner": "Legal" },
+          { "id": "Q-091", "topic": "Sub-processor list for APAC", "owner": "Security" },
+          { "id": "Q-107", "topic": "Retention beyond contract term", "owner": "Legal" }
+        ]
+      },
+      "helpdesk": {
+        "windowTitle": "IT & HR helpdesk — #ask-internal",
+        "tabPolicies": "Policies",
+        "tabTickets": "Tickets",
+        "policies": [
+          { "name": "Remote work policy", "freshness": "updated 4d ago", "sources": 3, "confidence": 0.94 },
+          { "name": "Expense reimbursement", "freshness": "updated 2w ago", "sources": 2, "confidence": 0.88 },
+          { "name": "Device replacement", "freshness": "updated 6w ago", "sources": 4, "confidence": 0.81 },
+          { "name": "Parental leave", "freshness": "updated 3mo ago", "sources": 2, "confidence": 0.72 },
+          { "name": "VPN access request", "freshness": "updated 5mo ago", "sources": 1, "confidence": 0.61 }
+        ],
+        "confidenceNote": "Confidence below 0.7 routes the question to a human.",
+        "ticketsLegend": ["IT", "HR", "Finance"],
+        "tickets": [
+          { "topic": "Laptop upgrade eligibility", "team": "IT", "volume": "3.2×", "trend": "answered in-channel" },
+          { "topic": "Carry-over annual leave", "team": "HR", "volume": "2.4×", "trend": "answered in-channel" },
+          { "topic": "Per-diem for client travel", "team": "Finance", "volume": "1.6×", "trend": "needs a policy owner" }
+        ],
+        "ticketsFooter": "Volume shown against the same week last quarter."
+      },
+      "dataAnalyst": {
+        "windowTitle": "Analytics agent — revenue by region",
+        "eyebrow": "Read-only SQL · approved tables",
+        "queryLabel": "generated query",
+        "queryLines": [
+          "select region, sum(mrr) as mrr",
+          "from subscriptions",
+          "where quarter >= '2025-Q4'",
+          "group by 1 order by 2 desc"
+        ],
+        "chartLabel": "MRR by quarter · APAC",
+        "quarters": ["2025-Q4", "2026-Q1", "2026-Q2", "2026-Q3"],
+        "caveat": "Excludes 2 accounts still in migration — flagged, not silently dropped.",
+        "footer": "Query, result and caveats returned together"
+      },
+      "contractReview": {
+        "windowTitle": "Contract review — Nordwind MSA v4",
+        "eyebrow": "64 clauses · compared to playbook",
+        "likelihood": "Deviation from standard",
+        "severity": "Commercial exposure",
+        "highRisk": "Escalate",
+        "acceptable": "Accept as-is",
+        "findings": {
+          "liability": { "label": "Liability cap", "sub": "12 months → 24 months fees" },
+          "termination": { "label": "Termination for convenience", "sub": "30 days, one-sided" },
+          "indemnity": { "label": "IP indemnity", "sub": "matches playbook" },
+          "dataResidency": { "label": "Data residency", "sub": "APAC required, not offered" },
+          "audit": { "label": "Audit rights", "sub": "comparing…" }
+        },
+        "footer": "3 deviations need legal review · 61 clauses match the playbook"
+      },
+      "complianceReport": {
+        "windowTitle": "Compliance reporting — SOC 2 evidence",
+        "eyebrow": "Evidence package · 42 controls",
+        "generatedCount": "31 / 42 assembled",
+        "metrics": [
+          { "label": "Controls covered", "value": "74%" },
+          { "label": "Evidence gaps", "value": "6" },
+          { "label": "Stale evidence", "value": "5" }
+        ],
+        "docs": [
+          { "name": "Access review export", "format": "CSV", "state": "done" },
+          { "name": "Change management log", "format": "CSV", "state": "done" },
+          { "name": "Policy version history", "format": "PDF", "state": "done" },
+          { "name": "Vendor risk assessments", "format": "XLSX", "state": "running" },
+          { "name": "Incident post-mortems", "format": "PDF", "state": "pending" },
+          { "name": "Control narrative", "format": "DOCX", "state": "pending" }
+        ],
+        "footer": "Every item links back to the system it came from"
+      }
+    }
+  },
+  "contact": {
+    "heading": "Bring grounded AI into your organisation.",
+    "testimonialsAria": "Testimonials",
+    "testimonialAria": "Show testimonial {n}",
+    "formHeading": "Talk to our team",
+    "helpOptions": [
+      "Product demo",
+      "Enterprise deployment",
+      "Security review",
+      "Partnership",
+      "General enquiry"
+    ],
+    "emailLabel": "Work email",
+    "emailPlaceholder": "an@congty.vn",
+    "nameLabel": "Full name",
+    "namePlaceholder": "Nguyen Van An",
+    "companyLabel": "Company or organisation",
+    "companyPlaceholder": "Acme Corp",
+    "positionLabel": "Role",
+    "positionPlaceholder": "Head of Operations",
+    "helpLabel": "What can we help you with?",
+    "helpPlaceholder": "Select an option",
+    "helpRequired": "Please choose what we can help you with.",
+    "messageLabel": "Tell us a bit more",
+    "messagePlaceholder": "Which sources you would connect, team size, timelines, anything else relevant…",
+    "submit": "Continue",
+    "submitting": "Sending…",
+    "errorGeneric": "Something went wrong. Please try again.",
+    "errorShort": "Something went wrong.",
+    "successHeading": "Thanks — we'll be in touch.",
+    "successBody": "Someone from the Ragenta team will reach out within one business day. In the meantime, feel free to keep exploring.",
+    "successBackHome": "Back to home",
+    "successSendAnother": "Send another message",
+    "privacyPrefix": "By submitting, you agree to receive product communications from Ragenta. See our",
+    "privacyLink": "privacy policy",
+    "privacySuffix": "."
+  },
+  "blogIndex": {
+    "eyebrow": "Blog",
+    "heroTitle": "Notes on building AI that cites its sources.",
+    "heroSubtitle": "Retrieval, agents, evaluation and the unglamorous engineering that decides whether any of it works.",
+    "searchLabel": "Search articles",
+    "searchPlaceholder": "Search articles",
+    "searchButton": "Search",
+    "clearSearch": "Clear search",
+    "clear": "Clear",
+    "featured": "Featured",
+    "allContent": "All articles",
+    "emptyTitle": "No articles published yet",
+    "emptySearchTitle": "No articles found",
+    "emptyDescription": "New Ragenta articles will appear here when they are published.",
+    "emptySearchDescription": "No articles match “{query}”.",
+    "paginationLabel": "Article pagination",
+    "previous": "Previous",
+    "next": "Next",
+    "showingAllOne": "Showing all {count} article.",
+    "showingAllOther": "Showing all {count} articles.",
+    "backToBlog": "Back to the blog",
+    "readingTime": "{count} min read",
+    "topics": "Topics",
+    "relatedPostsTitle": "Related articles",
+    "ctaTitle": "Try Ragenta on your own documents.",
+    "ctaBody": "Connect a source, ask a question, and see the passages behind the answer.",
+    "ctaButton": "Start for free"
+  },
+  "changelog": {
+    "eyebrow": "Changelog",
+    "heroTitle": "What's new in Ragenta.",
+    "heroSubtitle": "New models, connectors and platform improvements — shipped continuously.",
+    "types": {
+      "Release": "Release",
+      "Model": "Model",
+      "Integration": "Integration",
+      "Improvement": "Improvement",
+      "Fix": "Fix"
+    },
+    "footer": "End of changelog · Follow along for updates"
+  },
+  "legal": {
+    "eyebrow": "Legal",
+    "lastUpdated": "Last updated {date}"
+  },
+  "metadata": {
+    "ogTitle": "Turn your knowledge into answers you can trust.",
+    "default": {
+      "title": "Ragenta | AI Agents and RAG Chat on Your Own Knowledge",
+      "description": "Ragenta turns your documents, apps and databases into a grounded knowledge base, then puts AI agents on top of it. Answers with citations, no AI infrastructure to build."
+    },
+    "product": {
+      "title": "Product — Ragenta",
+      "description": "Agents that read your sources, use your tools and show their work. Ingest, retrieve and evaluate in one system, on every surface your team already uses."
+    },
+    "solutions": {
+      "title": "Solutions — Ragenta",
+      "description": "Enterprise search, support deflection, RFP answering, contract review and compliance reporting — grounded in your own systems of record."
+    },
+    "pricing": {
+      "title": "Pricing — Ragenta",
+      "description": "Start free, then scale seats and usage. Transparent metering, no surprise bills, private deployment available on Enterprise."
+    },
+    "contact": {
+      "title": "Contact — Ragenta",
+      "description": "Talk to the Ragenta team about deployments, pilots, security reviews and data residency."
+    },
+    "changelog": {
+      "title": "Changelog — Ragenta",
+      "description": "Latest releases, new models, connectors and platform updates for Ragenta."
+    },
+    "blog": {
+      "title": "Ragenta Blog | Retrieval, Agents and Evaluation",
+      "description": "Practical notes on retrieval-augmented generation, agent design, permission-aware search and measuring whether any of it works."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Ragenta",
+      "description": "How Ragenta handles personal data collected through this website."
+    },
+    "terms": {
+      "title": "Terms of Service | Ragenta",
+      "description": "The terms that govern use of the Ragenta website and service."
+    }
+  }
+}

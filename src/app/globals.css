@@ -1,0 +1,282 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+  Every colour in this site is a semantic token, never a raw Tailwind palette
+  class. That is what makes the theme toggle work: `.dark` re-points the same
+  token names, so a section written as `bg-card text-ink` flips without being
+  touched. Adding a hard-coded `slate-*` / `#fff` to a section breaks dark mode.
+
+  Surfaces are layered, outermost first:
+    page    page background
+    card    section wrapper card sitting on the page
+    window  the fake app window inside a section
+    chrome  that window's title bar
+    panel   a panel inside the window
+    subtle  secondary buttons / chips
+    bubble  the user-message bubble in chat mockups
+*/
+
+:root {
+  --page: #f7f7f4;
+  --card: #f2f1ee;
+  --window: #ffffff;
+  --chrome: #f0f0f0;
+  --panel: #f4f5f8;
+  --subtle: #e5e3dd;
+  --bubble: #ece9fb;
+
+  --ink: #0f172a;
+  --ink-muted: #475569;
+  --ink-subtle: #64748b;
+  --ink-faint: #94a3b8;
+  --ink-ghost: #cbd5e1;
+  --ink-inverse: #ffffff;
+
+  --line: #e2e8f0;
+  --line-soft: #eef1f5;
+  --line-strong: #cbd5e1;
+
+  /* Brand — violet, a nod to the "…genta" in Ragenta. */
+  --brand-50: #f5f3ff;
+  --brand-100: #ede9fe;
+  --brand-200: #ddd6fe;
+  --brand-300: #c4b5fd;
+  --brand-400: #a78bfa;
+  --brand-500: #8b5cf6;
+  --brand-600: #7c3aed;
+  --brand-700: #6d28d9;
+  --brand-800: #5b21b6;
+  --brand-900: #4c1d95;
+  --brand-on: #ffffff;
+
+  /* Status — used for dots, chips and small labels inside the mockups. */
+  --ok: #059669;
+  --ok-soft: #ecfdf5;
+  --ok-line: #a7f3d0;
+  --warn: #b45309;
+  --warn-soft: #fffbeb;
+  --warn-line: #fde68a;
+  --bad: #dc2626;
+  --bad-soft: #fef2f2;
+  --bad-line: #fecaca;
+
+  /* Decorative wallpapers behind the app-window mockups. */
+  --wallpaper-a: linear-gradient(160deg, #b9aee0 0%, #c8bde8 28%, #d8cfee 58%, #b3c4e6 82%, #93a8d8 100%);
+  --wallpaper-b: linear-gradient(145deg, #7d74a8 0%, #948bc0 30%, #b0a8d4 55%, #c9c4e2 80%, #d8d5ea 100%);
+  --wallpaper-c: linear-gradient(155deg, #8f7fb8 0%, #a996ca 28%, #c2b2dc 55%, #d6cae8 80%, #e6def2 100%);
+  --spotlight: #100b1c;
+
+  --shadow-window: 0 20px 60px rgba(15, 12, 30, 0.18);
+  --shadow-hero: 0 40px 100px rgba(15, 12, 30, 0.22);
+  --ring-window: rgba(15, 12, 30, 0.08);
+  --scrim: rgba(255, 255, 255, 0.6);
+}
+
+.dark {
+  --page: #0b0a0f;
+  --card: #141319;
+  --window: #101016;
+  --chrome: #1b1a22;
+  --panel: #1a1922;
+  --subtle: #26242e;
+  --bubble: #2a2540;
+
+  --ink: #f4f4f6;
+  --ink-muted: #c3c1cd;
+  --ink-subtle: #9d9aab;
+  --ink-faint: #74717f;
+  --ink-ghost: #4b4956;
+  --ink-inverse: #0b0a0f;
+
+  --line: #2a2833;
+  --line-soft: #221f2b;
+  --line-strong: #3a3747;
+
+  /* Light-on-dark: the accent used for text lightens, the "soft" tints become
+     translucent washes so they read as tints rather than bright blocks. */
+  --brand-50: color-mix(in oklab, #8b5cf6 14%, transparent);
+  --brand-100: color-mix(in oklab, #8b5cf6 22%, transparent);
+  --brand-200: color-mix(in oklab, #8b5cf6 34%, transparent);
+  --brand-300: #8b5cf6;
+  --brand-400: #a78bfa;
+  --brand-500: #b49bfb;
+  --brand-600: #bfa8ff;
+  --brand-700: #cdbcff;
+  --brand-800: #7c3aed;
+  --brand-900: #6d28d9;
+  --brand-on: #14101f;
+
+  --ok: #34d399;
+  --ok-soft: color-mix(in oklab, #10b981 16%, transparent);
+  --ok-line: color-mix(in oklab, #10b981 38%, transparent);
+  --warn: #fbbf24;
+  --warn-soft: color-mix(in oklab, #f59e0b 16%, transparent);
+  --warn-line: color-mix(in oklab, #f59e0b 38%, transparent);
+  --bad: #f87171;
+  --bad-soft: color-mix(in oklab, #ef4444 16%, transparent);
+  --bad-line: color-mix(in oklab, #ef4444 38%, transparent);
+
+  --wallpaper-a: linear-gradient(160deg, #241d3a 0%, #2c2447 28%, #332a52 58%, #241f3d 82%, #1a1630 100%);
+  --wallpaper-b: linear-gradient(145deg, #1d1930 0%, #262040 30%, #2f2750 55%, #241f3f 80%, #1b172e 100%);
+  --wallpaper-c: linear-gradient(155deg, #221b38 0%, #2a2246 28%, #322853 55%, #272040 80%, #1c1730 100%);
+  --spotlight: #08060f;
+
+  --shadow-window: 0 20px 60px rgba(0, 0, 0, 0.55);
+  --shadow-hero: 0 40px 100px rgba(0, 0, 0, 0.65);
+  --ring-window: rgba(255, 255, 255, 0.08);
+  --scrim: rgba(11, 10, 15, 0.72);
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-card: var(--card);
+  --color-window: var(--window);
+  --color-chrome: var(--chrome);
+  --color-panel: var(--panel);
+  --color-subtle: var(--subtle);
+  --color-bubble: var(--bubble);
+
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-subtle: var(--ink-subtle);
+  --color-ink-faint: var(--ink-faint);
+  --color-ink-ghost: var(--ink-ghost);
+  --color-ink-inverse: var(--ink-inverse);
+
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --color-line-strong: var(--line-strong);
+
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+  --color-brand-on: var(--brand-on);
+
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-ok-line: var(--ok-line);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-warn-line: var(--warn-line);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-bad-line: var(--bad-line);
+
+  --font-heading: var(--font-space-grotesk), var(--font-sans);
+}
+
+@layer base {
+  html {
+    scroll-behavior: initial; /* Handled by Lenis */
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-page text-ink font-sans antialiased;
+  }
+  ::selection {
+    background-color: var(--brand-200);
+  }
+  /* Vietnamese: Space Grotesk has no Vietnamese subset, so headings fall back
+     to the body stack (Inter, which does) rather than rendering tofu. */
+  html[lang="vi"] {
+    --font-heading: var(--font-sans);
+  }
+  * {
+    border-color: var(--line);
+  }
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-brand-600 px-6 py-3 font-medium text-brand-on transition-all hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-page;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg bg-subtle px-6 py-3 font-medium text-ink-muted transition-all hover:-translate-y-0.5 hover:text-brand-600 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-page;
+  }
+
+  .section-badge {
+    @apply mb-6 inline-flex items-center rounded-full bg-brand-50 px-3 py-1 text-sm font-medium text-brand-600 ring-1 ring-inset ring-brand-200;
+  }
+
+  /* Long-form legal / markdown documents. */
+  .prose-document {
+    @apply text-base leading-7 text-ink-muted;
+  }
+  .prose-document > * + * {
+    @apply mt-5;
+  }
+  .prose-document h1,
+  .prose-document h2,
+  .prose-document h3,
+  .prose-document h4 {
+    font-family: var(--font-heading), sans-serif;
+    @apply font-semibold tracking-normal text-ink;
+  }
+  .prose-document h1 {
+    @apply text-3xl leading-tight;
+  }
+  .prose-document h2 {
+    @apply mt-10 text-2xl leading-tight;
+  }
+  .prose-document h3 {
+    @apply mt-8 text-xl leading-snug;
+  }
+  .prose-document h4 {
+    @apply mt-6 text-lg leading-snug;
+  }
+  .prose-document a {
+    @apply font-medium text-brand-600 underline underline-offset-4 hover:text-brand-700;
+  }
+  .prose-document ul {
+    @apply list-disc pl-6;
+  }
+  .prose-document ol {
+    @apply list-decimal pl-6;
+  }
+  .prose-document li + li {
+    @apply mt-2;
+  }
+  .prose-document code {
+    @apply rounded bg-panel px-1.5 py-0.5 font-mono text-[0.9em] text-ink;
+  }
+  .prose-document pre {
+    @apply overflow-x-auto rounded-xl bg-panel p-4 text-sm;
+  }
+  .prose-document pre code {
+    @apply bg-transparent p-0;
+  }
+  .prose-document blockquote {
+    @apply border-l-2 border-brand-300 pl-4 text-ink-subtle italic;
+  }
+  .prose-document table {
+    @apply block w-full overflow-x-auto rounded-lg border border-line text-left text-sm;
+  }
+  .prose-document th,
+  .prose-document td {
+    @apply border-b border-line px-4 py-3 align-top;
+  }
+  .prose-document th {
+    @apply bg-panel font-semibold text-ink;
+  }
+  .prose-document img {
+    @apply h-auto max-w-full rounded-lg border border-line;
+  }
+}

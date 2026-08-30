@@ -1,0 +1,991 @@
+{
+  "common": {
+    "tryRagenta": "Dùng thử miễn phí",
+    "contactUs": "Liên hệ",
+    "requestDemo": "Đặt lịch demo"
+  },
+  "nav": {
+    "product": "Sản phẩm",
+    "solutions": "Giải pháp",
+    "pricing": "Bảng giá",
+    "resources": "Tài nguyên",
+    "resourceLinks": {
+      "blog": { "label": "Blog" },
+      "changelog": { "label": "Nhật ký thay đổi" },
+      "docs": { "label": "Tài liệu" },
+      "community": { "label": "Cộng đồng" }
+    },
+    "languageSwitcher": { "label": "Đổi ngôn ngữ" },
+    "theme": {
+      "label": "Giao diện",
+      "light": "Sáng",
+      "dark": "Tối",
+      "toggle": "Chuyển giao diện sáng / tối"
+    },
+    "openMenu": "Mở menu điều hướng",
+    "closeMenu": "Đóng menu điều hướng"
+  },
+  "announcement": {
+    "badge": "Mới",
+    "full": "Agent Skills đã có — playbook dùng lại được cho cả workspace",
+    "short": "Agent Skills đã có mặt",
+    "dismiss": "Đóng thông báo"
+  },
+  "footer": {
+    "product": "Sản phẩm",
+    "overview": "Tổng quan",
+    "solutions": "Giải pháp",
+    "pricing": "Bảng giá",
+    "changelog": "Nhật ký thay đổi",
+    "company": "Công ty",
+    "contactUs": "Liên hệ",
+    "blog": "Blog",
+    "resources": "Tài nguyên",
+    "docs": "Tài liệu",
+    "community": "Cộng đồng",
+    "status": "Trạng thái hệ thống",
+    "legal": "Pháp lý",
+    "privacyPolicy": "Chính sách quyền riêng tư",
+    "termsOfService": "Điều khoản dịch vụ",
+    "copyright": "© {year} Ragenta. Bảo lưu mọi quyền.",
+    "systemsOperational": "Hệ thống hoạt động bình thường",
+    "followLinkedin": "Theo dõi Ragenta trên LinkedIn",
+    "followX": "Theo dõi Ragenta trên X",
+    "followGithub": "Ragenta trên GitHub"
+  },
+  "home": {
+    "hero": {
+      "headline": "Không gian AI biến tri thức của bạn thành",
+      "subhead": "Chat có dẫn nguồn và AI agent chạy trên chính tài liệu, ứng dụng và cơ sở dữ liệu của bạn.",
+      "words": [
+        "câu trả lời",
+        "agent",
+        "quy trình",
+        "quyết định",
+        "tự động hoá",
+        "báo cáo",
+        "trợ lý"
+      ],
+      "previewAlt": "Ragenta trả lời kèm nguồn trích dẫn"
+    },
+    "preview": {
+      "windowTitle": "Ragenta — Workspace",
+      "question": "Chính sách hoàn tiền cho hợp đồng doanh nghiệp theo năm là bao lâu?",
+      "answerLead": "Hợp đồng doanh nghiệp theo năm được hoàn tiền trong 30 ngày",
+      "answerRest": "kể từ ngày xuất hoá đơn. Sau thời hạn đó, phần chưa dùng được chuyển sang kỳ kế tiếp thay vì hoàn tiền.",
+      "sourcesLabel": "3 nguồn",
+      "sources": [
+        "Hợp đồng khung dịch vụ · §7.2",
+        "Sổ tay tài chính · Hoàn tiền",
+        "Mẫu đơn đặt hàng doanh nghiệp"
+      ],
+      "composer": "Hỏi bất cứ điều gì về workspace của bạn…",
+      "grounded": "Bám nguồn · mọi khẳng định đều có trích dẫn"
+    },
+    "trustStrip": {
+      "eyebrow": "Xây cho yêu cầu bảo mật doanh nghiệp",
+      "items": [
+        { "label": "SOC 2 Type II", "sub": "Kiểm toán hằng năm" },
+        { "label": "ISO 27001", "sub": "Đã chứng nhận" },
+        { "label": "Truy hồi theo phân quyền", "sub": "Lọc ngay trong truy vấn" },
+        { "label": "Triển khai riêng", "sub": "Dữ liệu vẫn là của bạn" }
+      ]
+    },
+    "partners": {
+      "supportedBy": "Chạy trên những mô hình bạn đã tin dùng"
+    },
+    "featureOrchestration": {
+      "heading": "Agent biến câu hỏi thành câu trả lời có nguồn",
+      "description": "Hỏi bằng ngôn ngữ tự nhiên. Ragenta tự lên kế hoạch truy hồi, chọn đúng công cụ, tự kiểm tra lại, rồi trả lời với mọi khẳng định đều liên kết ngược về đoạn văn gốc.",
+      "cta": "Xem agent hoạt động ra sao →",
+      "windowTitle": "Ragenta — Agent",
+      "query": "Những khách hàng nào bị ảnh hưởng bởi thay đổi giá quý 3, và ta đã cam kết gì với họ?",
+      "workflowLabel": "Đang chạy kế hoạch {count} bước",
+      "agentSteps": [
+        {
+          "tool": "Truy hồi",
+          "action": "Đã tìm trong 4 nguồn — 38 đoạn ứng viên",
+          "time": "0,9s",
+          "windowTitle": "Truy hồi — 38 ứng viên"
+        },
+        {
+          "tool": "Rerank",
+          "action": "Rút còn 6 đoạn vượt ngưỡng liên quan",
+          "time": "0,4s",
+          "windowTitle": "Ngữ cảnh — 6 đoạn được dùng"
+        },
+        {
+          "tool": "Kiểm chứng",
+          "action": "Đang đối chiếu từng khẳng định với nguồn…",
+          "time": "~2s",
+          "windowTitle": "Kiểm chứng — báo cáo bám nguồn"
+        }
+      ],
+      "summaryHighlight": "14 tài khoản",
+      "summaryRest": "bị ảnh hưởng. Cam kết được trích từ 3 điều khoản hợp đồng.",
+      "agentStatus": "Agent đang chạy · bước 3 / 3",
+      "retrieval": {
+        "caption": "Top 5 trong 38 ứng viên · điểm hybrid",
+        "colSource": "Nguồn",
+        "colPassage": "Đoạn văn",
+        "colScore": "Điểm",
+        "colUsed": "Vào ngữ cảnh",
+        "used": "Đã dùng",
+        "skipped": "Dưới ngưỡng",
+        "rows": [
+          { "source": "MSA v4 · §7", "passage": "Thay đổi giá có hiệu lực khi gia hạn…", "score": 0.94, "used": true },
+          { "source": "Memo giá Q3", "passage": "Giữ giá cũ cho hợp đồng năm ký trước…", "score": 0.91, "used": true },
+          { "source": "Ghi chú · Nordwind", "passage": "Đã cam kết không tăng giá trước FY27…", "score": 0.88, "used": true },
+          { "source": "FAQ kinh doanh", "passage": "Cách giải thích thay đổi giá giữa kỳ…", "score": 0.62, "used": false },
+          { "source": "Memo giá Q1", "passage": "Đã bị memo Q3 thay thế…", "score": 0.48, "used": false }
+        ],
+        "footer": "Còn 33 ứng viên · xuất toàn bộ trace"
+      },
+      "context": {
+        "caption": "6 đoạn · 4.120 token trong ngữ cảnh",
+        "tokensLabel": "token",
+        "rows": [
+          { "label": "Hợp đồng khung dịch vụ", "value": "2 đoạn · §7.1, §7.2" },
+          { "label": "Memo giá Q3", "value": "2 đoạn · giữ giá cũ" },
+          { "label": "Ghi chú tài khoản", "value": "1 đoạn · Nordwind" },
+          { "label": "Mẫu đơn đặt hàng", "value": "1 đoạn · điều khoản gia hạn" }
+        ]
+      },
+      "verification": {
+        "caption": "Đang kiểm 9 khẳng định · trực tiếp",
+        "rows": [
+          { "property": "Khẳng định có nguồn", "value": "9 / 9", "flag": false },
+          { "property": "Mức bám nguồn", "value": "0,96", "flag": false },
+          { "property": "Độ phủ trích dẫn", "value": "100%", "flag": false },
+          { "property": "Nguồn mâu thuẫn", "value": "1 cặp bị đánh dấu", "flag": true },
+          { "property": "Nguồn cũ (>12 tháng)", "value": "Không có", "flag": false },
+          { "property": "Kiểm tra phân quyền", "value": "Mọi đoạn đều hợp lệ", "flag": false }
+        ]
+      }
+    },
+    "featurePipeline": {
+      "heading": "Phù hợp với mọi loại công việc tri thức",
+      "description": "Hỗ trợ khách hàng, pháp chế, kinh doanh, vận hành nội bộ — mô tả kết quả mong muốn và Ragenta lắp ráp agent phù hợp. Không template cứng. Hoặc bạn tự cấu hình từng bước khi cần kiểm soát chính xác.",
+      "cta": "Khám phá năng lực →",
+      "windowTitle": "Ragenta — Phiên đang chạy",
+      "statusRunning": "Đang chạy",
+      "statusComplete": "Hoàn tất",
+      "workflowLabel": "{tag} · Phiên chạy",
+      "planLabel": "Kế hoạch · {count} bước",
+      "inProgress": "Đang chạy…",
+      "runs": [
+        {
+          "query": "Trả lời câu hỏi của khách về chính sách lưu trữ dữ liệu",
+          "tag": "Hỗ trợ",
+          "steps": ["Phân loại ý định", "Truy hồi chính sách", "Soạn phản hồi", "Kiểm giọng văn"],
+          "result": "Bản nháp sẵn · 3 trích dẫn",
+          "detail": [
+            { "step": "Phân loại ticket", "sub": "Ý định: lưu trữ dữ liệu · Ưu tiên: thường · Ngôn ngữ: Tiếng Việt" },
+            { "step": "Truy hồi chính sách điều chỉnh", "sub": "Chính sách bảo mật §4, phụ lục DPA B, bài help-center 218" },
+            { "step": "Soạn phản hồi", "sub": "Chỉ viết dựa trên các đoạn đã truy hồi" },
+            { "step": "Kiểm giọng văn và tính tuân thủ", "sub": "3 trích dẫn · không có khẳng định thiếu nguồn · sẵn sàng duyệt" }
+          ]
+        },
+        {
+          "query": "Rà hợp đồng MSA của nhà cung cấp so với lập trường chuẩn của công ty",
+          "tag": "Pháp chế",
+          "steps": ["Bóc điều khoản", "Đối chiếu playbook", "Đánh dấu sai lệch"],
+          "result": "Đang chạy…",
+          "detail": [
+            { "step": "Bóc hợp đồng thành từng điều khoản", "sub": "64 điều khoản · giữ nguyên tiêu đề và tham chiếu chéo" },
+            { "step": "Đối chiếu với playbook đàm phán", "sub": "Đang khớp từng điều khoản với lập trường chuẩn…" },
+            { "step": "Đánh dấu sai lệch và đề xuất câu chữ", "sub": "Soạn phương án dự phòng cho từng sai lệch · chờ kết quả đối chiếu" }
+          ]
+        },
+        {
+          "query": "Điền bảng câu hỏi bảo mật cho hồ sơ thầu Nordwind",
+          "tag": "Kinh doanh",
+          "steps": ["Bóc câu hỏi", "Khớp câu trả lời cũ", "Soạn phần còn thiếu"],
+          "result": "112 / 118 câu",
+          "detail": [
+            { "step": "Bóc bảng câu hỏi", "sub": "118 câu hỏi thuộc 9 phần" },
+            { "step": "Khớp với câu đã trả lời trước đây", "sub": "112 câu khớp với câu trả lời đã duyệt, kèm nguồn" },
+            { "step": "Soạn 6 câu còn lại", "sub": "Soạn từ chính sách bảo mật và chuyển cho bộ phận phụ trách" }
+          ]
+        },
+        {
+          "query": "Tóm tắt những thay đổi của khối kỹ thuật trong tuần qua",
+          "tag": "Nội bộ",
+          "steps": ["Thu thập nguồn", "Nhóm theo chủ đề", "Viết bản tin"],
+          "result": "Bản tin · 5 chủ đề",
+          "detail": [
+            { "step": "Thu thập tư liệu trong tuần", "sub": "Pull request đã merge, ghi chú sự cố, tài liệu quyết định, thread standup" },
+            { "step": "Nhóm theo chủ đề", "sub": "5 chủ đề · đã loại phần trùng lặp và phần đã revert" },
+            { "step": "Viết bản tin", "sub": "Một đoạn cho mỗi chủ đề, kèm liên kết tới thread gốc" }
+          ]
+        }
+      ]
+    },
+    "featureKnowledge": {
+      "heading": "Một knowledge base cho mọi nguồn dữ liệu",
+      "description": "Drive, Notion, Confluence, Slack, hệ thống ticket, kho dữ liệu — được index vào một knowledge base duy nhất và vẫn giữ nguyên phân quyền của từng nguồn. Ragenta lấy đúng ngữ cảnh cho mỗi câu hỏi, nên mô hình chỉ suy luận trên những gì người hỏi được phép xem.",
+      "cta": "Xem danh sách connector →",
+      "windowTitle": "Ragenta — Knowledge base",
+      "evidenceStream": "Đang index",
+      "evidenceStreamSuffix": " · 4 connector · trực tiếp",
+      "live": "trực tiếp",
+      "conflictsInternal": "mâu thuẫn",
+      "contextBundleSuffix": " · phạm vi truy hồi",
+      "sourcesLinked": "18.402 chunk",
+      "streamTitles": [
+        "Chính sách hoàn tiền cập nhật — thay thế bản 2025",
+        "Cam kết lưu trữ dữ liệu theo từng hạng hợp đồng",
+        "Ticket #4821 — đã hứa với khách thời hạn 60 ngày",
+        "Điều khoản gia hạn và quy tắc giữ giá cũ"
+      ],
+      "panel": [
+        { "label": "Nguồn", "value": "4 đã kết nối" },
+        { "label": "Tài liệu", "value": "3.164 đã index" },
+        { "label": "Chunk", "value": "18.402" },
+        { "label": "Embedding", "value": "bge-m3 · đa ngôn ngữ" },
+        { "label": "Độ mới", "value": "đồng bộ 4 phút trước" },
+        { "label": "Phân quyền", "value": "kế thừa theo nguồn" }
+      ],
+      "tags": {
+        "wiki": "wiki",
+        "drive": "drive",
+        "ticket": "ticket",
+        "contract": "hợp đồng",
+        "synced": "đã đồng bộ"
+      }
+    },
+    "featureCatalogue": {
+      "heading": "Mô hình và công cụ, luôn cập nhật",
+      "description": "Ragenta không khoá bạn vào một nhà cung cấp. Chọn mô hình riêng cho từng agent, đổi mô hình mà không phải viết lại prompt, và cấp cho agent đúng công cụ, connector cần dùng — kể cả máy chủ MCP bạn đang tự vận hành.",
+      "cta": "Xem toàn bộ danh mục →",
+      "windowTitle": "Ragenta — Danh mục",
+      "panelTitle": "Mô hình, công cụ & connector",
+      "panelSubtitle": "Mọi thứ có thể cấp cho một agent",
+      "searchPlaceholder": "Tìm trong danh mục…",
+      "featured": "Phổ biến",
+      "noMatch": "Không có kết quả cho “{query}”",
+      "erroredSuffix": " · không làm mới được",
+      "prev": "Trước",
+      "next": "Sau",
+      "counterResult": "{count} kết quả cho “{query}”",
+      "counterResults": "{count} kết quả cho “{query}”",
+      "counterTotal": "{count} mục trong danh mục · liên tục bổ sung"
+    },
+    "testimonials": {
+      "title": "Từ những đội đang dùng mỗi ngày"
+    },
+    "blogHighlights": {
+      "title": "Từ blog",
+      "viewAll": "Đọc blog →"
+    },
+    "finalCta": {
+      "title": "Đặt một agent lên kho tri thức của bạn ngay hôm nay"
+    }
+  },
+  "testimonials": {
+    "items": [
+      {
+        "quote": "Chúng tôi có ba công cụ tìm kiếm riêng biệt và không cái nào trả lời được một câu hỏi. Ragenta thay cả ba chỉ trong một tháng, và phần trích dẫn mới là lý do mọi người thực sự tin nó.",
+        "name": "Trưởng phòng Vận hành",
+        "org": "Logistics, 900 nhân sự"
+      },
+      {
+        "quote": "Tỷ lệ tự xử lý ticket từ một dòng trong slide chiến lược đã thành con số trên dashboard. Retrieval trace là thứ giúp chúng tôi tự gỡ lỗi thay vì mở ticket cho nhà cung cấp.",
+        "name": "Trưởng nhóm Hỗ trợ khách hàng",
+        "org": "B2B SaaS"
+      },
+      {
+        "quote": "Truy hồi theo phân quyền là điều kiện tiên quyết. Pháp chế sẽ không duyệt bất cứ giải pháp nào gom hồ sơ nhân sự vào chung một kho.",
+        "name": "Giám đốc CNTT",
+        "org": "Dịch vụ tài chính"
+      },
+      {
+        "quote": "Tài liệu của chúng tôi nửa tiếng Việt nửa tiếng Anh. Một index xử lý được cả hai, và câu hỏi tiếng Anh vẫn tìm ra đúng đoạn tiếng Việt.",
+        "name": "Engineering Manager",
+        "org": "Fintech, TP. Hồ Chí Minh"
+      },
+      {
+        "quote": "Agent không chỉ truy hồi — nó tự quyết định cần tra cứu gì tiếp theo. Khoảnh khắc nó tự truy vấn lại sau một kết quả yếu là lúc cả đội hiểu ra giá trị.",
+        "name": "Trưởng bộ phận Dữ liệu",
+        "org": "Tập đoàn y tế"
+      },
+      {
+        "quote": "Chúng tôi đổi mô hình nền hai lần trong một quý mà không phải sửa một prompt nào. Sự linh hoạt đó đáng giá hơn bất kỳ điểm benchmark nào.",
+        "name": "Principal Engineer",
+        "org": "Phần mềm doanh nghiệp"
+      }
+    ]
+  },
+  "pricing": {
+    "heading": "Bảng giá",
+    "subheading": "Bắt đầu miễn phí, mở rộng số ghế và mức dùng khi đội ngũ dùng nhiều hơn.",
+    "billing": {
+      "monthly": "Theo tháng",
+      "yearly": "Theo năm (−20%)"
+    },
+    "proYearlyNote": "Tương đương 23$/tháng/người.",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "price": { "monthly": "0$", "yearly": "0$" },
+        "priceSuffix": "",
+        "intro": "Bao gồm:",
+        "cta": "Dùng thử miễn phí",
+        "features": [
+          "1 knowledge base, tối đa 200 tài liệu",
+          "500 lượt hỏi đáp mỗi tháng",
+          "Mô hình tiêu chuẩn và truy hồi hybrid",
+          "1 ghế"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "price": { "monthly": "29$", "yearly": "276$" },
+        "priceSuffix": "/tháng/người",
+        "priceSuffixYearly": "/năm/người",
+        "intro": "Mọi thứ ở gói Free, cộng thêm:",
+        "cta": "Dùng thử miễn phí",
+        "features": [
+          "Không giới hạn knowledge base và tài liệu",
+          "10.000 lượt hỏi đáp mỗi người mỗi tháng",
+          "Toàn bộ mô hình, gồm rerank và ngữ cảnh dài",
+          "Agent kèm công cụ, lịch chạy và API",
+          "Retrieval trace và đánh giá câu trả lời",
+          "Mua thêm mức dùng khi cần"
+        ]
+      },
+      "team": {
+        "name": "Team",
+        "price": { "monthly": "59$", "yearly": "564$" },
+        "priceSuffix": "/tháng/người",
+        "priceSuffixYearly": "/năm/người",
+        "intro": "Mọi thứ ở gói Pro, cộng thêm:",
+        "cta": "Bắt đầu dùng thử",
+        "features": [
+          "Truy hồi theo phân quyền đồng bộ từ từng nguồn",
+          "Agent Skills và quy tắc dùng chung toàn workspace",
+          "SSO (SAML, OIDC) và cấp tài khoản qua SCIM",
+          "Nhật ký kiểm toán và báo cáo mức dùng theo dự án"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": { "monthly": "Liên hệ", "yearly": "Liên hệ" },
+        "priceSuffix": "",
+        "intro": "Mọi thứ ở gói Team, cộng thêm:",
+        "cta": "Liên hệ",
+        "features": [
+          "Triển khai private cloud (VPC) hoặc on-premise",
+          "Dùng endpoint mô hình và vector store của riêng bạn",
+          "Connector riêng và cam kết lưu trú dữ liệu",
+          "Rà soát bảo mật, DPA và kỹ sư phụ trách riêng"
+        ]
+      }
+    },
+    "notes": [
+      {
+        "title": "Tính theo mức dùng, không chỉ theo ghế",
+        "body": "Ghế mở quyền truy cập; lượt hỏi đáp và phiên chạy agent được đo riêng. Dashboard hiển thị cả hai theo thời gian thực."
+      },
+      {
+        "title": "Không có hoá đơn bất ngờ",
+        "body": "Chạm trần tháng thì các phiên chạy dừng gọn, không âm thầm vượt ngân sách của bạn."
+      },
+      {
+        "title": "Đổi gói bất cứ lúc nào",
+        "body": "Nâng, hạ hoặc mua thêm mức dùng theo từng người. Trả theo năm tiết kiệm khoảng 20%."
+      }
+    ],
+    "faq": {
+      "heading": "Câu hỏi về giá",
+      "items": [
+        {
+          "question": "Một lượt hỏi đáp được tính thế nào?",
+          "answer": "Một câu hỏi và câu trả lời của nó, bao gồm cả phần truy hồi và các lần gọi công cụ mà agent thực hiện để tạo ra câu trả lời. Một phiên agent nhiều bước được tính là một lượt cộng phần công cụ đã dùng."
+        },
+        {
+          "question": "Hết mức dùng trong tháng thì sao?",
+          "answer": "Các phiên chạy dừng gọn. Bạn có thể mua thêm từ gói Pro trở lên, nâng gói, hoặc chờ chu kỳ kế tiếp — Ragenta không bao giờ âm thầm vượt ngân sách."
+        },
+        {
+          "question": "Ragenta có dùng dữ liệu của chúng tôi để huấn luyện mô hình không?",
+          "answer": "Không. Tài liệu và hội thoại của bạn chỉ phục vụ chính workspace của bạn. Gói Enterprise có thể cố định phần suy luận vào một triển khai riêng để nội dung không rời khỏi hệ thống nội bộ."
+        },
+        {
+          "question": "Sau này đổi gói được không?",
+          "answer": "Được. Nâng, hạ hoặc chuyển giữa trả theo tháng và theo năm bất cứ lúc nào. Trả theo năm tiết kiệm khoảng 20% so với theo tháng."
+        },
+        {
+          "question": "Tài liệu được đếm như thế nào?",
+          "answer": "Theo tài liệu gốc, không theo chunk. Một file PDF 400 trang vẫn là một tài liệu dù sinh ra bao nhiêu chunk."
+        },
+        {
+          "question": "Giá Enterprise hoạt động ra sao?",
+          "answer": "Enterprise được xác định theo từng triển khai — hạn mức sử dụng, rà soát bảo mật, yêu cầu lưu trú dữ liệu và thanh toán theo hoá đơn. Liên hệ để chúng tôi cùng bạn xác định phạm vi."
+        }
+      ]
+    }
+  },
+  "product": {
+    "hero": {
+      "eyebrow": "Agent",
+      "title": "Giao việc cho agent, giữ lại quyền phán đoán.",
+      "subtitle": "Agent đọc nguồn của bạn, dùng công cụ của bạn và trình bày rõ cách nó làm — để đội ngũ chỉ việc rà soát quyết định thay vì đi gom ngữ cảnh.",
+      "ctaPrimary": "Dùng thử miễn phí",
+      "ctaSecondary": "Đặt lịch demo →",
+      "dashboardTitle": "Ragenta — Bảng điều khiển agent",
+      "panelHeading": "Agent",
+      "activeCount": "7 đang chạy",
+      "todayLabel": "Hôm nay",
+      "todayAgents": [
+        { "title": "Phân loại ticket hỗ trợ — hộp thư #general", "sub": "Đang truy hồi", "meta": "38 ticket" },
+        { "title": "Rà MSA nhà cung cấp — Nordwind", "sub": "Đang đối chiếu điều khoản", "meta": "64 điều khoản" },
+        { "title": "Bảng câu hỏi bảo mật cho hồ sơ thầu", "sub": "Đang soạn phần thiếu", "meta": "112 / 118" },
+        { "title": "Bản tin kỹ thuật hằng tuần", "sub": "Hoàn tất", "meta": "5 chủ đề" }
+      ],
+      "weekLabel": "Tuần này",
+      "weekAgents": [
+        { "title": "Làm mới FAQ onboarding", "sub": "cập nhật 42 câu trả lời" },
+        { "title": "Danh sách theo dõi gia hạn hợp đồng", "sub": "9 tài khoản được đánh dấu" },
+        { "title": "Phân tích lỗ hổng help-center", "sub": "thiếu 17 bài viết" }
+      ],
+      "inputPlaceholder": "Mô tả việc bạn muốn agent làm…"
+    },
+    "surfaces": {
+      "title": "Ở đúng nơi đội ngũ đang làm việc",
+      "subtitle": "Cùng một agent, cùng một kho tri thức, bất kể câu hỏi được đặt ra ở đâu.",
+      "items": {
+        "webApp": {
+          "label": "Ứng dụng web",
+          "headline": "Một workspace gồm chat, nguồn dữ liệu, agent và đánh giá.",
+          "cta": "Mở ứng dụng →"
+        },
+        "api": {
+          "label": "API & SDK",
+          "headline": "Gọi agent từ sản phẩm của bạn chỉ với vài dòng mã.",
+          "cta": "Đọc tài liệu →"
+        },
+        "widget": {
+          "label": "Widget nhúng",
+          "headline": "Gắn một trợ lý có dẫn nguồn vào ứng dụng hoặc help center.",
+          "cta": "Xem widget →",
+          "previewMessage": "Hỏi về tài khoản của bạn…"
+        },
+        "slackTeams": {
+          "label": "Slack & Teams",
+          "headline": "Trả lời ngay trong thread, vẫn giữ trích dẫn và phân quyền.",
+          "cta": "Thêm vào Slack →",
+          "previewMessage": "Gói Team lưu 90 ngày — xem Chính sách bảo mật §4."
+        }
+      }
+    },
+    "understands": {
+      "title": "Hiểu tổ chức của bạn, không chỉ tài liệu của bạn",
+      "subtitle": "Ngữ cảnh, quy ước và phân quyền đi theo mọi phiên chạy.",
+      "learnMore": "Tìm hiểu thêm",
+      "subagentsTitle": "phiên chạy · song song",
+      "subagentsHeading": "Subagent chạy song song",
+      "subagentsBody": "Một câu hỏi rộng được chia cho nhiều subagent, mỗi subagent xử lý một phần và trả kết quả về ngay khi hoàn tất.",
+      "subagents": [
+        { "name": "Điều khoản hợp đồng", "status": "xong", "model": "opus-4.5" },
+        { "name": "Lịch sử tài khoản", "status": "đang chạy", "model": "gpt-5" },
+        { "name": "Ticket hỗ trợ", "status": "đang chạy", "model": "gpt-5" },
+        { "name": "Dữ liệu thanh toán", "status": "chờ", "model": "qwen3" }
+      ],
+      "knowledgeTitle": "truy hồi · trace",
+      "knowledgeQuery": "“Ta đã cam kết gì với Nordwind về giá?”",
+      "knowledgeHeading": "Tri thức có nguồn gốc rõ ràng",
+      "knowledgeBody": "Mỗi đoạn văn đều kèm nguồn, phân quyền và độ mới — nên câu trả lời có thể kiểm toán được, không chỉ để đọc.",
+      "sources": [
+        { "tool": "MSA v4", "value": "§7.2 — giá khi gia hạn" },
+        { "tool": "Ghi chú", "value": "không tăng giá trước FY27" },
+        { "tool": "Memo Q3", "value": "quy tắc giữ giá cũ" },
+        { "tool": "Đơn hàng", "value": "ký ngày 12/03/2026" }
+      ],
+      "rulesTitle": "workspace · quy tắc",
+      "rulesHeading": "Quy tắc chỉ cần viết một lần",
+      "rulesBody": "Giọng văn, khuyến cáo bắt buộc, nguồn bị cấm, ngưỡng chuyển tiếp — viết một lần và áp dụng cho mọi phiên chạy về sau.",
+      "teamRules": [
+        { "rule": "Không bao giờ báo giá chưa được duyệt", "scope": "mọi agent" },
+        { "rule": "Trích hợp đồng, không trích bản tóm tắt", "scope": "pháp chế, kinh doanh" },
+        { "rule": "Chuyển cho người khi mức bám nguồn dưới 0,8", "scope": "hỗ trợ" },
+        { "rule": "Trả lời bằng ngôn ngữ của khách hàng", "scope": "hỗ trợ" }
+      ]
+    },
+    "lifecycle": {
+      "title": "Trọn vòng lặp trong một hệ thống",
+      "subtitle": "Nạp dữ liệu, truy hồi, đánh giá — và kết quả đánh giá quay lại cải thiện hai bước đầu.",
+      "learnMore": "Tìm hiểu thêm",
+      "planChrome": "nạp dữ liệu · pipeline",
+      "planHeading": "Nạp dữ liệu",
+      "planBody": "Kết nối một nguồn và Ragenta tự bóc tách bố cục, cắt chunk theo cấu trúc, embedding và đồng bộ liên tục — kèm theo phân quyền của nguồn.",
+      "planSteps": [
+        "Bóc tách — hiểu bố cục, giữ nguyên bảng",
+        "Cắt chunk — theo cấu trúc, không theo số ký tự",
+        "Embedding — đa ngôn ngữ, một không gian vector",
+        "Đồng bộ — tăng dần, mang theo phân quyền"
+      ],
+      "skip": "Cấu hình",
+      "continue": "Chạy",
+      "designChrome": "truy hồi · hybrid",
+      "designHeading": "Truy hồi",
+      "designBody": "Tương đồng vector và so khớp từ khoá chạy song song, sau đó bộ rerank quyết định đoạn nào thực sự vào ngữ cảnh của mô hình.",
+      "retrievalRows": [
+        { "stage": "Vector", "detail": "top 50 theo tương đồng", "value": "50" },
+        { "stage": "Từ khoá", "detail": "BM25, mã định danh chính xác", "value": "24" },
+        { "stage": "Gộp", "detail": "ứng viên đã khử trùng lặp", "value": "38" },
+        { "stage": "Rerank", "detail": "vượt ngưỡng liên quan", "value": "6" }
+      ],
+      "validateChrome": "đánh giá · phiên chạy",
+      "validateHeading": "Đánh giá",
+      "validateBody": "Mức bám nguồn, độ phủ trích dẫn và tỷ lệ truy hồi trúng được chấm lại ở mọi thay đổi, nên suy giảm chất lượng lộ ra trước khi người dùng phản ánh.",
+      "validateSteps": [
+        { "action": "chấm", "target": "30 câu hỏi tham chiếu", "result": "bám nguồn 0,94 (+0,06)" },
+        { "action": "kiểm", "target": "độ phủ trích dẫn", "result": "98% khẳng định có liên kết" },
+        { "action": "so", "target": "với cấu hình trước đó", "result": "2 câu trả lời thay đổi" }
+      ],
+      "rootCauseLabel": "Điểm yếu nhất:",
+      "rootCauseValue": "truy hồi trên PDF scan"
+    },
+    "capabilities": {
+      "title": "Một agent thực sự làm được gì",
+      "subtitle": "Đọc, hành động, và để lại dấu vết bạn lần theo được.",
+      "learnMore": "Tìm hiểu thêm",
+      "terminal": {
+        "title": "ragenta · phiên chạy · sandbox",
+        "retrieving": "đang truy hồi trên 4 nguồn…",
+        "reranking": "rerank 38 → 6 đoạn",
+        "toolCall": "sql: doanh thu theo khu vực, 4 quý gần nhất",
+        "done": "đã soạn câu trả lời · 9 khẳng định · 9 trích dẫn"
+      },
+      "runToolsHeading": "Chạy công cụ, không chỉ chạy prompt",
+      "runToolsBody": "Truy vấn kho dữ liệu, gọi API nội bộ, chạy Python trong sandbox, tìm kiếm web — thông tin xác thực giữ ở phía máy chủ và không bao giờ lộ cho mô hình.",
+      "composeChrome": "soạn · ngữ cảnh",
+      "composeAttach": "So sánh {chip1} với {chip2} của chúng ta và áp dụng {chip3}",
+      "composeFollow": "Chỉ dùng nguồn mới hơn {chip1}",
+      "addContextHeading": "Trỏ đúng vào thứ cần dùng",
+      "addContextBody": "Nhắc tên một tài liệu, thư mục, connector hay bộ lọc đã lưu ngay trong câu hỏi, agent sẽ giới hạn truy hồi đúng phạm vi đó cho phiên chạy này.",
+      "snapshotsChrome": "lịch sử · phiên bản",
+      "snapshotsHeading": "Mọi phiên chạy đều tái lập được",
+      "snapshotsBody": "Mô hình, prompt, các đoạn đã truy hồi và kết quả công cụ được lưu phiên bản cùng nhau, nên bất kỳ câu trả lời nào cũng chạy lại được đúng như lúc tạo ra.",
+      "snapshots": [
+        { "label": "Index lại knowledge base", "date": "24/08 · 09:12" },
+        { "label": "Bật rerank", "date": "24/08 · 11:40" },
+        { "label": "Đổi mô hình sang opus-4.5", "date": "25/08 · 08:05" },
+        { "label": "Cấu hình hiện tại", "date": "26/08 · 14:22" }
+      ]
+    },
+    "extend": {
+      "title": "Mở rộng mà không phải fork",
+      "subtitle": "Connector, skill và công cụ của riêng bạn — đều là công dân hạng nhất.",
+      "learnMore": "Tìm hiểu thêm",
+      "connectorsChrome": "connector · workspace",
+      "connectorsHeading": "Connector",
+      "connectorsBody": "Đồng bộ có quản lý cho các hệ thống mà tri thức của bạn đang nằm ở đó, mang theo phân quyền của từng nguồn vào tận bước truy hồi.",
+      "connectorTags": ["đã đồng bộ", "đã đồng bộ", "đã đồng bộ", "đang đồng bộ", "đã đồng bộ"],
+      "skillsChrome": "skill · dùng chung",
+      "skillsHeading": "Agent Skills",
+      "skillsBody": "Biến một prompt đã chạy tốt thành skill có tên và có phiên bản, cố định sẵn nguồn, công cụ và định dạng đầu ra — rồi để cả workspace dùng lại.",
+      "skillDescs": [
+        "Soạn phản hồi hỗ trợ bám theo chính sách",
+        "Đối chiếu hợp đồng với playbook",
+        "Trả lời bảng câu hỏi bảo mật từ câu trả lời cũ",
+        "Tóm tắt một tuần hoạt động của khối kỹ thuật",
+        "Tìm mọi tài liệu có nhắc tới một điều khoản"
+      ],
+      "mcpChrome": "mcp · máy chủ",
+      "mcpHeading": "Công cụ của riêng bạn",
+      "mcpBody": "Gắn bất kỳ máy chủ Model Context Protocol nào, hoặc đăng ký một công cụ HTTP thuần, và nó xuất hiện với agent như công cụ có sẵn.",
+      "mcpConnections": [
+        { "name": "internal-crm", "status": "đã kết nối" },
+        { "name": "warehouse-sql", "status": "đã kết nối" },
+        { "name": "ticketing", "status": "đã kết nối" },
+        { "name": "billing-api", "status": "đã kết nối" },
+        { "name": "custom-search", "status": "đã kết nối" }
+      ]
+    },
+    "changelog": {
+      "heading": "Vừa phát hành",
+      "seeMore": "Xem toàn bộ nhật ký thay đổi →"
+    }
+  },
+  "solutions": {
+    "hero": {
+      "eyebrow": "Giải pháp",
+      "titlePrefix": "Một nền tảng AI có dẫn nguồn,",
+      "titleBuiltFor": "dành cho",
+      "subtitle": "Đội ngũ của bạn đặt câu hỏi và ra quyết định. Ragenta lo phần đọc, truy hồi và soạn thảo.",
+      "ctaPrimary": "Dùng thử miễn phí",
+      "ctaSecondary": "Trao đổi với chúng tôi",
+      "industries": ["Hỗ trợ", "Pháp chế", "Kinh doanh", "Vận hành"],
+      "previewAlt": "Xem trước giải pháp Ragenta"
+    },
+    "groups": [
+      {
+        "label": "Tri thức & Tìm kiếm",
+        "items": [
+          {
+            "id": "doc-search",
+            "num": "01",
+            "title": "Tìm kiếm nội bộ",
+            "blurb": "Một ô tìm kiếm cho mọi hệ thống, trả lời bằng câu chữ thay vì danh sách link.",
+            "challenge": "Tri thức nằm rải rác ở wiki, drive, hệ thống ticket và ba workspace chat. Mọi người bỏ cuộc trước khi tìm ra.",
+            "solution": "Ragenta index tất cả vào một knowledge base tôn trọng phân quyền và trả lời thẳng câu hỏi, kèm đúng đoạn văn đã dùng."
+          },
+          {
+            "id": "research-assistant",
+            "num": "02",
+            "title": "Trợ lý nghiên cứu",
+            "blurb": "Câu hỏi rộng được trả lời trên nhiều nguồn, kèm bằng chứng bày rõ.",
+            "challenge": "Trả lời \"chúng ta biết gì về X\" đồng nghĩa với đọc hai mươi tài liệu và hy vọng không bỏ sót gì.",
+            "solution": "Một agent toả ra nhiều nguồn, phủ từng khía cạnh của câu hỏi, và chỉ rõ nguồn nào chống lưng cho phần nào của câu trả lời."
+          }
+        ]
+      },
+      {
+        "label": "Hướng khách hàng",
+        "items": [
+          {
+            "id": "support-agent",
+            "num": "03",
+            "title": "Tự xử lý ticket hỗ trợ",
+            "blurb": "Giải quyết câu hỏi lặp lại ngay tại chỗ, phần còn lại chuyển tiếp kèm ngữ cảnh.",
+            "challenge": "Phần lớn ticket đã có sẵn bài viết trả lời — nhưng khách không tìm thấy và nhân viên phải gõ lại từ đầu.",
+            "solution": "Agent có dẫn nguồn trả lời từ help center và chính sách, trích rõ bài viết, và chuyển tiếp kèm tóm tắt khi độ tin cậy thấp."
+          },
+          {
+            "id": "sales-enablement",
+            "num": "04",
+            "title": "Hồ sơ thầu & bảng câu hỏi bảo mật",
+            "blurb": "Tái sử dụng mọi câu trả lời đội bạn đã duyệt.",
+            "challenge": "Mỗi bộ câu hỏi lại lặp lại những câu đã trả lời năm lần trước, còn câu chữ đã duyệt thì nằm trong hộp thư của ai đó.",
+            "solution": "Ragenta khớp từng câu hỏi với câu trả lời đã duyệt kèm nguồn, và chỉ soạn nháp cho những phần thực sự còn thiếu."
+          }
+        ]
+      },
+      {
+        "label": "Vận hành nội bộ",
+        "items": [
+          {
+            "id": "helpdesk",
+            "num": "05",
+            "title": "Helpdesk CNTT & Nhân sự",
+            "blurb": "Trả lời chính sách ngay trên Slack, không lộ thứ người hỏi không được xem.",
+            "challenge": "Nhân sự và CNTT trả lời cùng những câu hỏi chính sách suốt ngày, còn nguồn chuẩn thì thay đổi mà không ai hay.",
+            "solution": "Truy hồi kế thừa phân quyền của từng nguồn, nên câu trả lời chỉ được lắp từ tài liệu mà người đó vốn đã mở được."
+          },
+          {
+            "id": "data-analyst",
+            "num": "06",
+            "title": "Agent phân tích dữ liệu",
+            "blurb": "Hỏi chỉ số bằng lời, nhận về truy vấn, con số và cả lưu ý.",
+            "challenge": "Mọi câu hỏi chỉ số phát sinh đều thành một ticket cho đội dữ liệu, và hàng đợi quyết định câu nào được trả lời.",
+            "solution": "Agent viết SQL chỉ đọc trên các bảng đã được duyệt, chạy nó, và giải thích kết quả kèm đúng truy vấn đã dùng."
+          }
+        ]
+      },
+      {
+        "label": "Rủi ro & Tuân thủ",
+        "items": [
+          {
+            "id": "contract-review",
+            "num": "07",
+            "title": "Rà soát hợp đồng",
+            "blurb": "Đối chiếu từng điều khoản với playbook, xếp hạng sai lệch theo mức rủi ro.",
+            "challenge": "Vòng rà soát đầu tiên chậm, lặp đi lặp lại, và là thứ bị bỏ qua đầu tiên khi thương vụ gấp.",
+            "solution": "Ragenta bóc hợp đồng thành từng điều khoản, đối chiếu với lập trường chuẩn, và xếp hạng sai lệch theo mức phơi nhiễm."
+          },
+          {
+            "id": "compliance-report",
+            "num": "08",
+            "title": "Báo cáo tuân thủ",
+            "blurb": "Bộ hồ sơ bằng chứng được lắp từ chính các hệ thống gốc.",
+            "challenge": "Mùa kiểm toán là đi săn ảnh chụp màn hình và phiên bản chính sách trên nửa tá công cụ khác nhau.",
+            "solution": "Agent thu thập bằng chứng, ánh xạ vào từng chốt kiểm soát, và tạo ra bộ hồ sơ kèm liên kết tới mọi tài liệu gốc."
+          }
+        ]
+      }
+    ],
+    "closing": {
+      "statement": "Tổ chức của bạn đã có sẵn câu trả lời. Ragenta làm cho nó tìm được.",
+      "ctaPrimary": "Dùng thử miễn phí",
+      "ctaSecondary": "Trao đổi với chúng tôi"
+    },
+    "demo": {
+      "challengeLabel": "Vấn đề",
+      "solutionLabel": "Ragenta",
+      "status": {
+        "pass": "Đạt",
+        "caution": "Cần xem lại",
+        "fail": "Chặn",
+        "high": "Cao",
+        "medium": "Trung bình",
+        "low": "Thấp"
+      },
+      "docSearch": {
+        "windowTitle": "Tìm kiếm nội bộ — “chính sách lưu trữ dữ liệu”",
+        "eyebrow": "Truy hồi hybrid · 4 nguồn · 18.402 chunk",
+        "legendVector": "vector",
+        "legendKeyword": "từ khoá",
+        "rows": [
+          { "source": "Chính sách bảo mật §4", "system": "Confluence", "score": "0,94" },
+          { "source": "Phụ lục DPA B", "system": "Drive", "score": "0,91" },
+          { "source": "Help center #218", "system": "Zendesk", "score": "0,86" },
+          { "source": "FAQ onboarding", "system": "Notion", "score": "0,71" },
+          { "source": "Chính sách lưu trữ (2025)", "system": "Drive", "score": "0,55" }
+        ],
+        "supersededLabel": "đã thay thế",
+        "footer": "38 ứng viên · dùng 6 đoạn · trả lời trong 1,4s"
+      },
+      "researchAssistant": {
+        "windowTitle": "Trợ lý nghiên cứu — độ phủ bằng chứng",
+        "eyebrow": "Độ phủ từng khía cạnh theo nguồn",
+        "working": "đang tổng hợp",
+        "columns": {
+          "wiki": "wiki",
+          "drive": "drive",
+          "tickets": "ticket",
+          "chat": "chat",
+          "web": "web"
+        },
+        "facets": [
+          "Chính sách hiện hành",
+          "Cam kết hợp đồng",
+          "Ngoại lệ cho khách hàng",
+          "Thay đổi trong quá khứ",
+          "Câu hỏi còn bỏ ngỏ",
+          "Bối cảnh pháp lý"
+        ],
+        "coverage": "24 đoạn từ 5 nguồn"
+      },
+      "supportAgent": {
+        "windowTitle": "Tự xử lý ticket — hộp thư #general",
+        "eyebrow": "24 giờ gần nhất",
+        "metrics": [
+          { "label": "Xử lý tại chỗ", "value": "68%" },
+          { "label": "Phản hồi đầu (trung vị)", "value": "22s" },
+          { "label": "Chuyển tiếp", "value": "32%" }
+        ],
+        "rows": [
+          { "topic": "Thời hạn hoàn tiền gói năm", "state": "resolved", "detail": "trích MSA §7.2" },
+          { "topic": "Thiết lập SSO với Okta", "state": "resolved", "detail": "trích help center #142" },
+          { "topic": "Xuất hoá đơn bằng ngoại tệ khác", "state": "resolved", "detail": "trích FAQ thanh toán" },
+          { "topic": "Yêu cầu lưu trú dữ liệu riêng", "state": "escalated", "detail": "chưa có nguồn đã duyệt" },
+          { "topic": "Lỗi — xuất dữ liệu treo ở 90%", "state": "escalated", "detail": "chuyển cho kỹ thuật" }
+        ],
+        "states": { "resolved": "Đã xử lý", "escalated": "Đã chuyển tiếp" },
+        "footer": "Ticket chuyển tiếp luôn kèm tóm tắt và các nguồn đã kiểm"
+      },
+      "salesEnablement": {
+        "windowTitle": "Bảng câu hỏi bảo mật — hồ sơ thầu Nordwind",
+        "eyebrow": "118 câu hỏi · 9 phần",
+        "generating": "đang soạn phần thiếu",
+        "sections": [
+          { "name": "Kiểm soát truy cập", "matched": 22, "state": "done" },
+          { "name": "Bảo vệ dữ liệu", "matched": 31, "state": "done" },
+          { "name": "Ứng phó sự cố", "matched": 18, "state": "done" },
+          { "name": "Nhà thầu phụ", "matched": 6, "state": "running" }
+        ],
+        "matchedLabel": "{count} câu lấy từ nguồn đã duyệt",
+        "runningLabel": "{count} câu đã khớp · đang soạn phần còn lại",
+        "topLabel": "Cần người phụ trách",
+        "gaps": [
+          { "id": "Q-084", "topic": "Lưu trú dữ liệu tại Việt Nam", "owner": "Pháp chế" },
+          { "id": "Q-091", "topic": "Danh sách nhà thầu phụ khu vực APAC", "owner": "Bảo mật" },
+          { "id": "Q-107", "topic": "Lưu trữ sau khi kết thúc hợp đồng", "owner": "Pháp chế" }
+        ]
+      },
+      "helpdesk": {
+        "windowTitle": "Helpdesk CNTT & Nhân sự — #ask-internal",
+        "tabPolicies": "Chính sách",
+        "tabTickets": "Ticket",
+        "policies": [
+          { "name": "Chính sách làm việc từ xa", "freshness": "cập nhật 4 ngày trước", "sources": 3, "confidence": 0.94 },
+          { "name": "Hoàn ứng chi phí", "freshness": "cập nhật 2 tuần trước", "sources": 2, "confidence": 0.88 },
+          { "name": "Thay thế thiết bị", "freshness": "cập nhật 6 tuần trước", "sources": 4, "confidence": 0.81 },
+          { "name": "Nghỉ thai sản", "freshness": "cập nhật 3 tháng trước", "sources": 2, "confidence": 0.72 },
+          { "name": "Yêu cầu cấp VPN", "freshness": "cập nhật 5 tháng trước", "sources": 1, "confidence": 0.61 }
+        ],
+        "confidenceNote": "Độ tin cậy dưới 0,7 sẽ chuyển câu hỏi cho người xử lý.",
+        "ticketsLegend": ["IT", "HR", "Finance"],
+        "tickets": [
+          { "topic": "Điều kiện nâng cấp laptop", "team": "IT", "volume": "3,2×", "trend": "trả lời tại chỗ" },
+          { "topic": "Chuyển phép năm sang năm sau", "team": "HR", "volume": "2,4×", "trend": "trả lời tại chỗ" },
+          { "topic": "Công tác phí gặp khách hàng", "team": "Finance", "volume": "1,6×", "trend": "cần người phụ trách chính sách" }
+        ],
+        "ticketsFooter": "So sánh với cùng tuần của quý trước."
+      },
+      "dataAnalyst": {
+        "windowTitle": "Agent phân tích — doanh thu theo khu vực",
+        "eyebrow": "SQL chỉ đọc · bảng đã được duyệt",
+        "queryLabel": "truy vấn được sinh ra",
+        "queryLines": [
+          "select region, sum(mrr) as mrr",
+          "from subscriptions",
+          "where quarter >= '2025-Q4'",
+          "group by 1 order by 2 desc"
+        ],
+        "chartLabel": "MRR theo quý · APAC",
+        "quarters": ["2025-Q4", "2026-Q1", "2026-Q2", "2026-Q3"],
+        "caveat": "Chưa tính 2 tài khoản đang chuyển đổi — được nêu rõ, không âm thầm bỏ qua.",
+        "footer": "Truy vấn, kết quả và lưu ý được trả về cùng nhau"
+      },
+      "contractReview": {
+        "windowTitle": "Rà soát hợp đồng — Nordwind MSA v4",
+        "eyebrow": "64 điều khoản · đối chiếu playbook",
+        "likelihood": "Mức sai lệch so với chuẩn",
+        "severity": "Mức phơi nhiễm thương mại",
+        "highRisk": "Cần leo thang",
+        "acceptable": "Chấp nhận nguyên trạng",
+        "findings": {
+          "liability": { "label": "Trần trách nhiệm", "sub": "12 tháng → 24 tháng phí" },
+          "termination": { "label": "Đơn phương chấm dứt", "sub": "30 ngày, chỉ một chiều" },
+          "indemnity": { "label": "Bồi thường SHTT", "sub": "khớp playbook" },
+          "dataResidency": { "label": "Lưu trú dữ liệu", "sub": "yêu cầu APAC, chưa đáp ứng" },
+          "audit": { "label": "Quyền kiểm toán", "sub": "đang đối chiếu…" }
+        },
+        "footer": "3 sai lệch cần pháp chế duyệt · 61 điều khoản khớp playbook"
+      },
+      "complianceReport": {
+        "windowTitle": "Báo cáo tuân thủ — hồ sơ bằng chứng SOC 2",
+        "eyebrow": "Bộ bằng chứng · 42 chốt kiểm soát",
+        "generatedCount": "31 / 42 đã lắp",
+        "metrics": [
+          { "label": "Chốt đã phủ", "value": "74%" },
+          { "label": "Bằng chứng thiếu", "value": "6" },
+          { "label": "Bằng chứng cũ", "value": "5" }
+        ],
+        "docs": [
+          { "name": "Bản xuất rà soát truy cập", "format": "CSV", "state": "done" },
+          { "name": "Nhật ký quản lý thay đổi", "format": "CSV", "state": "done" },
+          { "name": "Lịch sử phiên bản chính sách", "format": "PDF", "state": "done" },
+          { "name": "Đánh giá rủi ro nhà cung cấp", "format": "XLSX", "state": "running" },
+          { "name": "Báo cáo hậu sự cố", "format": "PDF", "state": "pending" },
+          { "name": "Bản mô tả chốt kiểm soát", "format": "DOCX", "state": "pending" }
+        ],
+        "footer": "Mọi mục đều liên kết ngược về hệ thống gốc"
+      }
+    }
+  },
+  "contact": {
+    "heading": "Đưa AI có dẫn nguồn vào tổ chức của bạn.",
+    "testimonialsAria": "Đánh giá của khách hàng",
+    "testimonialAria": "Xem đánh giá {n}",
+    "formHeading": "Trao đổi với đội ngũ của chúng tôi",
+    "helpOptions": [
+      "Demo sản phẩm",
+      "Triển khai doanh nghiệp",
+      "Rà soát bảo mật",
+      "Hợp tác",
+      "Câu hỏi khác"
+    ],
+    "emailLabel": "Email công việc",
+    "emailPlaceholder": "an@congty.vn",
+    "nameLabel": "Họ và tên",
+    "namePlaceholder": "Nguyễn Văn An",
+    "companyLabel": "Công ty hoặc tổ chức",
+    "companyPlaceholder": "Công ty Acme",
+    "positionLabel": "Vị trí",
+    "positionPlaceholder": "Trưởng phòng Vận hành",
+    "helpLabel": "Chúng tôi có thể hỗ trợ gì cho bạn?",
+    "helpPlaceholder": "Chọn một mục",
+    "helpRequired": "Vui lòng chọn nội dung bạn cần hỗ trợ.",
+    "messageLabel": "Cho chúng tôi biết thêm",
+    "messagePlaceholder": "Nguồn dữ liệu bạn muốn kết nối, quy mô đội ngũ, mốc thời gian, hoặc bất cứ điều gì liên quan…",
+    "submit": "Tiếp tục",
+    "submitting": "Đang gửi…",
+    "errorGeneric": "Đã có lỗi xảy ra. Vui lòng thử lại.",
+    "errorShort": "Đã có lỗi xảy ra.",
+    "successHeading": "Cảm ơn bạn — chúng tôi sẽ liên hệ sớm.",
+    "successBody": "Đội ngũ Ragenta sẽ phản hồi trong vòng một ngày làm việc. Trong lúc chờ, bạn cứ tiếp tục khám phá nhé.",
+    "successBackHome": "Về trang chủ",
+    "successSendAnother": "Gửi tin nhắn khác",
+    "privacyPrefix": "Khi gửi, bạn đồng ý nhận thông tin về sản phẩm từ Ragenta. Xem",
+    "privacyLink": "chính sách quyền riêng tư",
+    "privacySuffix": " của chúng tôi."
+  },
+  "blogIndex": {
+    "eyebrow": "Blog",
+    "heroTitle": "Ghi chép về việc xây AI biết dẫn nguồn.",
+    "heroSubtitle": "Truy hồi, agent, đánh giá và những phần kỹ thuật ít hào nhoáng nhưng quyết định tất cả có chạy được hay không.",
+    "searchLabel": "Tìm bài viết",
+    "searchPlaceholder": "Tìm bài viết",
+    "searchButton": "Tìm",
+    "clearSearch": "Xoá tìm kiếm",
+    "clear": "Xoá",
+    "featured": "Nổi bật",
+    "allContent": "Tất cả bài viết",
+    "emptyTitle": "Chưa có bài viết nào",
+    "emptySearchTitle": "Không tìm thấy bài viết",
+    "emptyDescription": "Bài viết mới của Ragenta sẽ xuất hiện ở đây khi được đăng.",
+    "emptySearchDescription": "Không có bài viết nào khớp với “{query}”.",
+    "paginationLabel": "Phân trang bài viết",
+    "previous": "Trước",
+    "next": "Sau",
+    "showingAllOne": "Đang hiển thị {count} bài viết.",
+    "showingAllOther": "Đang hiển thị tất cả {count} bài viết.",
+    "backToBlog": "Về trang blog",
+    "readingTime": "Đọc {count} phút",
+    "topics": "Chủ đề",
+    "relatedPostsTitle": "Bài viết liên quan",
+    "ctaTitle": "Thử Ragenta trên chính tài liệu của bạn.",
+    "ctaBody": "Kết nối một nguồn, đặt một câu hỏi, và xem đúng những đoạn văn đứng sau câu trả lời.",
+    "ctaButton": "Dùng thử miễn phí"
+  },
+  "changelog": {
+    "eyebrow": "Nhật ký thay đổi",
+    "heroTitle": "Có gì mới ở Ragenta.",
+    "heroSubtitle": "Mô hình mới, connector mới và cải tiến nền tảng — phát hành liên tục.",
+    "types": {
+      "Release": "Phát hành",
+      "Model": "Mô hình",
+      "Integration": "Tích hợp",
+      "Improvement": "Cải tiến",
+      "Fix": "Sửa lỗi"
+    },
+    "footer": "Hết nhật ký thay đổi · Theo dõi để cập nhật tiếp"
+  },
+  "legal": {
+    "eyebrow": "Pháp lý",
+    "lastUpdated": "Cập nhật lần cuối {date}"
+  },
+  "metadata": {
+    "ogTitle": "Biến tri thức của bạn thành câu trả lời đáng tin.",
+    "default": {
+      "title": "Ragenta | AI Agent và Chat RAG trên tri thức của bạn",
+      "description": "Ragenta biến tài liệu, ứng dụng và cơ sở dữ liệu của bạn thành một knowledge base có dẫn nguồn, rồi đặt AI agent lên trên. Câu trả lời kèm trích dẫn, không cần tự xây hạ tầng AI."
+    },
+    "product": {
+      "title": "Sản phẩm — Ragenta",
+      "description": "Agent đọc nguồn của bạn, dùng công cụ của bạn và trình bày rõ cách làm. Nạp dữ liệu, truy hồi và đánh giá trong một hệ thống, trên mọi kênh đội ngũ bạn đang dùng."
+    },
+    "solutions": {
+      "title": "Giải pháp — Ragenta",
+      "description": "Tìm kiếm nội bộ, tự xử lý ticket hỗ trợ, trả lời hồ sơ thầu, rà soát hợp đồng và báo cáo tuân thủ — đều bám trên hệ thống dữ liệu gốc của bạn."
+    },
+    "pricing": {
+      "title": "Bảng giá — Ragenta",
+      "description": "Bắt đầu miễn phí, mở rộng số ghế và mức dùng. Đo lường minh bạch, không hoá đơn bất ngờ, có triển khai riêng ở gói Enterprise."
+    },
+    "contact": {
+      "title": "Liên hệ — Ragenta",
+      "description": "Trao đổi với đội ngũ Ragenta về triển khai, dự án thí điểm, rà soát bảo mật và yêu cầu lưu trú dữ liệu."
+    },
+    "changelog": {
+      "title": "Nhật ký thay đổi — Ragenta",
+      "description": "Các bản phát hành, mô hình mới, connector và cập nhật nền tảng mới nhất của Ragenta."
+    },
+    "blog": {
+      "title": "Blog Ragenta | Truy hồi, Agent và Đánh giá",
+      "description": "Ghi chép thực tế về retrieval-augmented generation, thiết kế agent, tìm kiếm theo phân quyền và cách đo lường xem tất cả có hiệu quả hay không."
+    },
+    "privacy": {
+      "title": "Chính sách quyền riêng tư | Ragenta",
+      "description": "Cách Ragenta xử lý dữ liệu cá nhân thu thập qua website này."
+    },
+    "terms": {
+      "title": "Điều khoản dịch vụ | Ragenta",
+      "description": "Các điều khoản điều chỉnh việc sử dụng website và dịch vụ Ragenta."
+    }
+  }
+}

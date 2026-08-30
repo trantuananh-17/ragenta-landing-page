@@ -1,0 +1,10 @@
+services:
+  landing:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8020:8020"
+    env_file:
+      - .env
+    restart: unless-stopped

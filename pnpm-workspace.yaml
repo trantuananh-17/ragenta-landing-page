@@ -1,0 +1,16 @@
+# pnpm 11 blocks packages published <24h ago (minimumReleaseAge). We track
+# fresh Next.js releases, so exempt that ecosystem.
+minimumReleaseAgeExclude:
+  - next
+  - "@next/*"
+  - eslint-config-next
+  - protobufjs
+
+overrides:
+  "postcss@<8.5.10": ">=8.5.10"
+
+allowBuilds:
+  "@scarf/scarf": false
+  core-js: true
+  sharp: true
+  unrs-resolver: true
