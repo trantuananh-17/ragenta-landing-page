@@ -944,6 +944,12 @@
       "Improvement": "Cải tiến",
       "Fix": "Sửa lỗi"
     },
+    "latest": "Mới nhất",
+    "versions": {
+      "label": "Lịch sử phiên bản",
+      "heading": "Phiên bản",
+      "hint": "Chọn một phiên bản để nhảy thẳng tới mục tương ứng."
+    },
     "footer": "Hết nhật ký thay đổi · Theo dõi để cập nhật tiếp"
   },
   "legal": {

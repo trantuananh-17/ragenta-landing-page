@@ -944,6 +944,12 @@
       "Improvement": "Improvement",
       "Fix": "Fix"
     },
+    "latest": "Latest",
+    "versions": {
+      "label": "Version history",
+      "heading": "Versions",
+      "hint": "Pick a version to jump straight to its entry."
+    },
     "footer": "End of changelog · Follow along for updates"
   },
   "legal": {

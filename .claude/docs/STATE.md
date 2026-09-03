@@ -17,7 +17,7 @@ standalone production server — not just the dev server.
 | `/solutions` | hero + sticky scroll frame with 8 interactive demo panels + closing |
 | `/pricing` | 4 plans with a monthly/yearly toggle, notes, FAQ (also emitted as FAQPage JSON-LD) |
 | `/contact` | form posting to `/api/contact`, rotating testimonial |
-| `/changelog` | full timeline from the content layer |
+| `/changelog` | full timeline from the content layer, sticky version index that scroll-spies the entries |
 | `/blog`, `/blog/[slug]` | search, pagination, related posts, markdown bodies |
 | `/privacy-policy`, `/terms-of-service` | markdown from the content layer |
 | `/robots.txt`, `/sitemap.xml`, `/llms.txt` | 30 sitemap URLs with hreflang alternates |
