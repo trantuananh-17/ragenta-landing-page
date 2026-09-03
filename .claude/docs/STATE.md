@@ -131,9 +131,10 @@ verified through the public URL: 2 posts and 8 catalogue items from its database
 fixtures' 6 and 26. The URL is a compose-network hostname, not an nginx one, so a server-side read
 here costs no public round trip and works even if the proxy is down.
 
-The legal pages still render from the fixtures, deliberately: no document has been loaded into the
-backend, so `/v1/public/legal/:slug` answers 404 and `fromApi` falls back. That is the only
-content type still served locally.
+Every content type now comes from the backend, legal documents included. Its seed carries the
+whole of what this repository used to ship in `src/content/fixtures/` — 26 catalogue items, 6
+posts, 10 changelog entries and both legal documents, in both locales — converted from those
+files. The fixtures here stay as the degradation path, not as the source.
 
 An **empty** content backend would not fall back — `normalizeList` returns `null` only on a
 malformed payload, and `{"items":[],"total":0}` is well-formed. Seed an environment before
