@@ -17,6 +17,14 @@ import { getDictionary } from "@/i18n/dictionaries";
 import type { Locale } from "@/i18n/config";
 import { pageMetadata } from "@/lib/seo";
 
+// ProductChangelog reads the content layer, so this route carries the same
+// window /blog and /changelog do. Today it changes nothing — the theme cookie
+// read in the [lang] layout makes every route dynamic, and content freshness
+// comes from the Data Cache in `fromApi`. It matters if that cookie read ever
+// goes away: this route would then be prerenderable, and without a revalidate
+// it would serve the build's changelog for the life of the container.
+export const revalidate = 300;
+
 export function generateMetadata({
   params,
 }: {

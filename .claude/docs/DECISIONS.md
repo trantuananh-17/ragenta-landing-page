@@ -88,3 +88,48 @@ exact version in `.env`.
 **Why.** Workspace ADR-009. It makes a rollback a re-deploy of the previous tag
 rather than a revert commit and a rebuild, and it stops `docker compose pull`
 from silently upgrading something nobody asked to upgrade.
+
+## D-9 · The content window is 300s, and it lives in `fromApi`
+
+**Decision.** Content freshness comes from one place: the `next: { revalidate:
+CONTENT_REVALIDATE_SECONDS }` on the fetch in `src/content/source.ts`. An edit in
+`ragenta-content-backend` reaches the site within about five minutes. There is no
+on-demand revalidation.
+
+**Why the delay is wanted.** Every visitor and every crawler would otherwise be a
+round trip to the content backend, which makes the marketing site's availability
+depend on it — the seam in D-1 exists so that it does not. An indexable page
+should also be stable between fetches: without a window, the HTML Googlebot sees
+is a function of when it asked, and an edit mid-crawl gets half the old page and
+half the new one indexed. Five minutes is also long enough to notice a mistake in
+the content backend before it is what search engines have.
+
+**Where the window is NOT.** Not in the pages. Every route under `[lang]` is
+rendered per request, because the layout reads the theme cookie — `next build`
+marks all of them `ƒ`, including the ones carrying `export const revalidate =
+300`. Those exports are inert today. Next's Data Cache is what holds the content,
+and it is independent of whether a route renders statically or dynamically.
+
+`force-dynamic` on the home page does **not** defeat it. Next only downgrades a
+fetch to `no-store` under `force-dynamic` when the fetch declares no cache
+options of its own — `patch-fetch.js`, `noFetchConfigAndForceDynamic`, which
+tests `!currentFetchRevalidate`. `fromApi` always declares one.
+
+This is worth writing down because it is the opposite of what the route table
+suggests. Do not "fix" the window by adding `revalidate` to a page, and do not
+assume removing `force-dynamic` changes how fresh content is.
+
+**Rejected.** On-demand revalidation — the content backend calling an
+`/api/revalidate` route on publish, which is what the reference service does.
+That makes the most exposed container accept an authenticated write from another
+service, a new attack surface, to remove a delay we want. Revisit only if editors
+find the window genuinely obstructive.
+
+**Consequence.** The Docker build has no `RAGENTA_CONTENT_API_URL`, so anything
+prerendered at build time holds fixture content. Today that is only the routes
+outside `[lang]`. The fixtures being real content (D-1) is what makes that
+acceptable.
+
+Changing the window means changing `CONTENT_REVALIDATE_SECONDS`. The page-level
+`revalidate` literals cannot import it, so if they ever start mattering they have
+to be changed alongside it.

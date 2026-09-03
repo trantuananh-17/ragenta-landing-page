@@ -122,9 +122,14 @@ Environment for it, and `SITE_URL` there is a placeholder — see gap 1 above.
 | --- | --- | --- |
 | `SITE_URL` | the staging host | canonical, hreflang and OG URLs |
 | `APP_URL` | from the backend's `APP_BASE_URL` | where signup CTAs go |
-| `RAGENTA_CONTENT_API_URL` | unset | serves the bundled fixtures |
+| `RAGENTA_CONTENT_API_URL` | unset | serves the bundled fixtures — see below |
 | `CONTACT_WEBHOOK_URL` | unset | `/api/contact` answers 503 |
 | `POSTHOG_KEY` | unset | PostHog is not loaded |
+
+`ragenta-content-backend` exists as of 2026-09-03 and this site was verified reading it end to
+end locally, but it is not deployed. When it is, set `RAGENTA_CONTENT_API_URL=http://content:8084`
+— over the compose network, not through nginx, so the server-side reads here cost no public round
+trip. The compose service and that variable are already committed in `ragenta-deployment`.
 
 The container gets those and nothing else — deliberately no `env_file`, so the
 most exposed container in the environment never sees the database password or
