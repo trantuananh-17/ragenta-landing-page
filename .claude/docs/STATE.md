@@ -39,8 +39,8 @@ JSON-LD for Organization, WebSite, FAQPage and BlogPosting.
   the error correctly; it just cannot deliver anywhere yet.
 - **No analytics.** PostHog is wired but env-gated, and `POSTHOG_KEY` is unset,
   so it is not loaded at all.
-- **No `app.ragenta.*`.** Every signup CTA points at `APP_URL/signup`, which
-  does not exist yet. The buttons work; the destination 404s.
+- **No `ragenta-frontend.ragenta.cloud`.** Every signup CTA points at
+  `APP_URL/signup`, which does not exist yet. The buttons work; the destination 404s.
 - No cookie banner, no search, no author pages, no RSS.
 
 ## Known gaps and open questions
@@ -101,7 +101,7 @@ problems while building this:
 
 ## Deployment
 
-**Staging is live at https://ragenta.tranhtuananh-anhtt.site**, running
+**Staging is live at https://staging-ragenta-landing-page.ragenta.cloud**, running
 `v0.1.0rc1` since 2026-08-30. It shares a VM with the backend and the
 dev-infra datastores — see the workspace `.claude/docs/STATUS.md`.
 

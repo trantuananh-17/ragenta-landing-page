@@ -7,8 +7,8 @@ import { fromApi } from "@/content/source";
  */
 const LOCAL_METADATA: Record<string, string> = {
   community_url: "https://discord.gg/ragenta",
-  status_url: "https://status.ragenta.ai",
-  docs_url: "https://docs.ragenta.ai",
+  status_url: "https://status.ragenta.cloud",
+  docs_url: "https://docs.ragenta.cloud",
 };
 
 export type SiteMetadataKey = keyof typeof LOCAL_METADATA;

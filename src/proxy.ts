@@ -35,9 +35,9 @@ const SITE_HOST = (() => {
 })();
 
 function cookieDomainFor(hostname: string): string | undefined {
-  // Share across ragenta.ai + app.ragenta.ai. In local dev (localhost, preview
-  // hosts) skip the domain attribute so the browser scopes the cookie to the
-  // current host.
+  // Scoped to SITE_HOST and below, so the apex and its own subdomains share the
+  // attribution cookie. In local dev (localhost, preview hosts) skip the domain
+  // attribute so the browser scopes the cookie to the current host.
   if (!SITE_HOST || SITE_HOST === "localhost") return undefined;
   if (hostname === SITE_HOST || hostname.endsWith(`.${SITE_HOST}`)) {
     return `.${SITE_HOST}`;

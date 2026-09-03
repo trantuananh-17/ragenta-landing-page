@@ -17,7 +17,7 @@ explains what we collect on this marketing website and what we do with it.
 
 ## 2. What this policy covers
 
-This policy covers **ragenta.ai** and its subdomains. Data you upload into the
+This policy covers **ragenta.cloud** and its subdomains. Data you upload into the
 Ragenta application is governed by your service agreement and our Data
 Processing Addendum, not by this page.
 
@@ -60,7 +60,7 @@ Analytics data is retained in aggregated form.
 
 You may request access, correction, deletion, restriction or portability of
 your personal data, and you may object to processing based on legitimate
-interests. Write to privacy@ragenta.ai and we will respond within 30 days.
+interests. Write to privacy@ragenta.cloud and we will respond within 30 days.
 
 ## 9. International transfers
 
@@ -74,7 +74,7 @@ changes will also be announced in the product.
 
 ## 11. Contact
 
-privacy@ragenta.ai
+privacy@ragenta.cloud
 `;
 
 const PRIVACY_VI = `## 1. Chúng tôi là ai
@@ -86,7 +86,7 @@ vào việc gì.
 
 ## 2. Phạm vi áp dụng
 
-Chính sách này áp dụng cho **ragenta.ai** và các tên miền phụ. Dữ liệu bạn tải
+Chính sách này áp dụng cho **ragenta.cloud** và các tên miền phụ. Dữ liệu bạn tải
 lên ứng dụng Ragenta chịu sự điều chỉnh của hợp đồng dịch vụ và Phụ lục Xử lý
 Dữ liệu, không phải trang này.
 
@@ -129,7 +129,7 @@ Dữ liệu phân tích được lưu ở dạng tổng hợp.
 
 Bạn có quyền yêu cầu truy cập, chỉnh sửa, xoá, hạn chế hoặc chuyển dữ liệu cá
 nhân của mình, và có quyền phản đối việc xử lý dựa trên lợi ích hợp pháp. Vui
-lòng gửi thư tới privacy@ragenta.ai, chúng tôi phản hồi trong vòng 30 ngày.
+lòng gửi thư tới privacy@ragenta.cloud, chúng tôi phản hồi trong vòng 30 ngày.
 
 ## 9. Chuyển dữ liệu quốc tế
 
@@ -143,7 +143,7 @@ trọng yếu sẽ được thông báo thêm trong sản phẩm.
 
 ## 11. Liên hệ
 
-privacy@ragenta.ai
+privacy@ragenta.cloud
 `;
 
 const TERMS_EN = `## 1. Agreement
@@ -162,7 +162,7 @@ will give reasonable notice before removing something you depend on.
 
 You are responsible for the accuracy of your registration details, for
 activity under your account, and for keeping credentials and API keys secret.
-Tell us promptly at security@ragenta.ai if you believe an account is compromised.
+Tell us promptly at security@ragenta.cloud if you believe an account is compromised.
 
 ## 4. Your content
 
@@ -219,7 +219,7 @@ least 30 days before they take effect.
 
 ## 12. Contact
 
-legal@ragenta.ai
+legal@ragenta.cloud
 `;
 
 const TERMS_VI = `## 1. Thoả thuận
@@ -239,7 +239,7 @@ trước khi gỡ bỏ tính năng mà bạn đang phụ thuộc.
 
 Bạn chịu trách nhiệm về tính chính xác của thông tin đăng ký, về mọi hoạt động
 dưới tài khoản của mình, và về việc giữ bí mật thông tin đăng nhập cùng khoá
-API. Hãy báo ngay tới security@ragenta.ai nếu bạn cho rằng tài khoản bị xâm phạm.
+API. Hãy báo ngay tới security@ragenta.cloud nếu bạn cho rằng tài khoản bị xâm phạm.
 
 ## 4. Nội dung của bạn
 
@@ -295,7 +295,7 @@ chủ tài khoản ít nhất 30 ngày trước khi có hiệu lực.
 
 ## 12. Liên hệ
 
-legal@ragenta.ai
+legal@ragenta.cloud
 `;
 
 export const LEGAL_SEED: Record<

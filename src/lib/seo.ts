@@ -7,7 +7,7 @@ import { SITE_URL } from "@/lib/site";
  * Build canonical + hreflang alternates for a locale-prefixed path.
  *
  *   hreflangAlternates("/pricing", "vi")
- *     canonical: https://ragenta.ai/vi/pricing   (self-referencing)
+ *     canonical: https://ragenta.cloud/vi/pricing   (self-referencing)
  *     languages: { en, vi, x-default }
  *
  * The canonical is self-referencing per locale: each language version is
