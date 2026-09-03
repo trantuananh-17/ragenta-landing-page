@@ -3,9 +3,9 @@ export const SITE_NAME = "Ragenta";
 // Every canonical, hreflang and OG URL is built from this, so a plausible but
 // wrong value indexes the site under the wrong host. The fallback stays local
 // even though the production domain is known (ragenta.cloud): each environment
-// sets SITE_URL itself — staging-ragenta-landing-page.ragenta.cloud on staging,
-// the apex in production — and one that forgets produces obviously broken URLs
-// rather than quietly convincing ones pointing at the live site.
+// sets SITE_URL itself — staging.ragenta.cloud on staging, the apex in
+// production — and one that forgets produces obviously broken URLs rather than
+// quietly convincing ones pointing at the live site.
 export const SITE_URL =
   process.env.SITE_URL?.replace(/\/$/, "") ?? "http://localhost:3000";
 
