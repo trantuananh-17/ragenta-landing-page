@@ -122,14 +122,22 @@ Environment for it, and `SITE_URL` there is a placeholder — see gap 1 above.
 | --- | --- | --- |
 | `SITE_URL` | the staging host | canonical, hreflang and OG URLs |
 | `APP_URL` | from the backend's `APP_BASE_URL` | where signup CTAs go |
-| `RAGENTA_CONTENT_API_URL` | unset | serves the bundled fixtures — see below |
+| `RAGENTA_CONTENT_API_URL` | `http://content:8084` | reads the content backend |
 | `CONTACT_WEBHOOK_URL` | unset | `/api/contact` answers 503 |
 | `POSTHOG_KEY` | unset | PostHog is not loaded |
 
-`ragenta-content-backend` exists as of 2026-09-03 and this site was verified reading it end to
-end locally, but it is not deployed. When it is, set `RAGENTA_CONTENT_API_URL=http://content:8084`
-— over the compose network, not through nginx, so the server-side reads here cost no public round
-trip. The compose service and that variable are already committed in `ragenta-deployment`.
+`ragenta-content-backend` is live on staging as of 2026-09-03 and this site reads it —
+verified through the public URL: 2 posts and 8 catalogue items from its database rather than the
+fixtures' 6 and 26. The URL is a compose-network hostname, not an nginx one, so a server-side read
+here costs no public round trip and works even if the proxy is down.
+
+The legal pages still render from the fixtures, deliberately: no document has been loaded into the
+backend, so `/v1/public/legal/:slug` answers 404 and `fromApi` falls back. That is the only
+content type still served locally.
+
+An **empty** content backend would not fall back — `normalizeList` returns `null` only on a
+malformed payload, and `{"items":[],"total":0}` is well-formed. Seed an environment before
+pointing this site at it.
 
 The container gets those and nothing else — deliberately no `env_file`, so the
 most exposed container in the environment never sees the database password or
