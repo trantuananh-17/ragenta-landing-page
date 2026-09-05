@@ -150,14 +150,11 @@ the visitor to `APP_URL/signup`.
 ## Build/runtime notes worth knowing
 
 - `next.config.ts` pins `turbopack.root` and `outputFileTracingRoot` to this
-  directory — the read-only vecura reference clone in `vecura-landing-page/`
-  ships its own lockfile and would otherwise make Next infer the wrong
-  workspace root and break `src/proxy.ts` detection. Don't remove these.
+  directory. This repo sits inside a multi-repo workspace; without the pin Next
+  can infer a parent directory as the root and break `src/proxy.ts` detection.
+  Don't remove these.
 - Document responses (`/`, `/:lang`, `/:lang/*`) are sent `no-store` via
   `headers()` to avoid serving stale HTML that references CSS/JS chunks from a
   previous deploy (which causes unstyled first loads). This is intentional.
 - The home page is `force-dynamic` so the content env is read at request time;
   a static prerender would bake the fixture answers into the image.
-- `vecura-landing-page/` is a **read-only reference** (ADR-012). It is
-  gitignored, excluded from tsconfig, eslint and Docker, and must never be
-  edited, staged or committed.

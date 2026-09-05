@@ -2,8 +2,8 @@ import type { Locale } from "@/i18n/config";
 import type { LegalDocument } from "@/content/types";
 
 /**
- * Fixture behind `GET /v1/public/legal/:slug`. Vecura fetches these from
- * Confluence; Ragenta keeps them in the repo until a source of record exists.
+ * Fixture behind `GET /v1/public/legal/:slug`. Kept in the repo until a source
+ * of record exists.
  *
  * Not counsel-reviewed. That is a known and accepted state, not an oversight —
  * see .claude/docs/STATE.md. Edit the bodies here; when the content backend

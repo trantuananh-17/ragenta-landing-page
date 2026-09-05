@@ -10,9 +10,8 @@ import { useTranslations } from "@/i18n/useTranslations";
 const WORD_INTERVAL_MS = 2500;
 
 /**
- * The product surface shown under the headline. Vecura frames a demo video
- * here; Ragenta frames a live-looking answer with its citations, which is the
- * one thing the whole product is about.
+ * The product surface shown under the headline: a live-looking answer with its
+ * citations, which is the one thing the whole product is about.
  */
 function HeroAnswerPreview() {
   const { t, raw } = useTranslations("home.preview");

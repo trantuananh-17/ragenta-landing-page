@@ -1,17 +1,5 @@
 # Git Safety
 
-## The reference clone
-
-`vecura-landing-page/` is **read-only reference code** (workspace ADR-012).
-
-Never edit, stage, commit, lint, format, or run an install inside it. It is
-gitignored here and excluded from `tsconfig.json`, `eslint.config.mjs`,
-`.dockerignore` and `outputFileTracingExcludes` in `next.config.ts`. If you ever
-see it staged, stop and report rather than committing.
-
-Read it freely when comparing a layout decision. Ragenta's requirements win over
-the reference's — reuse the pattern, not the file.
-
 ## Never without being asked
 
 - `git push`, any branch, any remote

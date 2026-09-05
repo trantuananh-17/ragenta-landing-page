@@ -8,16 +8,12 @@ const LOCALE_PATTERN = "en|vi";
 const nextConfig: NextConfig = {
   reactCompiler: true,
   output: "standalone",
-  // Pin the workspace root: the reference clone in `vecura-landing-page/` ships
-  // its own lockfile, which would otherwise make Next infer the wrong root and
-  // break `src/proxy.ts` detection.
+  // Pin the workspace root explicitly: this repo sits inside a multi-repo
+  // workspace, and an inferred parent root breaks `src/proxy.ts` detection.
   turbopack: {
     root: path.resolve(__dirname),
   },
   outputFileTracingRoot: path.resolve(__dirname),
-  outputFileTracingExcludes: {
-    "*": ["./vecura-landing-page/**"],
-  },
   async redirects() {
     return [
       {

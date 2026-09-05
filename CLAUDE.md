@@ -32,18 +32,16 @@ both are green — keep them that way.
 
 If you change how something works, update `STATE.md` in the same commit.
 
-## The five rules that are easiest to break
+## The four rules that are easiest to break
 
-1. **`vecura-landing-page/` is read-only reference code** (ADR-012). Never
-   edit, stage, commit, lint or install inside it.
-2. **No colour literals in sections.** Every colour is a semantic token
+1. **No colour literals in sections.** Every colour is a semantic token
    (`bg-card`, `text-ink-muted`, `border-line`, `text-brand-600`). A `slate-500`
    or `#fff` silently breaks dark mode.
-3. **Copy a backend will own goes in `src/content/`**, not in a component.
+2. **Copy a backend will own goes in `src/content/`**, not in a component.
    Static UI copy goes in the dictionaries. Neither goes in JSX.
-4. **Every user-facing string is a dictionary key**, added to **both**
+3. **Every user-facing string is a dictionary key**, added to **both**
    `en.json` and `vi.json` in the same change.
-5. **`LocaleLink`, never `next/link`**, for internal navigation.
+4. **`LocaleLink`, never `next/link`**, for internal navigation.
 
 ## Things that will bite you
 
@@ -58,7 +56,8 @@ If you change how something works, update `STATE.md` in the same commit.
   back to Inter under `html[lang="vi"]`. Satori ships none either, so
   `og-image.tsx` fetches the subset it needs. Do not remove either.
 - Do not drop `turbopack.root` / `outputFileTracingRoot` from `next.config.ts` —
-  the reference clone's lockfile would then break workspace-root inference.
+  this repo sits inside a multi-repo workspace and Next would otherwise infer a
+  parent directory as the root.
 - The browser must not call an upstream service directly. Client reads go
   through `/api/*`.
 

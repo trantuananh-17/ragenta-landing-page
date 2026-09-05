@@ -3,6 +3,5 @@ node_modules
 .git
 .env
 .env*.local
-vecura-landing-page
 Dockerfile
 docker-compose.yml

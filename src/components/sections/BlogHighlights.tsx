@@ -8,9 +8,8 @@ import type { Locale } from "@/i18n/config";
 
 /**
  * Server component: reads through the content layer directly rather than going
- * back out through `/api`, the same way vecura's home page pulls its listings.
- * Renders nothing when there is no content, so a missing backend leaves a clean
- * page rather than an empty heading.
+ * back out through `/api`. Renders nothing when there is no content, so a
+ * missing backend leaves a clean page rather than an empty heading.
  */
 export async function BlogHighlights({ lang }: { lang: Locale }) {
   const [dict, page] = await Promise.all([

@@ -12,8 +12,6 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    // The vecura reference clone is read-only — never lint or fix inside it.
-    "vecura-landing-page/**",
   ]),
 ]);
 

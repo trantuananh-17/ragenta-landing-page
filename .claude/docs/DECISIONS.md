@@ -71,12 +71,12 @@ which resolve through `src/content/`.
 place to add caching, rate limiting or a circuit breaker, and means the client
 cannot tell whether an answer came from a fixture or a real API.
 
-## D-7 · The reference is read, never vendored
+## D-7 · Reference implementations are read, never vendored
 
-**Decision.** `vecura-landing-page/` stays a gitignored local clone, excluded
-from tsconfig, eslint, Docker and Next's file tracing.
+**Decision.** A reference implementation is read outside this repository. None
+is ever copied in, committed, or listed as a dependency.
 
-**Why.** Workspace ADR-012. Vendoring it would drag another product's naming,
+**Why.** Workspace ADR-012. Vendoring one would drag another product's naming,
 dependencies and security assumptions into this repo, and every future reader
 would have to work out which half is ours.
 
