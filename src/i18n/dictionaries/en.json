@@ -37,8 +37,8 @@
   },
   "announcement": {
     "badge": "New",
-    "full": "Agent Skills are here — reusable playbooks your whole workspace can run",
-    "short": "Agent Skills are here",
+    "full": "Describe an agent in one sentence and the canvas drafts the whole flow",
+    "short": "Draft a flow from a sentence",
     "dismiss": "Dismiss announcement"
   },
   "footer": {

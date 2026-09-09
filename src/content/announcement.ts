@@ -9,18 +9,18 @@ const LOCAL_ANNOUNCEMENT: Record<Locale, Announcement> = {
   en: {
     enabled: true,
     badge: "New",
-    full: "Agent Skills are here — reusable playbooks your whole workspace can run",
-    short: "Agent Skills are here",
+    full: "Describe an agent in one sentence and the canvas drafts the whole flow",
+    short: "Draft a flow from a sentence",
     href: "/changelog",
-    version: "2026-08-24",
+    version: "2026-09-09",
   },
   vi: {
     enabled: true,
     badge: "Mới",
-    full: "Agent Skills đã có — playbook dùng lại được cho cả workspace",
-    short: "Agent Skills đã có mặt",
+    full: "Mô tả agent bằng một câu, canvas phác ra trọn cả flow",
+    short: "Phác flow từ một câu",
     href: "/changelog",
-    version: "2026-08-24",
+    version: "2026-09-09",
   },
 };
 

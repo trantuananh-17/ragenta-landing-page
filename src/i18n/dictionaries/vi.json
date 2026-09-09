@@ -37,8 +37,8 @@
   },
   "announcement": {
     "badge": "Mới",
-    "full": "Agent Skills đã có — playbook dùng lại được cho cả workspace",
-    "short": "Agent Skills đã có mặt",
+    "full": "Mô tả agent bằng một câu, canvas phác ra trọn cả flow",
+    "short": "Phác flow từ một câu",
     "dismiss": "Đóng thông báo"
   },
   "footer": {
