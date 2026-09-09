@@ -32,6 +32,8 @@ export function generateMetadata({
  * out of the string the page renders rather than kept as a second copy that can
  * drift away from it. Plans quoted as "Custom" / "Liên hệ" carry no digits and
  * produce no offer, which is correct — an unpriced plan has nothing to offer.
+ *
+ * Every plan is billed monthly, so there is one price string per plan.
  */
 function monthlyPrice(display: string): number | null {
   const digits = display.replace(/[^\d.]/g, "");
@@ -51,7 +53,7 @@ export default async function PricingPage({
   // the Q&A is eligible for FAQ rich results.
   const faqItems = dict.pricing.faq.items;
   const plans = Object.values(dict.pricing.plans).flatMap((plan) => {
-    const monthly = monthlyPrice(plan.price.monthly);
+    const monthly = monthlyPrice(plan.price);
     return monthly === null
       ? []
       : [{ name: plan.name, monthlyPrice: monthly }];

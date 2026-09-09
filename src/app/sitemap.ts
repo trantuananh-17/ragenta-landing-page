@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { CATALOGUE_MAX_PAGE_SIZE, fetchCatalogue } from "@/content/catalogue";
 import { getAllPosts } from "@/content/posts";
 import { SITE_URL } from "@/lib/site";
 import { locales, defaultLocale } from "@/i18n/config";
@@ -47,6 +48,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...entriesForPath("/solutions", { lastModified: now, changeFrequency: "monthly", priority: 0.9 }),
     ...entriesForPath("/pricing", { lastModified: now, changeFrequency: "monthly", priority: 0.9 }),
     ...entriesForPath("/blog", { lastModified: now, changeFrequency: "weekly", priority: 0.8 }),
+    ...entriesForPath("/catalogue", { lastModified: now, changeFrequency: "weekly", priority: 0.8 }),
     ...entriesForPath("/changelog", { lastModified: now, changeFrequency: "weekly", priority: 0.6 }),
     ...entriesForPath("/contact", { lastModified: now, changeFrequency: "monthly", priority: 0.7 }),
     ...entriesForPath("/privacy-policy", { lastModified: now, changeFrequency: "yearly", priority: 0.3 }),
@@ -69,5 +71,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.error("[sitemap] Failed to load posts.", error);
   }
 
-  return [...staticRoutes, ...postRoutes];
+  // Slugs are shared across locales here too — an item's id is its slug, not a
+  // translated name — so one locale's listing expands into the full cluster.
+  let catalogueRoutes: MetadataRoute.Sitemap = [];
+  try {
+    const catalogue = await fetchCatalogue({
+      locale: defaultLocale,
+      limit: CATALOGUE_MAX_PAGE_SIZE,
+    });
+    catalogueRoutes = catalogue.items.flatMap((item) =>
+      item.id
+        ? entriesForPath(`/catalogue/${item.id}`, {
+            lastModified: now,
+            changeFrequency: "monthly",
+            priority: 0.6,
+          })
+        : [],
+    );
+  } catch (error) {
+    console.error("[sitemap] Failed to load the catalogue.", error);
+  }
+
+  return [...staticRoutes, ...postRoutes, ...catalogueRoutes];
 }

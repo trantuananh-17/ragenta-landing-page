@@ -1,6 +1,6 @@
 # Current State
 
-Last verified: 2026-08-30, against the deployed v0.1.0rc1.
+Last verified: 2026-09-09, against a local standalone build of v0.3.0rc1.
 
 Read this first in a new session. Keep it honest — if you find reality differs,
 fix this file in the same change. A stale STATE.md is worse than none.
@@ -15,7 +15,9 @@ standalone production server — not just the dev server.
 | `/` | hero, providers, trust strip, 4 feature sections, testimonials, blog highlights, CTA |
 | `/product` | hero dashboard, surfaces, understands, lifecycle, capabilities, extend, changelog strip |
 | `/solutions` | hero + sticky scroll frame with 8 interactive demo panels + closing |
-| `/pricing` | 4 plans with a monthly/yearly toggle, notes, FAQ (also emitted as FAQPage JSON-LD) |
+| `/pricing` | the 5 plans the backend sells, a top-up panel, notes, FAQ (also emitted as FAQPage JSON-LD) |
+| `/catalogue` | the whole catalogue, searched with a GET form and filtered by tag through the URL |
+| `/catalogue/[slug]` | one entry: specs, markdown write-up, related entries, CTA |
 | `/contact` | form posting to `/api/contact`, rotating testimonial |
 | `/changelog` | full timeline from the content layer, sticky version index that scroll-spies the entries |
 | `/blog`, `/blog/[slug]` | search, pagination, related posts, markdown bodies |
@@ -23,6 +25,10 @@ standalone production server — not just the dev server.
 | `/robots.txt`, `/sitemap.xml`, `/llms.txt` | 30 sitemap URLs with hreflang alternates |
 | `/[lang]/opengraph-image` | rendered by Satori, Vietnamese subset fetched per title |
 | `/api/*` | announcement, catalogue, posts, site-metadata, contact, health |
+
+The home page's sections are: hero, providers, trust strip, agent canvas, knowledge,
+catalogue, embedded widget, testimonials, blog highlights, CTA. `FeaturePipeline` — a
+grid of invented "active runs" — was removed when the canvas section replaced it.
 
 Also working: locale detection and the `NEXT_LOCALE` override, UTM/click-id
 attribution cookies set in the proxy, the light/dark toggle with no hydration
@@ -55,6 +61,10 @@ JSON-LD for Organization, WebSite, FAQPage and BlogPosting.
    whether to source real ones or reword them as personas before launch.
 3. Blog posts have no author byline and no hero images. The `PostSummary` type
    already carries `heroImageUrl`; nothing populates it.
+4. The catalogue's five chat and embedding model entries are editorial: they name
+   models the platform can reach through its providers, not rows read from the
+   backend's own model catalogue. Everything else in the catalogue — tools,
+   connectors, canvas, widget — maps to a capability that exists.
 
 Settled, so nobody re-opens them:
 
@@ -68,6 +78,14 @@ Settled, so nobody re-opens them:
   about Ragenta.
 - **The legal documents ship as written.** They are not counsel-reviewed and the
   owner has accepted that for now.
+- **No "permissions inherited from every source".** That claim was on the trust
+  strip, the knowledge section, the product page and two solutions panels, and the
+  product does not do it: retrieval is scoped by workspace, project and role, and a
+  connected account reads as the person who connected it. Do not put it back
+  without per-document ACL sync to go with it.
+- **No monthly/yearly toggle on pricing.** Every plan is billed monthly and there
+  are no yearly Stripe prices. A toggle offering a discount checkout cannot honour
+  is a promise the product would have to break.
 
 ## How to verify a change
 
@@ -132,9 +150,10 @@ fixtures' 6 and 26. The URL is a compose-network hostname, not an nginx one, so 
 here costs no public round trip and works even if the proxy is down.
 
 Every content type now comes from the backend, legal documents included. Its seed carries the
-whole of what this repository used to ship in `src/content/fixtures/` — 26 catalogue items, 6
-posts, 10 changelog entries and both legal documents, in both locales — converted from those
-files. The fixtures here stay as the degradation path, not as the source.
+same content this repository ships in `src/content/fixtures/` — 33 catalogue items, 6 posts, 8
+changelog entries and both legal documents, in both locales. The fixtures here stay as the
+degradation path, not as the source, and the catalogue and changelog fixtures are generated from
+the same source as that seed so the two cannot drift apart silently.
 
 An **empty** content backend would not fall back — `normalizeList` returns `null` only on a
 malformed payload, and `{"items":[],"total":0}` is well-formed. Seed an environment before

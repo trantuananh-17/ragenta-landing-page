@@ -10,12 +10,22 @@
     "pricing": "Bảng giá",
     "resources": "Tài nguyên",
     "resourceLinks": {
-      "blog": { "label": "Blog" },
-      "changelog": { "label": "Nhật ký thay đổi" },
-      "docs": { "label": "Tài liệu" },
-      "community": { "label": "Cộng đồng" }
+      "blog": {
+        "label": "Blog"
+      },
+      "changelog": {
+        "label": "Nhật ký thay đổi"
+      },
+      "docs": {
+        "label": "Tài liệu"
+      },
+      "community": {
+        "label": "Cộng đồng"
+      }
     },
-    "languageSwitcher": { "label": "Đổi ngôn ngữ" },
+    "languageSwitcher": {
+      "label": "Đổi ngôn ngữ"
+    },
     "theme": {
       "label": "Giao diện",
       "light": "Sáng",
@@ -36,6 +46,7 @@
     "overview": "Tổng quan",
     "solutions": "Giải pháp",
     "pricing": "Bảng giá",
+    "catalogue": "Danh mục",
     "changelog": "Nhật ký thay đổi",
     "company": "Công ty",
     "contactUs": "Liên hệ",
@@ -85,10 +96,22 @@
     "trustStrip": {
       "eyebrow": "Xây cho tri thức nội bộ nhạy cảm",
       "items": [
-        { "label": "Truy hồi theo phân quyền", "sub": "Kế thừa từ từng nguồn" },
-        { "label": "Triển khai riêng", "sub": "VPC của bạn hoặc on-premise" },
-        { "label": "Không dùng để huấn luyện", "sub": "Nội dung vẫn là của bạn" },
-        { "label": "Câu trả lời kiểm toán được", "sub": "Nguồn, điểm số, trace đầy đủ" }
+        {
+          "label": "Truy hồi có phạm vi",
+          "sub": "Theo workspace, dự án và vai trò"
+        },
+        {
+          "label": "Triển khai riêng",
+          "sub": "VPC của bạn hoặc on-premise"
+        },
+        {
+          "label": "Không dùng để huấn luyện",
+          "sub": "Nội dung vẫn là của bạn"
+        },
+        {
+          "label": "Câu trả lời kiểm toán được",
+          "sub": "Nguồn, điểm số, trace đầy đủ"
+        }
       ]
     },
     "partners": {
@@ -133,11 +156,36 @@
         "used": "Đã dùng",
         "skipped": "Dưới ngưỡng",
         "rows": [
-          { "source": "MSA v4 · §7", "passage": "Thay đổi giá có hiệu lực khi gia hạn…", "score": 0.94, "used": true },
-          { "source": "Memo giá Q3", "passage": "Giữ giá cũ cho hợp đồng năm ký trước…", "score": 0.91, "used": true },
-          { "source": "Ghi chú · Nordwind", "passage": "Đã cam kết không tăng giá trước FY27…", "score": 0.88, "used": true },
-          { "source": "FAQ kinh doanh", "passage": "Cách giải thích thay đổi giá giữa kỳ…", "score": 0.62, "used": false },
-          { "source": "Memo giá Q1", "passage": "Đã bị memo Q3 thay thế…", "score": 0.48, "used": false }
+          {
+            "source": "MSA v4 · §7",
+            "passage": "Thay đổi giá có hiệu lực khi gia hạn…",
+            "score": 0.94,
+            "used": true
+          },
+          {
+            "source": "Memo giá Q3",
+            "passage": "Giữ giá cũ cho hợp đồng năm ký trước…",
+            "score": 0.91,
+            "used": true
+          },
+          {
+            "source": "Ghi chú · Nordwind",
+            "passage": "Đã cam kết không tăng giá trước FY27…",
+            "score": 0.88,
+            "used": true
+          },
+          {
+            "source": "FAQ kinh doanh",
+            "passage": "Cách giải thích thay đổi giá giữa kỳ…",
+            "score": 0.62,
+            "used": false
+          },
+          {
+            "source": "Memo giá Q1",
+            "passage": "Đã bị memo Q3 thay thế…",
+            "score": 0.48,
+            "used": false
+          }
         ],
         "footer": "Còn 33 ứng viên · xuất toàn bộ trace"
       },
@@ -145,85 +193,99 @@
         "caption": "6 đoạn · 4.120 token trong ngữ cảnh",
         "tokensLabel": "token",
         "rows": [
-          { "label": "Hợp đồng khung dịch vụ", "value": "2 đoạn · §7.1, §7.2" },
-          { "label": "Memo giá Q3", "value": "2 đoạn · giữ giá cũ" },
-          { "label": "Ghi chú tài khoản", "value": "1 đoạn · Nordwind" },
-          { "label": "Mẫu đơn đặt hàng", "value": "1 đoạn · điều khoản gia hạn" }
+          {
+            "label": "Hợp đồng khung dịch vụ",
+            "value": "2 đoạn · §7.1, §7.2"
+          },
+          {
+            "label": "Memo giá Q3",
+            "value": "2 đoạn · giữ giá cũ"
+          },
+          {
+            "label": "Ghi chú tài khoản",
+            "value": "1 đoạn · Nordwind"
+          },
+          {
+            "label": "Mẫu đơn đặt hàng",
+            "value": "1 đoạn · điều khoản gia hạn"
+          }
         ]
       },
       "verification": {
         "caption": "Đang kiểm 9 khẳng định · trực tiếp",
         "rows": [
-          { "property": "Khẳng định có nguồn", "value": "9 / 9", "flag": false },
-          { "property": "Mức bám nguồn", "value": "0,96", "flag": false },
-          { "property": "Độ phủ trích dẫn", "value": "100%", "flag": false },
-          { "property": "Nguồn mâu thuẫn", "value": "1 cặp bị đánh dấu", "flag": true },
-          { "property": "Nguồn cũ (>12 tháng)", "value": "Không có", "flag": false },
-          { "property": "Kiểm tra phân quyền", "value": "Mọi đoạn đều hợp lệ", "flag": false }
+          {
+            "property": "Khẳng định có nguồn",
+            "value": "9 / 9",
+            "flag": false
+          },
+          {
+            "property": "Mức bám nguồn",
+            "value": "0,96",
+            "flag": false
+          },
+          {
+            "property": "Độ phủ trích dẫn",
+            "value": "100%",
+            "flag": false
+          },
+          {
+            "property": "Nguồn mâu thuẫn",
+            "value": "1 cặp bị đánh dấu",
+            "flag": true
+          },
+          {
+            "property": "Nguồn cũ (>12 tháng)",
+            "value": "Không có",
+            "flag": false
+          },
+          {
+            "property": "Kiểm tra phân quyền",
+            "value": "Mọi đoạn đều hợp lệ",
+            "flag": false
+          }
         ]
       }
     },
-    "featurePipeline": {
-      "heading": "Phù hợp với mọi loại công việc tri thức",
-      "description": "Hỗ trợ khách hàng, pháp chế, kinh doanh, vận hành nội bộ — mô tả kết quả mong muốn và Ragenta lắp ráp agent phù hợp. Không template cứng. Hoặc bạn tự cấu hình từng bước khi cần kiểm soát chính xác.",
-      "cta": "Khám phá năng lực →",
-      "windowTitle": "Ragenta — Phiên đang chạy",
-      "statusRunning": "Đang chạy",
-      "statusComplete": "Hoàn tất",
-      "workflowLabel": "{tag} · Phiên chạy",
-      "planLabel": "Kế hoạch · {count} bước",
-      "inProgress": "Đang chạy…",
-      "runs": [
+    "featureCanvas": {
+      "heading": "Dựng một agent bạn thật sự nhìn thấy được",
+      "description": "Các bước, nhánh rẽ và vòng lặp trên canvas thay vì một prompt dài dằng dặc. Mô tả công việc bằng một câu và Ragenta phác ra flow để bạn sửa — và mọi phiên bản bạn xuất bản đều được giữ lại, nên một thay đổi luôn hoàn tác được.",
+      "cta": "Xem canvas hoạt động thế nào →",
+      "windowTitle": "Ragenta — Agent canvas",
+      "promptLabel": "Phác bằng một câu",
+      "promptText": "Đọc email hôm qua, phân loại theo chủ đề, và xử lý từng loại.",
+      "draftButton": "Phác flow",
+      "stepsLabel": "17 loại bước",
+      "publishNote": "Không có gì được lưu cho tới khi bạn xuất bản một phiên bản.",
+      "trunk": [
         {
-          "query": "Trả lời câu hỏi của khách về chính sách lưu trữ dữ liệu",
-          "tag": "Hỗ trợ",
-          "steps": ["Phân loại ý định", "Truy hồi chính sách", "Soạn phản hồi", "Kiểm giọng văn"],
-          "result": "Bản nháp sẵn · 3 trích dẫn",
-          "detail": [
-            { "step": "Phân loại ticket", "sub": "Ý định: lưu trữ dữ liệu · Ưu tiên: thường · Ngôn ngữ: Tiếng Việt" },
-            { "step": "Truy hồi chính sách điều chỉnh", "sub": "Chính sách bảo mật §4, phụ lục DPA B, bài help-center 218" },
-            { "step": "Soạn phản hồi", "sub": "Chỉ viết dựa trên các đoạn đã truy hồi" },
-            { "step": "Kiểm giọng văn và tính tuân thủ", "sub": "3 trích dẫn · không có khẳng định thiếu nguồn · sẵn sàng duyệt" }
-          ]
+          "label": "Bắt đầu"
         },
         {
-          "query": "Rà hợp đồng MSA của nhà cung cấp so với lập trường chuẩn của công ty",
-          "tag": "Pháp chế",
-          "steps": ["Bóc điều khoản", "Đối chiếu playbook", "Đánh dấu sai lệch"],
-          "result": "Đang chạy…",
-          "detail": [
-            { "step": "Bóc hợp đồng thành từng điều khoản", "sub": "64 điều khoản · giữ nguyên tiêu đề và tham chiếu chéo" },
-            { "step": "Đối chiếu với playbook đàm phán", "sub": "Đang khớp từng điều khoản với lập trường chuẩn…" },
-            { "step": "Đánh dấu sai lệch và đề xuất câu chữ", "sub": "Soạn phương án dự phòng cho từng sai lệch · chờ kết quả đối chiếu" }
-          ]
+          "label": "Đọc hộp thư"
         },
         {
-          "query": "Điền bảng câu hỏi bảo mật cho hồ sơ thầu Nordwind",
-          "tag": "Kinh doanh",
-          "steps": ["Bóc câu hỏi", "Khớp câu trả lời cũ", "Soạn phần còn thiếu"],
-          "result": "112 / 118 câu",
-          "detail": [
-            { "step": "Bóc bảng câu hỏi", "sub": "118 câu hỏi thuộc 9 phần" },
-            { "step": "Khớp với câu đã trả lời trước đây", "sub": "112 câu khớp với câu trả lời đã duyệt, kèm nguồn" },
-            { "step": "Soạn 6 câu còn lại", "sub": "Soạn từ chính sách bảo mật và chuyển cho bộ phận phụ trách" }
-          ]
+          "label": "Phân loại theo chủ đề"
+        }
+      ],
+      "branches": [
+        {
+          "when": "Hoá đơn",
+          "label": "Soạn thư trả lời"
         },
         {
-          "query": "Tóm tắt những thay đổi của khối kỹ thuật trong tuần qua",
-          "tag": "Nội bộ",
-          "steps": ["Thu thập nguồn", "Nhóm theo chủ đề", "Viết bản tin"],
-          "result": "Bản tin · 5 chủ đề",
-          "detail": [
-            { "step": "Thu thập tư liệu trong tuần", "sub": "Pull request đã merge, ghi chú sự cố, tài liệu quyết định, thread standup" },
-            { "step": "Nhóm theo chủ đề", "sub": "5 chủ đề · đã loại phần trùng lặp và phần đã revert" },
-            { "step": "Viết bản tin", "sub": "Một đoạn cho mỗi chủ đề, kèm liên kết tới thread gốc" }
-          ]
+          "when": "Báo lỗi",
+          "label": "Mở một issue"
+        },
+        {
+          "when": "Còn lại",
+          "label": "Đăng lên Slack"
         }
       ]
     },
     "featureKnowledge": {
       "heading": "Một knowledge base cho mọi nguồn dữ liệu",
-      "description": "Drive, Notion, Confluence, Slack, hệ thống ticket, kho dữ liệu — được index vào một knowledge base duy nhất và vẫn giữ nguyên phân quyền của từng nguồn. Ragenta lấy đúng ngữ cảnh cho mỗi câu hỏi, nên mô hình chỉ suy luận trên những gì người hỏi được phép xem.",
+      "description": "Drive, Notion, Slack, GitHub, bảng tính và cơ sở dữ liệu của bạn — index vào một knowledge base duy nhất, hoặc để agent đọc trực tiếp. Ragenta lấy đúng ngữ cảnh cho từng câu hỏi và cho thấy nó đã dùng những đoạn nào.",
       "cta": "Xem danh sách connector →",
       "windowTitle": "Ragenta — Knowledge base",
       "evidenceStream": "Đang index",
@@ -239,12 +301,30 @@
         "Điều khoản gia hạn và quy tắc giữ giá cũ"
       ],
       "panel": [
-        { "label": "Nguồn", "value": "4 đã kết nối" },
-        { "label": "Tài liệu", "value": "3.164 đã index" },
-        { "label": "Chunk", "value": "18.402" },
-        { "label": "Embedding", "value": "bge-m3 · đa ngôn ngữ" },
-        { "label": "Độ mới", "value": "đồng bộ 4 phút trước" },
-        { "label": "Phân quyền", "value": "kế thừa theo nguồn" }
+        {
+          "label": "Nguồn",
+          "value": "4 đã kết nối"
+        },
+        {
+          "label": "Tài liệu",
+          "value": "3.164 đã index"
+        },
+        {
+          "label": "Chunk",
+          "value": "18.402"
+        },
+        {
+          "label": "Embedding",
+          "value": "bge-m3 · đa ngôn ngữ"
+        },
+        {
+          "label": "Độ mới",
+          "value": "đồng bộ 4 phút trước"
+        },
+        {
+          "label": "Phạm vi truy cập",
+          "value": "theo workspace và dự án"
+        }
       ],
       "tags": {
         "wiki": "wiki",
@@ -270,6 +350,24 @@
       "counterResult": "{count} kết quả cho “{query}”",
       "counterResults": "{count} kết quả cho “{query}”",
       "counterTotal": "{count} mục trong danh mục · liên tục bổ sung"
+    },
+    "featureWidget": {
+      "heading": "Đưa nó lên website của bạn bằng một dòng",
+      "description": "Một bong bóng chat trả lời từ knowledge base của bạn, trên tên miền của bạn. Danh sách origin được phép kiểm ở server của chúng tôi, mọi hội thoại đều tính vào workspace của bạn, và bạn đọc được đúng những câu khách đã hỏi.",
+      "cta": "Xem widget báo cáo những gì →",
+      "windowTitle": "congtycuaban.com — Trung tâm hỗ trợ",
+      "snippetLabel": "Dán ngay trước thẻ đóng body",
+      "bubbleTitle": "Hỏi chúng tôi bất cứ điều gì",
+      "visitorQuestion": "Bên bạn có giao Đà Nẵng không, mất bao lâu?",
+      "answerLead": "Có — Đà Nẵng giao hôm sau",
+      "answerRest": " với đơn đặt trước 16h, sau giờ đó là hai ngày. Miễn phí giao cho đơn trên 500.000 ₫.",
+      "sourcesLabel": "2 nguồn",
+      "composerPlaceholder": "Hỏi về đơn hàng của bạn…",
+      "statLabels": [
+        "Hội thoại hôm nay",
+        "Trả lời từ tài liệu của bạn",
+        "Credit đã dùng"
+      ]
     },
     "testimonials": {
       "title": "Từ những đội đang dùng mỗi ngày"
@@ -318,110 +416,133 @@
   },
   "pricing": {
     "heading": "Bảng giá",
-    "subheading": "Bắt đầu miễn phí, mở rộng số ghế và mức dùng khi đội ngũ dùng nhiều hơn.",
-    "billing": {
-      "monthly": "Theo tháng",
-      "yearly": "Theo năm (−20%)"
-    },
-    "proYearlyNote": "Tương đương 23$/tháng/người.",
+    "subheading": "Bắt đầu bằng bản dùng thử miễn phí, rồi chỉ trả cho phần bạn thật sự dùng.",
     "plans": {
       "free": {
         "name": "Free",
-        "price": { "monthly": "0$", "yearly": "0$" },
+        "price": "0$",
         "priceSuffix": "",
+        "credits": "20.000 credit, một lần duy nhất",
         "intro": "Bao gồm:",
         "cta": "Dùng thử miễn phí",
         "features": [
-          "1 knowledge base, tối đa 200 tài liệu",
-          "500 lượt hỏi đáp mỗi tháng",
-          "Mô hình tiêu chuẩn và truy hồi hybrid",
-          "1 ghế"
+          "20.000 credit khi bạn xác thực email — là bản dùng thử, không phải hạn mức hằng tháng",
+          "1 knowledge base và 2 agent",
+          "1 chỗ ngồi",
+          "Mô hình economy, truy hồi lai và rerank",
+          "Agent canvas, đầy đủ mọi loại bước"
+        ]
+      },
+      "starter": {
+        "name": "Starter",
+        "price": "9$",
+        "priceSuffix": "/tháng",
+        "credits": "500.000 credit mỗi tháng",
+        "intro": "Mọi thứ ở gói Free, thêm:",
+        "cta": "Dùng thử miễn phí",
+        "features": [
+          "500.000 credit mỗi tháng",
+          "3 knowledge base và 5 agent",
+          "Một widget chat nhúng trên website của bạn",
+          "Chạy theo lịch và webhook gửi đi",
+          "Nạp thêm credit khi tháng đó dùng hụt"
         ]
       },
       "pro": {
         "name": "Pro",
-        "price": { "monthly": "29$", "yearly": "276$" },
+        "price": "29$",
         "priceSuffix": "/tháng/người",
-        "priceSuffixYearly": "/năm/người",
-        "intro": "Mọi thứ ở gói Free, cộng thêm:",
+        "credits": "2.000.000 credit mỗi người, mỗi tháng",
+        "intro": "Mọi thứ ở gói Starter, thêm:",
         "cta": "Dùng thử miễn phí",
         "features": [
-          "Không giới hạn knowledge base và tài liệu",
-          "10.000 lượt hỏi đáp mỗi người mỗi tháng",
-          "Toàn bộ mô hình, gồm rerank và ngữ cảnh dài",
-          "Agent kèm công cụ, lịch chạy và API",
-          "Retrieval trace và đánh giá câu trả lời",
-          "Mua thêm mức dùng khi cần"
+          "2.000.000 credit mỗi người mỗi tháng",
+          "Mô hình premium — Claude Opus, GPT-5, Gemini Pro",
+          "10 knowledge base và 20 agent, tối đa 25 chỗ ngồi",
+          "API key của workspace, để gọi agent từ sản phẩm của bạn",
+          "Kết nối cơ sở dữ liệu của bạn như một nguồn chỉ đọc"
         ]
       },
       "team": {
         "name": "Team",
-        "price": { "monthly": "59$", "yearly": "564$" },
-        "priceSuffix": "/tháng/người",
-        "priceSuffixYearly": "/năm/người",
-        "intro": "Mọi thứ ở gói Pro, cộng thêm:",
+        "price": "99$",
+        "priceSuffix": "/tháng",
+        "credits": "8.000.000 credit mỗi tháng, gồm 5 chỗ ngồi",
+        "intro": "Mọi thứ ở gói Pro, thêm:",
         "cta": "Bắt đầu dùng thử",
         "features": [
-          "Truy hồi theo phân quyền đồng bộ từ từng nguồn",
-          "Agent Skills và quy tắc dùng chung toàn workspace",
-          "SSO (SAML, OIDC) và cấp tài khoản qua SCIM",
-          "Nhật ký kiểm toán và báo cáo mức dùng theo dự án"
+          "8.000.000 credit mỗi tháng, dùng chung cho cả workspace",
+          "Bao gồm 5 chỗ ngồi, mỗi chỗ tiếp theo 19$",
+          "Không giới hạn knowledge base và agent",
+          "Năm widget nhúng",
+          "Vai trò tuỳ chỉnh do chính workspace tự soạn"
         ]
       },
       "enterprise": {
         "name": "Enterprise",
-        "price": { "monthly": "Liên hệ", "yearly": "Liên hệ" },
+        "price": "Liên hệ",
         "priceSuffix": "",
-        "intro": "Mọi thứ ở gói Team, cộng thêm:",
+        "credits": "Mức dùng thoả thuận riêng",
+        "intro": "Mọi thứ ở gói Team, thêm:",
         "cta": "Liên hệ",
         "features": [
-          "Triển khai private cloud (VPC) hoặc on-premise",
-          "Dùng endpoint mô hình và vector store của riêng bạn",
-          "Connector riêng và cam kết lưu trú dữ liệu",
-          "Rà soát bảo mật, DPA và kỹ sư phụ trách riêng"
+          "Không giới hạn chỗ ngồi, xuất hoá đơn thay vì trừ thẻ",
+          "Endpoint mô hình của riêng bạn, kể cả mô hình tự vận hành",
+          "Triển khai riêng và khoanh vùng lưu trú dữ liệu",
+          "Rà soát bảo mật, hợp đồng xử lý dữ liệu và một đầu mối riêng"
         ]
       }
     },
+    "topup": {
+      "title": "Hết credit trước khi hết tháng?",
+      "body": "Credit nạp thêm không bao giờ hết hạn, và chỉ bị trừ sau khi hạn mức tháng của gói đã dùng hết. Có từ gói Starter trở lên.",
+      "packs": [
+        "1.000.000 credit — 39$",
+        "5.000.000 credit — 175$",
+        "15.000.000 credit — 450$",
+        "Hoặc tự nhập số tiền, từ 10$"
+      ]
+    },
     "notes": [
       {
-        "title": "Tính theo mức dùng, không chỉ theo ghế",
-        "body": "Ghế mở quyền truy cập; lượt hỏi đáp và phiên chạy agent được đo riêng. Dashboard hiển thị cả hai theo thời gian thực."
+        "title": "Tính bằng credit, không phải tin nhắn",
+        "body": "Một credit bằng một token đầu vào của mô hình cơ sở. Mọi mô hình tiêu credit theo đúng tỷ lệ chi phí của nó, nên đổi mô hình chỉ làm đổi con số — không đổi đơn vị bạn đang đếm."
       },
       {
         "title": "Không có hoá đơn bất ngờ",
-        "body": "Chạm trần tháng thì các phiên chạy dừng gọn, không âm thầm vượt ngân sách của bạn."
+        "body": "Khi hết số dư, các lần chạy dừng lại gọn gàng và nói rõ lý do. Không có gì âm thầm vượt hạn mức, và không có gì bị tính tiền mà không thực sự dùng."
       },
       {
-        "title": "Đổi gói bất cứ lúc nào",
-        "body": "Nâng, hạ hoặc mua thêm mức dùng theo từng người. Trả theo năm tiết kiệm khoảng 20%."
+        "title": "Đổi gói lúc nào cũng được",
+        "body": "Nâng cấp, hạ cấp hay huỷ ngay trong màn hình thanh toán. Ngày gia hạn, số tiền đã trả và toàn bộ hoá đơn đều nằm trên cùng một trang."
       }
     ],
     "faq": {
       "heading": "Câu hỏi về giá",
       "items": [
         {
-          "question": "Một lượt hỏi đáp được tính thế nào?",
-          "answer": "Một câu hỏi và câu trả lời của nó, bao gồm cả phần truy hồi và các lần gọi công cụ mà agent thực hiện để tạo ra câu trả lời. Một phiên agent nhiều bước được tính là một lượt cộng phần công cụ đã dùng."
+          "question": "Credit chính xác là gì?",
+          "answer": "Một credit bằng một token đầu vào của mô hình cơ sở có giá 3$ cho mỗi triệu token. Mọi mô hình khác tiêu credit theo đúng tỷ lệ chi phí thật của nó — mô hình rẻ tiêu một phần nhỏ credit cho mỗi token, mô hình đầu bảng tiêu vài credit. Mua lẻ dạng nạp thêm, một triệu credit là 39$; nằm trong gói thì rẻ hơn đáng kể."
         },
         {
-          "question": "Hết mức dùng trong tháng thì sao?",
-          "answer": "Các phiên chạy dừng gọn. Bạn có thể mua thêm từ gói Pro trở lên, nâng gói, hoặc chờ chu kỳ kế tiếp — Ragenta không bao giờ âm thầm vượt ngân sách."
+          "question": "Credit của tôi đổi được bao nhiêu token?",
+          "answer": "Tuỳ mô hình, và đó chính là lý do đếm bằng credit thay vì token. Mô hình economy giúp một triệu credit đi được rất xa; chạy Claude Opus ở mọi bước sẽ tiêu hết nhanh hơn nhiều. Mỗi lần chạy đều hiện chi phí theo từng bước, và màn hình sử dụng cộng lại theo ngày, theo thành viên và theo mô hình."
         },
         {
-          "question": "Ragenta có dùng dữ liệu của chúng tôi để huấn luyện mô hình không?",
-          "answer": "Không. Tài liệu và hội thoại của bạn chỉ phục vụ chính workspace của bạn. Gói Enterprise có thể cố định phần suy luận vào một triển khai riêng để nội dung không rời khỏi hệ thống nội bộ."
+          "question": "Hết credit thì sao?",
+          "answer": "Các lần chạy dừng lại và nói rõ lý do. Trên gói trả phí, bạn nạp thêm ngay hoặc chờ kỳ cấp credit tháng sau. Ragenta không bao giờ tiêu vượt quá số dư."
         },
         {
-          "question": "Sau này đổi gói được không?",
-          "answer": "Được. Nâng, hạ hoặc chuyển giữa trả theo tháng và theo năm bất cứ lúc nào. Trả theo năm tiết kiệm khoảng 20% so với theo tháng."
+          "question": "Gói miễn phí có được cộng credit hằng tháng không?",
+          "answer": "Không. Free là bản dùng thử: 20.000 credit một lần, cấp khi bạn xác thực địa chỉ email. Gói miễn phí sinh ra để thử sản phẩm trên một knowledge base với vài agent — một hạn mức tháng không bao giờ hết sẽ là khoản chi phí không có điểm dừng với chúng tôi và cũng không cho bạn lý do gì để nâng cấp."
         },
         {
-          "question": "Tài liệu được đếm như thế nào?",
-          "answer": "Theo tài liệu gốc, không theo chunk. Một file PDF 400 trang vẫn là một tài liệu dù sinh ra bao nhiêu chunk."
+          "question": "Các bạn có dùng dữ liệu của chúng tôi để huấn luyện mô hình không?",
+          "answer": "Không. Tài liệu và hội thoại của bạn chỉ được dùng để phục vụ chính workspace của bạn. Bản triển khai Enterprise có thể ghim toàn bộ suy luận vào endpoint của bạn để nội dung không bao giờ rời khỏi mạng nội bộ."
         },
         {
-          "question": "Giá Enterprise hoạt động ra sao?",
-          "answer": "Enterprise được xác định theo từng triển khai — hạn mức sử dụng, rà soát bảo mật, yêu cầu lưu trú dữ liệu và thanh toán theo hoá đơn. Liên hệ để chúng tôi cùng bạn xác định phạm vi."
+          "question": "Chúng tôi dùng mô hình của riêng mình được không?",
+          "answer": "Gói Enterprise trỏ Ragenta về endpoint mô hình của riêng bạn, kể cả mô hình trọng số mở tự vận hành. Ở các gói còn lại, quản trị viên chọn những mô hình nào trong danh mục mà mỗi workspace được chạy."
         }
       ]
     }
@@ -438,16 +559,41 @@
       "activeCount": "7 đang chạy",
       "todayLabel": "Hôm nay",
       "todayAgents": [
-        { "title": "Phân loại ticket hỗ trợ — hộp thư #general", "sub": "Đang truy hồi", "meta": "38 ticket" },
-        { "title": "Rà MSA nhà cung cấp — Nordwind", "sub": "Đang đối chiếu điều khoản", "meta": "64 điều khoản" },
-        { "title": "Bảng câu hỏi bảo mật cho hồ sơ thầu", "sub": "Đang soạn phần thiếu", "meta": "112 / 118" },
-        { "title": "Bản tin kỹ thuật hằng tuần", "sub": "Hoàn tất", "meta": "5 chủ đề" }
+        {
+          "title": "Phân loại ticket hỗ trợ — hộp thư #general",
+          "sub": "Đang truy hồi",
+          "meta": "38 ticket"
+        },
+        {
+          "title": "Rà MSA nhà cung cấp — Nordwind",
+          "sub": "Đang đối chiếu điều khoản",
+          "meta": "64 điều khoản"
+        },
+        {
+          "title": "Bảng câu hỏi bảo mật cho hồ sơ thầu",
+          "sub": "Đang soạn phần thiếu",
+          "meta": "112 / 118"
+        },
+        {
+          "title": "Bản tin kỹ thuật hằng tuần",
+          "sub": "Hoàn tất",
+          "meta": "5 chủ đề"
+        }
       ],
       "weekLabel": "Tuần này",
       "weekAgents": [
-        { "title": "Làm mới FAQ onboarding", "sub": "cập nhật 42 câu trả lời" },
-        { "title": "Danh sách theo dõi gia hạn hợp đồng", "sub": "9 tài khoản được đánh dấu" },
-        { "title": "Phân tích lỗ hổng help-center", "sub": "thiếu 17 bài viết" }
+        {
+          "title": "Làm mới FAQ onboarding",
+          "sub": "cập nhật 42 câu trả lời"
+        },
+        {
+          "title": "Danh sách theo dõi gia hạn hợp đồng",
+          "sub": "9 tài khoản được đánh dấu"
+        },
+        {
+          "title": "Phân tích lỗ hổng help-center",
+          "sub": "thiếu 17 bài viết"
+        }
       ],
       "inputPlaceholder": "Mô tả việc bạn muốn agent làm…"
     },
@@ -462,20 +608,20 @@
         },
         "api": {
           "label": "API & SDK",
-          "headline": "Gọi agent từ sản phẩm của bạn chỉ với vài dòng mã.",
+          "headline": "Tạo một key cho workspace và khởi động agent ngay từ sản phẩm của bạn.",
           "cta": "Đọc tài liệu →"
         },
         "widget": {
           "label": "Widget nhúng",
-          "headline": "Gắn một trợ lý có dẫn nguồn vào ứng dụng hoặc help center.",
+          "headline": "Một thẻ script đặt trợ lý có dẫn nguồn lên website của bạn.",
           "cta": "Xem widget →",
           "previewMessage": "Hỏi về tài khoản của bạn…"
         },
         "slackTeams": {
-          "label": "Slack & Teams",
-          "headline": "Trả lời ngay trong thread, vẫn giữ trích dẫn và phân quyền.",
-          "cta": "Thêm vào Slack →",
-          "previewMessage": "Gói Team lưu 90 ngày — xem Chính sách bảo mật §4."
+          "label": "Slack",
+          "headline": "Bản tin, cảnh báo và câu trả lời đăng thẳng vào kênh đang cần.",
+          "cta": "Xem các kết nối →",
+          "previewMessage": "Tháng này có 3 hợp đồng đến hạn gia hạn — Nordwind là cái nên xem trước."
         }
       }
     },
@@ -487,29 +633,69 @@
       "subagentsHeading": "Subagent chạy song song",
       "subagentsBody": "Một câu hỏi rộng được chia cho nhiều subagent, mỗi subagent xử lý một phần và trả kết quả về ngay khi hoàn tất.",
       "subagents": [
-        { "name": "Điều khoản hợp đồng", "status": "xong", "model": "opus-4.5" },
-        { "name": "Lịch sử tài khoản", "status": "đang chạy", "model": "gpt-5" },
-        { "name": "Ticket hỗ trợ", "status": "đang chạy", "model": "gpt-5" },
-        { "name": "Dữ liệu thanh toán", "status": "chờ", "model": "qwen3" }
+        {
+          "name": "Điều khoản hợp đồng",
+          "status": "xong",
+          "model": "opus-4.5"
+        },
+        {
+          "name": "Lịch sử tài khoản",
+          "status": "đang chạy",
+          "model": "gpt-5"
+        },
+        {
+          "name": "Ticket hỗ trợ",
+          "status": "đang chạy",
+          "model": "gpt-5"
+        },
+        {
+          "name": "Dữ liệu thanh toán",
+          "status": "chờ",
+          "model": "qwen3"
+        }
       ],
       "knowledgeTitle": "truy hồi · trace",
       "knowledgeQuery": "“Ta đã cam kết gì với Nordwind về giá?”",
       "knowledgeHeading": "Tri thức có nguồn gốc rõ ràng",
-      "knowledgeBody": "Mỗi đoạn văn đều kèm nguồn, phân quyền và độ mới — nên câu trả lời có thể kiểm toán được, không chỉ để đọc.",
+      "knowledgeBody": "Mỗi đoạn đều mang theo nguồn của nó và vị trí trong tài liệu, và mỗi lần chạy đều ghi lại từng bước đã nhận gì — nên một câu trả lời có thể kiểm chứng chứ không chỉ để đọc.",
       "sources": [
-        { "tool": "MSA v4", "value": "§7.2 — giá khi gia hạn" },
-        { "tool": "Ghi chú", "value": "không tăng giá trước FY27" },
-        { "tool": "Memo Q3", "value": "quy tắc giữ giá cũ" },
-        { "tool": "Đơn hàng", "value": "ký ngày 12/03/2026" }
+        {
+          "tool": "MSA v4",
+          "value": "§7.2 — giá khi gia hạn"
+        },
+        {
+          "tool": "Ghi chú",
+          "value": "không tăng giá trước FY27"
+        },
+        {
+          "tool": "Memo Q3",
+          "value": "quy tắc giữ giá cũ"
+        },
+        {
+          "tool": "Đơn hàng",
+          "value": "ký ngày 12/03/2026"
+        }
       ],
       "rulesTitle": "workspace · quy tắc",
       "rulesHeading": "Quy tắc chỉ cần viết một lần",
       "rulesBody": "Giọng văn, khuyến cáo bắt buộc, nguồn bị cấm, ngưỡng chuyển tiếp — viết một lần và áp dụng cho mọi phiên chạy về sau.",
       "teamRules": [
-        { "rule": "Không bao giờ báo giá chưa được duyệt", "scope": "mọi agent" },
-        { "rule": "Trích hợp đồng, không trích bản tóm tắt", "scope": "pháp chế, kinh doanh" },
-        { "rule": "Chuyển cho người khi mức bám nguồn dưới 0,8", "scope": "hỗ trợ" },
-        { "rule": "Trả lời bằng ngôn ngữ của khách hàng", "scope": "hỗ trợ" }
+        {
+          "rule": "Không bao giờ báo giá chưa được duyệt",
+          "scope": "mọi agent"
+        },
+        {
+          "rule": "Trích hợp đồng, không trích bản tóm tắt",
+          "scope": "pháp chế, kinh doanh"
+        },
+        {
+          "rule": "Chuyển cho người khi mức bám nguồn dưới 0,8",
+          "scope": "hỗ trợ"
+        },
+        {
+          "rule": "Trả lời bằng ngôn ngữ của khách hàng",
+          "scope": "hỗ trợ"
+        }
       ]
     },
     "lifecycle": {
@@ -523,7 +709,7 @@
         "Bóc tách — hiểu bố cục, giữ nguyên bảng",
         "Cắt chunk — theo cấu trúc, không theo số ký tự",
         "Embedding — đa ngôn ngữ, một không gian vector",
-        "Đồng bộ — tăng dần, mang theo phân quyền"
+        "Đồng bộ — tăng dần, chỉ phần đã thay đổi"
       ],
       "skip": "Cấu hình",
       "continue": "Chạy",
@@ -531,18 +717,46 @@
       "designHeading": "Truy hồi",
       "designBody": "Tương đồng vector và so khớp từ khoá chạy song song, sau đó bộ rerank quyết định đoạn nào thực sự vào ngữ cảnh của mô hình.",
       "retrievalRows": [
-        { "stage": "Vector", "detail": "top 50 theo tương đồng", "value": "50" },
-        { "stage": "Từ khoá", "detail": "BM25, mã định danh chính xác", "value": "24" },
-        { "stage": "Gộp", "detail": "ứng viên đã khử trùng lặp", "value": "38" },
-        { "stage": "Rerank", "detail": "vượt ngưỡng liên quan", "value": "6" }
+        {
+          "stage": "Vector",
+          "detail": "top 50 theo tương đồng",
+          "value": "50"
+        },
+        {
+          "stage": "Từ khoá",
+          "detail": "BM25, mã định danh chính xác",
+          "value": "24"
+        },
+        {
+          "stage": "Gộp",
+          "detail": "ứng viên đã khử trùng lặp",
+          "value": "38"
+        },
+        {
+          "stage": "Rerank",
+          "detail": "vượt ngưỡng liên quan",
+          "value": "6"
+        }
       ],
       "validateChrome": "đánh giá · phiên chạy",
       "validateHeading": "Đánh giá",
       "validateBody": "Mức bám nguồn, độ phủ trích dẫn và tỷ lệ truy hồi trúng được chấm lại ở mọi thay đổi, nên suy giảm chất lượng lộ ra trước khi người dùng phản ánh.",
       "validateSteps": [
-        { "action": "chấm", "target": "30 câu hỏi tham chiếu", "result": "bám nguồn 0,94 (+0,06)" },
-        { "action": "kiểm", "target": "độ phủ trích dẫn", "result": "98% khẳng định có liên kết" },
-        { "action": "so", "target": "với cấu hình trước đó", "result": "2 câu trả lời thay đổi" }
+        {
+          "action": "chấm",
+          "target": "30 câu hỏi tham chiếu",
+          "result": "bám nguồn 0,94 (+0,06)"
+        },
+        {
+          "action": "kiểm",
+          "target": "độ phủ trích dẫn",
+          "result": "98% khẳng định có liên kết"
+        },
+        {
+          "action": "so",
+          "target": "với cấu hình trước đó",
+          "result": "2 câu trả lời thay đổi"
+        }
       ],
       "rootCauseLabel": "Điểm yếu nhất:",
       "rootCauseValue": "truy hồi trên PDF scan"
@@ -559,49 +773,83 @@
         "done": "đã soạn câu trả lời · 9 khẳng định · 9 trích dẫn"
       },
       "runToolsHeading": "Chạy công cụ, không chỉ chạy prompt",
-      "runToolsBody": "Truy vấn kho dữ liệu, gọi API nội bộ, chạy Python trong sandbox, tìm kiếm web — thông tin xác thực giữ ở phía máy chủ và không bao giờ lộ cho mô hình.",
+      "runToolsBody": "Tìm trong tri thức của bạn, truy vấn cơ sở dữ liệu ở chế độ chỉ đọc, đọc một trang web, xử lý một bảng tính, gửi thư — với thông tin đăng nhập giữ ở phía server và không bao giờ lộ cho mô hình.",
       "composeChrome": "soạn · ngữ cảnh",
       "composeAttach": "So sánh {chip1} với {chip2} của chúng ta và áp dụng {chip3}",
       "composeFollow": "Chỉ dùng nguồn mới hơn {chip1}",
       "addContextHeading": "Trỏ đúng vào thứ cần dùng",
       "addContextBody": "Nhắc tên một tài liệu, thư mục, connector hay bộ lọc đã lưu ngay trong câu hỏi, agent sẽ giới hạn truy hồi đúng phạm vi đó cho phiên chạy này.",
       "snapshotsChrome": "lịch sử · phiên bản",
-      "snapshotsHeading": "Mọi phiên chạy đều tái lập được",
-      "snapshotsBody": "Mô hình, prompt, các đoạn đã truy hồi và kết quả công cụ được lưu phiên bản cùng nhau, nên bất kỳ câu trả lời nào cũng chạy lại được đúng như lúc tạo ra.",
+      "snapshotsHeading": "Mọi lần chạy đều xem lại được",
+      "snapshotsBody": "Mô hình, prompt, công cụ và đầu vào — đầu ra của từng bước đều được ghi lại gắn với phiên bản đã tạo ra chúng, nên bất kỳ câu trả lời nào cũng đọc lại được đúng như lúc nó được tạo ra — hoặc đem so với một phiên bản khác trên cùng câu hỏi.",
       "snapshots": [
-        { "label": "Index lại knowledge base", "date": "24/08 · 09:12" },
-        { "label": "Bật rerank", "date": "24/08 · 11:40" },
-        { "label": "Đổi mô hình sang opus-4.5", "date": "25/08 · 08:05" },
-        { "label": "Cấu hình hiện tại", "date": "26/08 · 14:22" }
+        {
+          "label": "Index lại knowledge base",
+          "date": "24/08 · 09:12"
+        },
+        {
+          "label": "Bật rerank",
+          "date": "24/08 · 11:40"
+        },
+        {
+          "label": "Đổi mô hình sang opus-4.5",
+          "date": "25/08 · 08:05"
+        },
+        {
+          "label": "Cấu hình hiện tại",
+          "date": "26/08 · 14:22"
+        }
       ]
     },
     "extend": {
-      "title": "Mở rộng mà không phải fork",
-      "subtitle": "Connector, skill và công cụ của riêng bạn — đều là công dân hạng nhất.",
+      "title": "Mở rộng mà không cần fork",
+      "subtitle": "Mẫu có sẵn để bắt đầu, kết nối tới hệ thống bạn đang dùng, và công cụ của riêng bạn đứng cạnh công cụ của chúng tôi.",
       "learnMore": "Tìm hiểu thêm",
       "connectorsChrome": "connector · workspace",
-      "connectorsHeading": "Connector",
-      "connectorsBody": "Đồng bộ có quản lý cho các hệ thống mà tri thức của bạn đang nằm ở đó, mang theo phân quyền của từng nguồn vào tận bước truy hồi.",
-      "connectorTags": ["đã đồng bộ", "đã đồng bộ", "đã đồng bộ", "đang đồng bộ", "đã đồng bộ"],
-      "skillsChrome": "skill · dùng chung",
-      "skillsHeading": "Agent Skills",
-      "skillsBody": "Biến một prompt đã chạy tốt thành skill có tên và có phiên bản, cố định sẵn nguồn, công cụ và định dạng đầu ra — rồi để cả workspace dùng lại.",
+      "connectorsHeading": "Kết nối",
+      "connectorsBody": "Kết nối tài khoản một lần qua OAuth, và các công cụ của nó trở thành lựa chọn được trên mọi bước agent — đọc đúng những gì người kết nối đọc được, không hơn.",
+      "connectorTags": [
+        "đã kết nối",
+        "đã kết nối",
+        "đã kết nối",
+        "đã kết nối",
+        "đã kết nối"
+      ],
+      "skillsChrome": "mẫu · bắt đầu ở đây",
+      "skillsHeading": "Sáu agent mẫu để bắt đầu",
+      "skillsBody": "Mỗi mẫu đến dưới dạng một flow chạy được, đã cài sẵn các bước, công cụ và chỉ dẫn — kể cả những điều nó không được phép làm. Sửa phần bạn cần rồi xuất bản một phiên bản của riêng mình.",
       "skillDescs": [
-        "Soạn phản hồi hỗ trợ bám theo chính sách",
-        "Đối chiếu hợp đồng với playbook",
-        "Trả lời bảng câu hỏi bảo mật từ câu trả lời cũ",
-        "Tóm tắt một tuần hoạt động của khối kỹ thuật",
-        "Tìm mọi tài liệu có nhắc tới một điều khoản"
+        "Tìm, đọc và dẫn nguồn trước khi trả lời",
+        "Trả lời theo quy định của bạn, chuyển người khi không chắc",
+        "Hỏi cơ sở dữ liệu ở chế độ chỉ đọc và hiện truy vấn",
+        "Trả lời câu hỏi quy định nội bộ kèm nguồn",
+        "Soạn thư trả lời dựa trên tài liệu đã duyệt",
+        "Đọc một tài liệu và bóc ra đúng thứ bạn yêu cầu"
       ],
       "mcpChrome": "mcp · máy chủ",
       "mcpHeading": "Công cụ của riêng bạn",
-      "mcpBody": "Gắn bất kỳ máy chủ Model Context Protocol nào, hoặc đăng ký một công cụ HTTP thuần, và nó xuất hiện với agent như công cụ có sẵn.",
+      "mcpBody": "Gắn bất kỳ máy chủ Model Context Protocol nào, hoặc đăng ký một công cụ HTTP thường, và nó xuất hiện cho agent bên cạnh công cụ có sẵn — mọi lời gọi cùng kết quả đều được ghi lại.",
       "mcpConnections": [
-        { "name": "internal-crm", "status": "đã kết nối" },
-        { "name": "warehouse-sql", "status": "đã kết nối" },
-        { "name": "ticketing", "status": "đã kết nối" },
-        { "name": "billing-api", "status": "đã kết nối" },
-        { "name": "custom-search", "status": "đã kết nối" }
+        {
+          "name": "internal-crm",
+          "status": "đã kết nối"
+        },
+        {
+          "name": "warehouse-sql",
+          "status": "đã kết nối"
+        },
+        {
+          "name": "ticketing",
+          "status": "đã kết nối"
+        },
+        {
+          "name": "billing-api",
+          "status": "đã kết nối"
+        },
+        {
+          "name": "custom-search",
+          "status": "đã kết nối"
+        }
       ]
     },
     "changelog": {
@@ -617,7 +865,12 @@
       "subtitle": "Đội ngũ của bạn đặt câu hỏi và ra quyết định. Ragenta lo phần đọc, truy hồi và soạn thảo.",
       "ctaPrimary": "Dùng thử miễn phí",
       "ctaSecondary": "Trao đổi với chúng tôi",
-      "industries": ["Hỗ trợ", "Pháp chế", "Kinh doanh", "Vận hành"],
+      "industries": [
+        "Hỗ trợ",
+        "Pháp chế",
+        "Kinh doanh",
+        "Vận hành"
+      ],
       "previewAlt": "Xem trước giải pháp Ragenta"
     },
     "groups": [
@@ -630,7 +883,7 @@
             "title": "Tìm kiếm nội bộ",
             "blurb": "Một ô tìm kiếm cho mọi hệ thống, trả lời bằng câu chữ thay vì danh sách link.",
             "challenge": "Tri thức nằm rải rác ở wiki, drive, hệ thống ticket và ba workspace chat. Mọi người bỏ cuộc trước khi tìm ra.",
-            "solution": "Ragenta index tất cả vào một knowledge base tôn trọng phân quyền và trả lời thẳng câu hỏi, kèm đúng đoạn văn đã dùng."
+            "solution": "Ragenta index tất cả vào một knowledge base và trả lời thẳng câu hỏi, kèm theo đoạn văn nó đã dùng. Một tài khoản đã kết nối đọc với đúng quyền của người kết nối, nên agent không bao giờ nhìn thấy nhiều hơn họ."
           },
           {
             "id": "research-assistant",
@@ -670,9 +923,9 @@
             "id": "helpdesk",
             "num": "05",
             "title": "Helpdesk CNTT & Nhân sự",
-            "blurb": "Trả lời chính sách ngay trên Slack, không lộ thứ người hỏi không được xem.",
+            "blurb": "Trả lời quy định nội bộ đăng thẳng vào Slack, từ đúng những nguồn bạn khoanh cho nhóm đó.",
             "challenge": "Nhân sự và CNTT trả lời cùng những câu hỏi chính sách suốt ngày, còn nguồn chuẩn thì thay đổi mà không ai hay.",
-            "solution": "Truy hồi kế thừa phân quyền của từng nguồn, nên câu trả lời chỉ được lắp từ tài liệu mà người đó vốn đã mở được."
+            "solution": "Câu trả lời đến từ knowledge base bạn đã khoanh vùng cho nhóm đó, và một tài khoản đã kết nối chỉ đọc được đúng phần mà người kết nối nó đọc được."
           },
           {
             "id": "data-analyst",
@@ -728,11 +981,31 @@
         "legendVector": "vector",
         "legendKeyword": "từ khoá",
         "rows": [
-          { "source": "Chính sách bảo mật §4", "system": "Confluence", "score": "0,94" },
-          { "source": "Phụ lục DPA B", "system": "Drive", "score": "0,91" },
-          { "source": "Help center #218", "system": "Zendesk", "score": "0,86" },
-          { "source": "FAQ onboarding", "system": "Notion", "score": "0,71" },
-          { "source": "Chính sách lưu trữ (2025)", "system": "Drive", "score": "0,55" }
+          {
+            "source": "Chính sách bảo mật §4",
+            "system": "Confluence",
+            "score": "0,94"
+          },
+          {
+            "source": "Phụ lục DPA B",
+            "system": "Drive",
+            "score": "0,91"
+          },
+          {
+            "source": "Help center #218",
+            "system": "Zendesk",
+            "score": "0,86"
+          },
+          {
+            "source": "FAQ onboarding",
+            "system": "Notion",
+            "score": "0,71"
+          },
+          {
+            "source": "Chính sách lưu trữ (2025)",
+            "system": "Drive",
+            "score": "0,55"
+          }
         ],
         "supersededLabel": "đã thay thế",
         "footer": "38 ứng viên · dùng 6 đoạn · trả lời trong 1,4s"
@@ -762,18 +1035,50 @@
         "windowTitle": "Tự xử lý ticket — hộp thư #general",
         "eyebrow": "24 giờ gần nhất",
         "metrics": [
-          { "label": "Xử lý tại chỗ", "value": "68%" },
-          { "label": "Phản hồi đầu (trung vị)", "value": "22s" },
-          { "label": "Chuyển tiếp", "value": "32%" }
+          {
+            "label": "Xử lý tại chỗ",
+            "value": "68%"
+          },
+          {
+            "label": "Phản hồi đầu (trung vị)",
+            "value": "22s"
+          },
+          {
+            "label": "Chuyển tiếp",
+            "value": "32%"
+          }
         ],
         "rows": [
-          { "topic": "Thời hạn hoàn tiền gói năm", "state": "resolved", "detail": "trích MSA §7.2" },
-          { "topic": "Thiết lập SSO với Okta", "state": "resolved", "detail": "trích help center #142" },
-          { "topic": "Xuất hoá đơn bằng ngoại tệ khác", "state": "resolved", "detail": "trích FAQ thanh toán" },
-          { "topic": "Yêu cầu lưu trú dữ liệu riêng", "state": "escalated", "detail": "chưa có nguồn đã duyệt" },
-          { "topic": "Lỗi — xuất dữ liệu treo ở 90%", "state": "escalated", "detail": "chuyển cho kỹ thuật" }
+          {
+            "topic": "Thời hạn hoàn tiền gói năm",
+            "state": "resolved",
+            "detail": "trích MSA §7.2"
+          },
+          {
+            "topic": "Thiết lập SSO với Okta",
+            "state": "resolved",
+            "detail": "trích help center #142"
+          },
+          {
+            "topic": "Xuất hoá đơn bằng ngoại tệ khác",
+            "state": "resolved",
+            "detail": "trích FAQ thanh toán"
+          },
+          {
+            "topic": "Yêu cầu lưu trú dữ liệu riêng",
+            "state": "escalated",
+            "detail": "chưa có nguồn đã duyệt"
+          },
+          {
+            "topic": "Lỗi — xuất dữ liệu treo ở 90%",
+            "state": "escalated",
+            "detail": "chuyển cho kỹ thuật"
+          }
         ],
-        "states": { "resolved": "Đã xử lý", "escalated": "Đã chuyển tiếp" },
+        "states": {
+          "resolved": "Đã xử lý",
+          "escalated": "Đã chuyển tiếp"
+        },
         "footer": "Ticket chuyển tiếp luôn kèm tóm tắt và các nguồn đã kiểm"
       },
       "salesEnablement": {
@@ -781,18 +1086,46 @@
         "eyebrow": "118 câu hỏi · 9 phần",
         "generating": "đang soạn phần thiếu",
         "sections": [
-          { "name": "Kiểm soát truy cập", "matched": 22, "state": "done" },
-          { "name": "Bảo vệ dữ liệu", "matched": 31, "state": "done" },
-          { "name": "Ứng phó sự cố", "matched": 18, "state": "done" },
-          { "name": "Nhà thầu phụ", "matched": 6, "state": "running" }
+          {
+            "name": "Kiểm soát truy cập",
+            "matched": 22,
+            "state": "done"
+          },
+          {
+            "name": "Bảo vệ dữ liệu",
+            "matched": 31,
+            "state": "done"
+          },
+          {
+            "name": "Ứng phó sự cố",
+            "matched": 18,
+            "state": "done"
+          },
+          {
+            "name": "Nhà thầu phụ",
+            "matched": 6,
+            "state": "running"
+          }
         ],
         "matchedLabel": "{count} câu lấy từ nguồn đã duyệt",
         "runningLabel": "{count} câu đã khớp · đang soạn phần còn lại",
         "topLabel": "Cần người phụ trách",
         "gaps": [
-          { "id": "Q-084", "topic": "Lưu trú dữ liệu tại Việt Nam", "owner": "Pháp chế" },
-          { "id": "Q-091", "topic": "Danh sách nhà thầu phụ khu vực APAC", "owner": "Bảo mật" },
-          { "id": "Q-107", "topic": "Lưu trữ sau khi kết thúc hợp đồng", "owner": "Pháp chế" }
+          {
+            "id": "Q-084",
+            "topic": "Lưu trú dữ liệu tại Việt Nam",
+            "owner": "Pháp chế"
+          },
+          {
+            "id": "Q-091",
+            "topic": "Danh sách nhà thầu phụ khu vực APAC",
+            "owner": "Bảo mật"
+          },
+          {
+            "id": "Q-107",
+            "topic": "Lưu trữ sau khi kết thúc hợp đồng",
+            "owner": "Pháp chế"
+          }
         ]
       },
       "helpdesk": {
@@ -800,18 +1133,62 @@
         "tabPolicies": "Chính sách",
         "tabTickets": "Ticket",
         "policies": [
-          { "name": "Chính sách làm việc từ xa", "freshness": "cập nhật 4 ngày trước", "sources": 3, "confidence": 0.94 },
-          { "name": "Hoàn ứng chi phí", "freshness": "cập nhật 2 tuần trước", "sources": 2, "confidence": 0.88 },
-          { "name": "Thay thế thiết bị", "freshness": "cập nhật 6 tuần trước", "sources": 4, "confidence": 0.81 },
-          { "name": "Nghỉ thai sản", "freshness": "cập nhật 3 tháng trước", "sources": 2, "confidence": 0.72 },
-          { "name": "Yêu cầu cấp VPN", "freshness": "cập nhật 5 tháng trước", "sources": 1, "confidence": 0.61 }
+          {
+            "name": "Chính sách làm việc từ xa",
+            "freshness": "cập nhật 4 ngày trước",
+            "sources": 3,
+            "confidence": 0.94
+          },
+          {
+            "name": "Hoàn ứng chi phí",
+            "freshness": "cập nhật 2 tuần trước",
+            "sources": 2,
+            "confidence": 0.88
+          },
+          {
+            "name": "Thay thế thiết bị",
+            "freshness": "cập nhật 6 tuần trước",
+            "sources": 4,
+            "confidence": 0.81
+          },
+          {
+            "name": "Nghỉ thai sản",
+            "freshness": "cập nhật 3 tháng trước",
+            "sources": 2,
+            "confidence": 0.72
+          },
+          {
+            "name": "Yêu cầu cấp VPN",
+            "freshness": "cập nhật 5 tháng trước",
+            "sources": 1,
+            "confidence": 0.61
+          }
         ],
         "confidenceNote": "Độ tin cậy dưới 0,7 sẽ chuyển câu hỏi cho người xử lý.",
-        "ticketsLegend": ["IT", "HR", "Finance"],
+        "ticketsLegend": [
+          "IT",
+          "HR",
+          "Finance"
+        ],
         "tickets": [
-          { "topic": "Điều kiện nâng cấp laptop", "team": "IT", "volume": "3,2×", "trend": "trả lời tại chỗ" },
-          { "topic": "Chuyển phép năm sang năm sau", "team": "HR", "volume": "2,4×", "trend": "trả lời tại chỗ" },
-          { "topic": "Công tác phí gặp khách hàng", "team": "Finance", "volume": "1,6×", "trend": "cần người phụ trách chính sách" }
+          {
+            "topic": "Điều kiện nâng cấp laptop",
+            "team": "IT",
+            "volume": "3,2×",
+            "trend": "trả lời tại chỗ"
+          },
+          {
+            "topic": "Chuyển phép năm sang năm sau",
+            "team": "HR",
+            "volume": "2,4×",
+            "trend": "trả lời tại chỗ"
+          },
+          {
+            "topic": "Công tác phí gặp khách hàng",
+            "team": "Finance",
+            "volume": "1,6×",
+            "trend": "cần người phụ trách chính sách"
+          }
         ],
         "ticketsFooter": "So sánh với cùng tuần của quý trước."
       },
@@ -826,7 +1203,12 @@
           "group by 1 order by 2 desc"
         ],
         "chartLabel": "MRR theo quý · APAC",
-        "quarters": ["2025-Q4", "2026-Q1", "2026-Q2", "2026-Q3"],
+        "quarters": [
+          "2025-Q4",
+          "2026-Q1",
+          "2026-Q2",
+          "2026-Q3"
+        ],
         "caveat": "Chưa tính 2 tài khoản đang chuyển đổi — được nêu rõ, không âm thầm bỏ qua.",
         "footer": "Truy vấn, kết quả và lưu ý được trả về cùng nhau"
       },
@@ -838,11 +1220,26 @@
         "highRisk": "Cần leo thang",
         "acceptable": "Chấp nhận nguyên trạng",
         "findings": {
-          "liability": { "label": "Trần trách nhiệm", "sub": "12 tháng → 24 tháng phí" },
-          "termination": { "label": "Đơn phương chấm dứt", "sub": "30 ngày, chỉ một chiều" },
-          "indemnity": { "label": "Bồi thường SHTT", "sub": "khớp playbook" },
-          "dataResidency": { "label": "Lưu trú dữ liệu", "sub": "yêu cầu APAC, chưa đáp ứng" },
-          "audit": { "label": "Quyền kiểm toán", "sub": "đang đối chiếu…" }
+          "liability": {
+            "label": "Trần trách nhiệm",
+            "sub": "12 tháng → 24 tháng phí"
+          },
+          "termination": {
+            "label": "Đơn phương chấm dứt",
+            "sub": "30 ngày, chỉ một chiều"
+          },
+          "indemnity": {
+            "label": "Bồi thường SHTT",
+            "sub": "khớp playbook"
+          },
+          "dataResidency": {
+            "label": "Lưu trú dữ liệu",
+            "sub": "yêu cầu APAC, chưa đáp ứng"
+          },
+          "audit": {
+            "label": "Quyền kiểm toán",
+            "sub": "đang đối chiếu…"
+          }
         },
         "footer": "3 sai lệch cần pháp chế duyệt · 61 điều khoản khớp playbook"
       },
@@ -851,17 +1248,50 @@
         "eyebrow": "Bộ bằng chứng · 42 chốt kiểm soát",
         "generatedCount": "31 / 42 đã lắp",
         "metrics": [
-          { "label": "Chốt đã phủ", "value": "74%" },
-          { "label": "Bằng chứng thiếu", "value": "6" },
-          { "label": "Bằng chứng cũ", "value": "5" }
+          {
+            "label": "Chốt đã phủ",
+            "value": "74%"
+          },
+          {
+            "label": "Bằng chứng thiếu",
+            "value": "6"
+          },
+          {
+            "label": "Bằng chứng cũ",
+            "value": "5"
+          }
         ],
         "docs": [
-          { "name": "Bản xuất rà soát truy cập", "format": "CSV", "state": "done" },
-          { "name": "Nhật ký quản lý thay đổi", "format": "CSV", "state": "done" },
-          { "name": "Lịch sử phiên bản chính sách", "format": "PDF", "state": "done" },
-          { "name": "Đánh giá rủi ro nhà cung cấp", "format": "XLSX", "state": "running" },
-          { "name": "Báo cáo hậu sự cố", "format": "PDF", "state": "pending" },
-          { "name": "Bản mô tả chốt kiểm soát", "format": "DOCX", "state": "pending" }
+          {
+            "name": "Bản xuất rà soát truy cập",
+            "format": "CSV",
+            "state": "done"
+          },
+          {
+            "name": "Nhật ký quản lý thay đổi",
+            "format": "CSV",
+            "state": "done"
+          },
+          {
+            "name": "Lịch sử phiên bản chính sách",
+            "format": "PDF",
+            "state": "done"
+          },
+          {
+            "name": "Đánh giá rủi ro nhà cung cấp",
+            "format": "XLSX",
+            "state": "running"
+          },
+          {
+            "name": "Báo cáo hậu sự cố",
+            "format": "PDF",
+            "state": "pending"
+          },
+          {
+            "name": "Bản mô tả chốt kiểm soát",
+            "format": "DOCX",
+            "state": "pending"
+          }
         ],
         "footer": "Mọi mục đều liên kết ngược về hệ thống gốc"
       }
@@ -952,6 +1382,28 @@
     },
     "footer": "Hết nhật ký thay đổi · Theo dõi để cập nhật tiếp"
   },
+  "catalogue": {
+    "eyebrow": "Danh mục",
+    "heroTitle": "Mọi mô hình, công cụ và kết nối bạn có thể trao cho một agent.",
+    "heroSubtitle": "Chọn mô hình cho từng agent, gắn công cụ nó cần, và kết nối những hệ thống mà câu trả lời nên lấy dữ liệu từ đó.",
+    "searchLabel": "Tìm trong danh mục",
+    "searchPlaceholder": "Tìm mô hình, công cụ và kết nối",
+    "searchButton": "Tìm",
+    "clearSearch": "Xoá tìm kiếm",
+    "clear": "Xoá",
+    "allTags": "Tất cả",
+    "featured": "Phổ biến",
+    "count": "{count} mục trong danh mục",
+    "emptyTitle": "Chưa có gì ở đây",
+    "emptyDescription": "Không có mục nào khớp với “{query}”.",
+    "backToCatalogue": "Về danh mục",
+    "specsTitle": "Tóm tắt",
+    "noBody": "Bài giới thiệu chi tiết cho mục này sẽ có sớm.",
+    "relatedTitle": "Mục liên quan",
+    "detailTitle": "{name} — Danh mục Ragenta",
+    "ctaTitle": "Dùng {name} trong workspace của bạn.",
+    "ctaBody": "Tạo workspace, kết nối một nguồn dữ liệu, và đưa nó vào việc chỉ trong vài phút."
+  },
   "legal": {
     "eyebrow": "Pháp lý",
     "lastUpdated": "Cập nhật lần cuối {date}"
@@ -981,6 +1433,10 @@
     "changelog": {
       "title": "Nhật ký thay đổi — Ragenta",
       "description": "Các bản phát hành, mô hình mới, connector và cập nhật nền tảng mới nhất của Ragenta."
+    },
+    "catalogue": {
+      "title": "Danh mục — Mô hình, công cụ và kết nối | Ragenta",
+      "description": "Toàn bộ mô hình, công cụ agent và kết nối có trong Ragenta: mô hình chat và embedding, truy hồi, công cụ cho agent, kết nối Google và Slack, cùng các tính năng nền tảng xây trên đó."
     },
     "blog": {
       "title": "Blog Ragenta | Truy hồi, Agent và Đánh giá",

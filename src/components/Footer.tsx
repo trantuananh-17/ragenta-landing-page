@@ -15,6 +15,7 @@ const INTERNAL_SECTIONS = [
       { key: "overview", href: "/product" },
       { key: "solutions", href: "/solutions" },
       { key: "pricing", href: "/pricing" },
+      { key: "catalogue", href: "/catalogue" },
       { key: "changelog", href: "/changelog" },
     ],
   },

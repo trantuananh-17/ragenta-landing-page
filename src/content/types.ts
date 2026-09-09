@@ -14,6 +14,20 @@ export type CatalogueItem = {
   featured: boolean;
 };
 
+/** One labelled fact in a catalogue item's spec table. */
+export type CatalogueSpec = {
+  label: string;
+  value: string;
+};
+
+/** What the catalogue detail page renders: the card, plus prose and specs. */
+export type CatalogueItemDetail = CatalogueItem & {
+  /** Markdown. Empty for an item nobody has written up yet. */
+  body: string;
+  specs: CatalogueSpec[];
+  related: CatalogueItem[];
+};
+
 export type CatalogueResult = {
   items: CatalogueItem[];
   total: number;

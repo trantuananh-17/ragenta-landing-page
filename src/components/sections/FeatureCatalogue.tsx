@@ -6,8 +6,8 @@ import { Search } from "lucide-react";
 import { usePostHog } from "@posthog/next";
 import { Container } from "@/components/ui/Container";
 import { WindowChrome } from "@/components/ui/WindowChrome";
-import { usePublicEnv } from "@/lib/runtime-env";
 import { getAttributionProps } from "@/lib/attribution";
+import { LocaleLink } from "@/i18n/LocaleLink";
 import { useTranslations } from "@/i18n/useTranslations";
 import { fetchCatalogueClient } from "@/content/client";
 import type { CatalogueItem, CatalogueResult } from "@/content/types";
@@ -21,7 +21,6 @@ const SEARCH_DEBOUNCE_MS = 300;
  * data currently comes from the fixtures or from the content backend.
  */
 export function FeatureCatalogue({ initial }: { initial: CatalogueResult }) {
-  const { appUrl } = usePublicEnv();
   const posthog = usePostHog();
   const { t, locale } = useTranslations("home.featureCatalogue");
 
@@ -187,22 +186,20 @@ export function FeatureCatalogue({ initial }: { initial: CatalogueResult }) {
                       );
 
                       return item.id ? (
-                        <a
+                        <LocaleLink
                           key={item.id}
-                          href={`${appUrl}/catalogue/${item.id}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href={`/catalogue/${item.id}`}
                           onClick={() =>
                             trackCTA(
                               `Open catalogue item: ${item.name}`,
                               "feature_catalogue_card",
-                              `${appUrl}/catalogue/${item.id}`,
+                              `/catalogue/${item.id}`,
                             )
                           }
                           className="block rounded-lg border border-line bg-window p-3 transition-all duration-150 hover:border-brand-300 hover:shadow-sm"
                         >
                           {inner}
-                        </a>
+                        </LocaleLink>
                       ) : (
                         <div
                           key={item.name}
@@ -268,21 +265,15 @@ export function FeatureCatalogue({ initial }: { initial: CatalogueResult }) {
               <p className="mb-6 text-[17px] leading-relaxed text-ink-muted">
                 {t("description")}
               </p>
-              <a
-                href={`${appUrl}/catalogue`}
-                target="_blank"
-                rel="noopener noreferrer"
+              <LocaleLink
+                href="/catalogue"
                 onClick={() =>
-                  trackCTA(
-                    "Browse the catalogue",
-                    "feature_catalogue",
-                    `${appUrl}/catalogue`,
-                  )
+                  trackCTA("Browse the catalogue", "feature_catalogue", "/catalogue")
                 }
                 className="w-fit text-[15px] font-semibold text-brand-600 transition-colors hover:text-brand-700"
               >
                 {t("cta")}
-              </a>
+              </LocaleLink>
             </motion.div>
           </div>
         </div>

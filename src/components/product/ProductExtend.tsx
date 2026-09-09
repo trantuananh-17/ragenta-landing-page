@@ -7,22 +7,18 @@ import {
 } from "@/components/product/ProductCard";
 import { useTranslations } from "@/i18n/useTranslations";
 
-// Product and command names are identifiers, so they stay in code; the labels
-// beside them (`connectorTags`, `skillDescs`, `mcpConnections`) are translated.
-const CONNECTOR_NAMES = [
-  "Google Drive",
-  "Notion",
-  "Confluence",
-  "Slack",
-  "Zendesk",
-];
+// Product names are identifiers, so they stay in code; the labels beside them
+// (`connectorTags`, `skillDescs`, `mcpConnections`) are translated.
+const CONNECTOR_NAMES = ["Google Drive", "Gmail", "Notion", "Slack", "GitHub"];
 
-const SKILL_NAMES = [
-  "/support-reply",
-  "/contract-diff",
-  "/rfp-answer",
-  "/weekly-digest",
-  "/clause-search",
+// The six templates a new agent can start from, named as the app names them.
+const TEMPLATE_NAMES = [
+  "Research agent",
+  "Customer support agent",
+  "Data analyst agent",
+  "HR assistant",
+  "Sales assistant",
+  "Document agent",
 ];
 
 export function ProductExtend() {
@@ -76,9 +72,9 @@ export function ProductExtend() {
             ctaLocation="product_extend"
           >
             <div className="space-y-1.5 p-3">
-              {SKILL_NAMES.map((name, i) => (
+              {TEMPLATE_NAMES.map((name, i) => (
                 <div key={name} className="text-[10px]">
-                  <p className="font-mono font-semibold text-brand-600">{name}</p>
+                  <p className="font-semibold text-brand-600">{name}</p>
                   <p className="mt-0.5 pl-1 text-ink-subtle">{skillDescs[i]}</p>
                 </div>
               ))}

@@ -59,9 +59,9 @@ one, edit its `vi` entry in the same change.
 
 | Module | Fixture | Future endpoint |
 | --- | --- | --- |
-| `catalogue.ts` | 26 models, tools, connectors | `GET /v1/public/catalogue` |
+| `catalogue.ts` | 33 models, tools, connectors, platform capabilities | `GET /v1/public/catalogue[/:slug]` |
 | `posts.ts` | 6 blog posts with full markdown bodies | `GET /v1/public/posts[/:slug]` |
-| `changelog.ts` | 10 entries | `GET /v1/public/changelog` |
+| `changelog.ts` | 8 entries | `GET /v1/public/changelog` |
 | `announcement.ts` | inline | `GET /v1/public/announcement` |
 | `legal.ts` | privacy policy, terms of service | `GET /v1/public/legal/:slug` |
 | `site-metadata.ts` | inline | `GET /v1/public/site-metadata/:key` |

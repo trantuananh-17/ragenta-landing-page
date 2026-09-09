@@ -4,9 +4,10 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { Providers } from "@/components/sections/Providers";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { FeatureOrchestration } from "@/components/sections/FeatureOrchestration";
-import { FeaturePipeline } from "@/components/sections/FeaturePipeline";
+import { FeatureCanvas } from "@/components/sections/FeatureCanvas";
 import { FeatureKnowledge } from "@/components/sections/FeatureKnowledge";
 import { FeatureCatalogue } from "@/components/sections/FeatureCatalogue";
+import { FeatureWidget } from "@/components/sections/FeatureWidget";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { BlogHighlights } from "@/components/sections/BlogHighlights";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -53,9 +54,10 @@ export default async function Home({
       <Providers />
       <TrustStrip />
       <FeatureOrchestration />
-      <FeaturePipeline />
+      <FeatureCanvas />
       <FeatureKnowledge />
       <FeatureCatalogue initial={catalogue} />
+      <FeatureWidget />
       <Testimonials />
       <BlogHighlights lang={lang} />
       <FinalCTA />

@@ -1,17 +1,22 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { useSignupFlow } from "@/lib/SignupFlowContext";
 import { Container } from "@/components/ui/Container";
 import { useTranslations } from "@/i18n/useTranslations";
 
-type BillingCycle = "monthly" | "yearly";
-
-// Plan ids and their non-text behaviour; all copy comes from the dictionary.
+/**
+ * Plan ids in the order they are sold, and their non-text behaviour. All copy
+ * comes from the dictionary.
+ *
+ * There is no monthly/yearly toggle: every plan is billed monthly, and a toggle
+ * offering a discount nobody can actually buy is a promise the checkout would
+ * have to break.
+ */
 const PLANS = [
   { id: "free", featured: false, newTab: true, ctaAnalytics: "Start for free" },
+  { id: "starter", featured: false, newTab: true, ctaAnalytics: "Start for free" },
   { id: "pro", featured: true, newTab: true, ctaAnalytics: "Start for free" },
   { id: "team", featured: false, newTab: true, ctaAnalytics: "Start a trial" },
   { id: "enterprise", featured: false, newTab: false, ctaAnalytics: "Contact us" },
@@ -19,21 +24,22 @@ const PLANS = [
 
 type PlanText = {
   name: string;
-  price: { monthly: string; yearly: string };
+  price: string;
   priceSuffix: string;
-  priceSuffixYearly?: string;
+  credits: string;
   intro: string;
   cta: string;
   features: string[];
 };
 
 type NoteItem = { title: string; body: string };
+type TopupText = { title: string; body: string; packs: string[] };
 
 export function PricingPlans() {
-  const [billingCycle, setBillingCycle] = useState<BillingCycle>("monthly");
   const { openSignup } = useSignupFlow();
   const { t, raw } = useTranslations("pricing");
   const notes = raw<NoteItem[]>("notes");
+  const topup = raw<TopupText>("topup");
 
   return (
     <section className="pt-28 pb-16">
@@ -55,75 +61,40 @@ export function PricingPlans() {
         >
           {t("subheading")}
         </motion.p>
-
-        <motion.div
-          className="mt-6 inline-flex rounded-xl border border-line bg-window/70 p-1 backdrop-blur-sm"
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          role="tablist"
-          aria-label="Billing cycle"
-        >
-          {(["monthly", "yearly"] as const).map((cycle) => {
-            const isActive = billingCycle === cycle;
-            return (
-              <button
-                key={cycle}
-                type="button"
-                role="tab"
-                aria-selected={isActive}
-                onClick={() => setBillingCycle(cycle)}
-                className={`rounded-lg px-5 py-2 text-sm font-semibold transition-all ${
-                  isActive
-                    ? "bg-brand-600 text-brand-on shadow-sm"
-                    : "text-ink-subtle hover:text-ink"
-                }`}
-              >
-                {t(`billing.${cycle}`)}
-              </button>
-            );
-          })}
-        </motion.div>
       </Container>
 
       <Container>
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {PLANS.map((plan, index) => {
             const text = raw<PlanText>(`plans.${plan.id}`);
-            const isProYearly = plan.id === "pro" && billingCycle === "yearly";
             return (
               <motion.div
                 key={plan.id}
-                className="flex min-h-full flex-col rounded-2xl bg-card p-7 md:p-8"
+                className={`flex min-h-full flex-col rounded-2xl p-6 ${
+                  plan.featured ? "bg-card ring-2 ring-brand-500" : "bg-card"
+                }`}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
+                transition={{ duration: 0.5, delay: index * 0.06 }}
               >
-                <h2 className="text-2xl font-semibold tracking-tight text-ink">
+                <h2 className="text-xl font-semibold tracking-tight text-ink">
                   {text.name}
                 </h2>
 
                 <div className="mt-2 flex items-baseline gap-1">
                   <span className="text-3xl font-semibold tracking-tight text-ink">
-                    {text.price[billingCycle]}
+                    {text.price}
                   </span>
                   {text.priceSuffix && (
                     <span className="text-sm font-medium text-ink-subtle">
-                      {isProYearly && text.priceSuffixYearly
-                        ? text.priceSuffixYearly
-                        : text.priceSuffix}
+                      {text.priceSuffix}
                     </span>
                   )}
                 </div>
 
-                <p
-                  className={`mt-2 text-xs font-medium text-brand-600 transition-opacity duration-200 ${
-                    isProYearly ? "opacity-100" : "opacity-0"
-                  }`}
-                  aria-hidden={!isProYearly}
-                >
-                  {t("proYearlyNote")}
+                <p className="mt-2 min-h-10 text-xs leading-5 font-medium text-brand-600">
+                  {text.credits}
                 </p>
 
                 <button
@@ -135,7 +106,7 @@ export function PricingPlans() {
                       newTab: plan.newTab,
                     })
                   }
-                  className={`mt-6 inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-all ${
+                  className={`mt-5 inline-flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
                     plan.featured
                       ? "bg-brand-600 text-brand-on hover:bg-brand-700"
                       : "bg-subtle text-ink-muted hover:text-brand-600"
@@ -144,9 +115,9 @@ export function PricingPlans() {
                   {text.cta}
                 </button>
 
-                <p className="mt-7 text-sm text-ink-subtle">{text.intro}</p>
+                <p className="mt-6 text-sm text-ink-subtle">{text.intro}</p>
 
-                <ul className="mt-4 space-y-2.5">
+                <ul className="mt-3 space-y-2.5">
                   {text.features.map((feature) => (
                     <li
                       key={feature}
@@ -160,6 +131,29 @@ export function PricingPlans() {
               </motion.div>
             );
           })}
+        </div>
+      </Container>
+
+      <Container className="mt-5">
+        <div className="grid gap-6 rounded-2xl bg-card p-6 md:grid-cols-[1fr_1fr] md:p-8">
+          <div>
+            <p className="mb-1.5 text-lg font-semibold text-ink">
+              {topup.title}
+            </p>
+            <p className="max-w-md text-sm leading-relaxed text-ink-subtle">
+              {topup.body}
+            </p>
+          </div>
+          <ul className="grid gap-2 sm:grid-cols-2">
+            {topup.packs.map((pack) => (
+              <li
+                key={pack}
+                className="rounded-xl border border-line bg-window px-3.5 py-2.5 text-sm font-medium text-ink-muted"
+              >
+                {pack}
+              </li>
+            ))}
+          </ul>
         </div>
       </Container>
 

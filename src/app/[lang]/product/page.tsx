@@ -9,6 +9,8 @@ import { ProductLifecycle } from "@/components/product/ProductLifecycle";
 import { ProductCapabilities } from "@/components/product/ProductCapabilities";
 import { ProductExtend } from "@/components/product/ProductExtend";
 import { ProductChangelog } from "@/components/product/ProductChangelog";
+import { FeatureCanvas } from "@/components/sections/FeatureCanvas";
+import { FeatureWidget } from "@/components/sections/FeatureWidget";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { JsonLd } from "@/components/JsonLd";
@@ -53,9 +55,11 @@ export default async function ProductPage({
         <Navbar />
         <ProductHero />
         <ProductSurfaces />
+        <FeatureCanvas />
         <ProductUnderstands />
         <ProductLifecycle />
         <ProductCapabilities />
+        <FeatureWidget />
         <ProductExtend />
         <Testimonials />
         <ProductChangelog lang={lang} />
