@@ -5,6 +5,8 @@ import { SignupFlowProvider } from "@/lib/SignupFlowContext";
 import { SolutionsHero } from "@/components/solutions/SolutionsHero";
 import { SolutionsScrollDemo } from "@/components/solutions/SolutionsScrollDemo";
 import { SolutionsClosing } from "@/components/solutions/SolutionsClosing";
+import { FeatureCanvas } from "@/components/sections/FeatureCanvas";
+import { FeatureWidget } from "@/components/sections/FeatureWidget";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { BlogHighlights } from "@/components/sections/BlogHighlights";
 import { JsonLd } from "@/components/JsonLd";
@@ -43,6 +45,8 @@ export default async function SolutionsPage({
         <Navbar />
         <SolutionsHero />
         <SolutionsScrollDemo />
+        <FeatureCanvas />
+        <FeatureWidget />
         <Testimonials />
         <BlogHighlights lang={lang} />
         <SolutionsClosing />
