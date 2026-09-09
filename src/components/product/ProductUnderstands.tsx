@@ -46,7 +46,7 @@ export function ProductUnderstands() {
                   />
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-[11px] text-ink-muted">{s.name}</p>
-                    <p className="mt-0.5 font-mono text-[9px] text-ink-faint">
+                    <p className="mt-0.5 font-mono text-[10px] text-ink-faint">
                       {s.status} · {s.model}
                     </p>
                   </div>
@@ -96,7 +96,7 @@ export function ProductUnderstands() {
                     <p className="text-[11px] leading-snug text-ink-muted">
                       {r.rule}
                     </p>
-                    <p className="mt-0.5 font-mono text-[9px] text-ink-faint">
+                    <p className="mt-0.5 font-mono text-[10px] text-ink-faint">
                       {r.scope}
                     </p>
                   </div>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Search, X } from "lucide-react";
 import { CatalogueCard } from "@/components/catalogue/CatalogueCard";
+import { buttonClasses } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
@@ -69,7 +70,7 @@ export function CatalogueList({
             <button
               type="submit"
               aria-label={t.searchButton}
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-brand-600 px-4 text-sm font-semibold text-brand-on transition-all hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-lg sm:px-6"
+              className={buttonClasses({ size: "md", className: "h-12 sm:px-6" })}
             >
               <Search className="h-4 w-4" aria-hidden="true" />
               <span className="hidden sm:inline">{t.searchButton}</span>
@@ -78,7 +79,7 @@ export function CatalogueList({
               <Link
                 href={localizedHref(lang, filterHref(activeTag, ""))}
                 aria-label={t.clearSearch}
-                className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-subtle px-4 text-sm font-semibold text-ink-muted transition-colors hover:text-brand-600 sm:px-5"
+                className={buttonClasses({ variant: "secondary", size: "md", className: "h-12 sm:px-5" })}
               >
                 <X className="h-4 w-4" aria-hidden="true" />
                 <span className="hidden sm:inline">{t.clear}</span>

@@ -32,7 +32,7 @@ export function Testimonials() {
               key={i}
               className="flex flex-col justify-between gap-5 rounded-xl border border-line bg-card p-5"
             >
-              <p className="text-[14px] leading-[1.55] text-ink-muted">
+              <p className="text-sm leading-[1.55] text-ink-muted">
                 &ldquo;{q.quote}&rdquo;
               </p>
               <div className="flex items-center gap-2.5">
@@ -40,7 +40,7 @@ export function Testimonials() {
                   {initialsOf(q.name)}
                 </span>
                 <div>
-                  <p className="text-[13px] leading-snug font-semibold text-ink">
+                  <p className="text-sm leading-snug font-semibold text-ink">
                     {q.name}
                   </p>
                   <p className="text-[11px] text-ink-faint">{q.org}</p>

@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { WindowChrome } from "@/components/ui/WindowChrome";
 import { useTranslations } from "@/i18n/useTranslations";
 import { LocaleLink } from "@/i18n/LocaleLink";
+import { buttonClasses } from "@/components/ui/Button";
 import { DEMO_REGISTRY } from "@/components/solutions/demos";
 
 // One accent per rotating industry, cycled with the label.
@@ -87,11 +88,11 @@ export function SolutionsHero() {
                 newTab: true,
               })
             }
-            className="btn-primary"
+            className={buttonClasses()}
           >
             {t("hero.ctaPrimary")}
           </button>
-          <LocaleLink href="/contact" className="btn-secondary">
+          <LocaleLink href="/contact" className={buttonClasses({ variant: "secondary" })}>
             {t("hero.ctaSecondary")}
           </LocaleLink>
         </motion.div>

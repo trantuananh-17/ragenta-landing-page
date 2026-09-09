@@ -52,7 +52,7 @@ export function ProductExtend() {
                   className="flex items-center justify-between text-[10px]"
                 >
                   <div className="flex items-center gap-2">
-                    <div className="h-4 w-4 rounded bg-brand-100" />
+                    <div className="h-4 w-4 rounded-sm bg-brand-100" />
                     <span className="text-ink-muted">{name}</span>
                   </div>
                   <span className="font-mono text-ink-faint">
@@ -99,7 +99,7 @@ export function ProductExtend() {
                     <span className="h-1.5 w-1.5 rounded-full bg-ok" />
                     <span className="font-mono text-ink-muted">{c.name}</span>
                   </div>
-                  <span className="font-mono text-[9px] text-ok">{c.status}</span>
+                  <span className="font-mono text-[10px] text-ok">{c.status}</span>
                 </div>
               ))}
             </div>

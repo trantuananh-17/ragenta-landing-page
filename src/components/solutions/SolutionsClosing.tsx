@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { useSignupFlow } from "@/lib/SignupFlowContext";
 import { useTranslations } from "@/i18n/useTranslations";
 import { LocaleLink } from "@/i18n/LocaleLink";
+import { buttonClasses } from "@/components/ui/Button";
 
 export function SolutionsClosing() {
   const { openSignup } = useSignupFlow();
@@ -32,11 +33,11 @@ export function SolutionsClosing() {
                   newTab: true,
                 })
               }
-              className="btn-primary"
+              className={buttonClasses()}
             >
               {t("closing.ctaPrimary")}
             </button>
-            <LocaleLink href="/contact" className="btn-secondary">
+            <LocaleLink href="/contact" className={buttonClasses({ variant: "secondary" })}>
               {t("closing.ctaSecondary")}
             </LocaleLink>
           </div>

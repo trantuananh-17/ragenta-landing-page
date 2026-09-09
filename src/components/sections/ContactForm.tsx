@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { usePostHog } from "@posthog/next";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { LocaleLink } from "@/i18n/LocaleLink";
+import { buttonClasses } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { getAttributionProps } from "@/lib/attribution";
 import { useTranslations } from "@/i18n/useTranslations";
@@ -171,7 +172,7 @@ export function ContactForm() {
                 aria-selected={i === quoteIndex}
                 aria-label={t("testimonialAria", { n: i + 1 })}
                 onClick={() => setQuoteIndex(i)}
-                className={`h-1.5 rounded-full transition-all ${
+                className={`h-1.5 rounded-full transition-all focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-card focus-visible:outline-none ${
                   i === quoteIndex
                     ? "w-6 bg-brand-600"
                     : "w-1.5 bg-line-strong hover:bg-ink-faint"
@@ -212,7 +213,7 @@ export function ContactForm() {
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.1, duration: 0.35 }}
-                      className="mb-3 text-2xl leading-tight font-semibold tracking-tight text-ink md:text-[28px]"
+                      className="mb-3 text-2xl leading-tight font-semibold tracking-tight text-ink md:text-3xl"
                     >
                       {t("successHeading")}
                     </motion.h3>
@@ -416,7 +417,7 @@ export function ContactForm() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-6 py-3 text-sm font-semibold text-brand-on transition-all hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-lg focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-card focus:outline-none disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:bg-brand-600 disabled:hover:shadow-none"
+                className={buttonClasses({ size: "md", className: "py-3 disabled:hover:translate-y-0" })}
               >
                 {submitting ? t("submitting") : t("submit")}
                 <ArrowRight className="h-4 w-4" />

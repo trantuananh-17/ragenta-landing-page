@@ -19,10 +19,10 @@ function WebAppVisual() {
     <MiniWindow>
       <WindowChrome size="sm" />
       <div className="space-y-1.5 p-3">
-        <div className="h-2 w-full rounded bg-panel" />
-        <div className="h-2 w-4/5 rounded bg-panel" />
-        <div className="h-2 w-3/5 rounded bg-brand-100" />
-        <div className="h-2 w-2/3 rounded bg-panel" />
+        <div className="h-2 w-full rounded-sm bg-panel" />
+        <div className="h-2 w-4/5 rounded-sm bg-panel" />
+        <div className="h-2 w-3/5 rounded-sm bg-brand-100" />
+        <div className="h-2 w-2/3 rounded-sm bg-panel" />
       </div>
     </MiniWindow>
   );
@@ -31,7 +31,7 @@ function WebAppVisual() {
 function ApiVisual() {
   return (
     <div className="overflow-hidden rounded-lg bg-[#14121d] font-mono shadow-sm ring-1 ring-black/20">
-      <div className="border-b border-white/10 px-3 py-2 text-[9px] text-slate-400">
+      <div className="border-b border-white/10 px-3 py-2 text-[10px] text-slate-400">
         answer.ts
       </div>
       <div className="p-3 text-[10px] leading-relaxed">
@@ -57,16 +57,16 @@ function WidgetVisual({ placeholder }: { placeholder: string }) {
   return (
     <MiniWindow>
       <div className="flex items-center justify-between border-b border-line bg-brand-600 px-3 py-1.5">
-        <span className="text-[9px] font-semibold text-brand-on">Ragenta</span>
-        <span className="text-[9px] text-brand-on/70">●</span>
+        <span className="text-[10px] font-semibold text-brand-on">Ragenta</span>
+        <span className="text-[10px] text-brand-on/70">●</span>
       </div>
       <div className="space-y-2 p-3">
-        <div className="ml-auto w-3/4 rounded-lg rounded-tr-sm bg-bubble px-2 py-1.5 text-[9px] text-ink-muted">
+        <div className="ml-auto w-3/4 rounded-lg rounded-tr-sm bg-bubble px-2 py-1.5 text-[10px] text-ink-muted">
           {placeholder}
         </div>
         <div className="w-5/6 rounded-lg rounded-tl-sm bg-panel px-2 py-1.5">
-          <div className="h-1.5 w-full rounded bg-line" />
-          <div className="mt-1 h-1.5 w-2/3 rounded bg-line" />
+          <div className="h-1.5 w-full rounded-sm bg-line" />
+          <div className="mt-1 h-1.5 w-2/3 rounded-sm bg-line" />
         </div>
       </div>
     </MiniWindow>
@@ -77,11 +77,11 @@ function SlackVisual({ message }: { message: string }) {
   return (
     <MiniWindow>
       <div className="border-b border-line bg-chrome px-3 py-1.5">
-        <span className="font-mono text-[9px] text-ink-subtle">#ask-internal</span>
+        <span className="font-mono text-[10px] text-ink-subtle">#ask-internal</span>
       </div>
       <div className="p-3 text-[10px]">
         <div className="flex gap-1.5">
-          <div className="h-4 w-4 shrink-0 rounded bg-brand-100" />
+          <div className="h-4 w-4 shrink-0 rounded-sm bg-brand-100" />
           <div>
             <p className="font-semibold text-ink-muted">Ragenta</p>
             <p className="text-ink-subtle">{message}</p>
@@ -152,7 +152,7 @@ export function ProductSurfaces() {
                     cta_location: surface.ctaLocation,
                   })
                 }
-                className="w-fit text-[13px] font-semibold text-brand-600 transition-colors hover:text-brand-700"
+                className="w-fit rounded-sm text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
               >
                 {t(`surfaces.items.${surface.key}.cta`)}
               </button>

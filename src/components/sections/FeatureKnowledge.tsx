@@ -45,10 +45,11 @@ export function FeatureKnowledge() {
               <h2 className="mb-4 text-2xl leading-snug font-bold tracking-tight text-ink sm:text-3xl">
                 {t("heading")}
               </h2>
-              <p className="mb-6 text-[17px] leading-relaxed text-ink-muted">
+              <p className="mb-6 text-lg leading-relaxed text-ink-muted">
                 {t("description")}
               </p>
               <button
+                type="button"
                 onClick={() =>
                   openSignup({
                     cta_text: "See the connectors",
@@ -56,7 +57,7 @@ export function FeatureKnowledge() {
                     newTab: true,
                   })
                 }
-                className="w-fit text-[15px] font-semibold text-brand-600 transition-colors hover:text-brand-700"
+                className="w-fit rounded-sm text-prose font-semibold text-brand-600 transition-colors hover:text-brand-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
               >
                 {t("cta")}
               </button>
@@ -108,7 +109,7 @@ export function FeatureKnowledge() {
                             {row.tags.map((tag) => (
                               <span
                                 key={tag}
-                                className={`rounded px-1.5 py-0.5 text-[10px] font-semibold ${
+                                className={`rounded-sm px-1.5 py-0.5 text-[10px] font-semibold ${
                                   tag === "synced"
                                     ? "bg-ok-soft text-ok"
                                     : "bg-subtle text-ink-subtle"
@@ -137,7 +138,7 @@ export function FeatureKnowledge() {
                           {t("contextBundleSuffix")}
                         </span>
                       </span>
-                      <span className="shrink-0 rounded bg-brand-100 px-2 py-0.5 text-[10px] font-semibold whitespace-nowrap text-brand-600">
+                      <span className="shrink-0 rounded-sm bg-brand-100 px-2 py-0.5 text-[10px] font-semibold whitespace-nowrap text-brand-600">
                         {t("tags.synced")}
                       </span>
                     </div>

@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { WindowChrome } from "@/components/ui/WindowChrome";
 import { useTranslations } from "@/i18n/useTranslations";
 import { LocaleLink } from "@/i18n/LocaleLink";
+import { buttonClasses } from "@/components/ui/Button";
 
 type AgentStatus = "running" | "done" | "pending";
 
@@ -99,11 +100,11 @@ export function ProductHero() {
                 newTab: true,
               })
             }
-            className="btn-primary"
+            className={buttonClasses()}
           >
             {t("hero.ctaPrimary")}
           </button>
-          <LocaleLink href="/contact" className="btn-secondary">
+          <LocaleLink href="/contact" className={buttonClasses({ variant: "secondary" })}>
             {t("hero.ctaSecondary")}
           </LocaleLink>
         </motion.div>

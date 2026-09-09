@@ -139,12 +139,12 @@ export function FeatureCanvas() {
               <h2 className="mb-4 text-2xl leading-snug font-bold tracking-tight text-ink sm:text-3xl">
                 {t("heading")}
               </h2>
-              <p className="mb-6 text-[17px] leading-relaxed text-ink-muted">
+              <p className="mb-6 text-lg leading-relaxed text-ink-muted">
                 {t("description")}
               </p>
               <LocaleLink
                 href="/product"
-                className="w-fit text-[15px] font-semibold text-brand-600 transition-colors hover:text-brand-700"
+                className="w-fit text-prose font-semibold text-brand-600 transition-colors hover:text-brand-700"
               >
                 {t("cta")}
               </LocaleLink>

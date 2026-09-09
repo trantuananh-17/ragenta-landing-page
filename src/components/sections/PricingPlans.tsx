@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { useSignupFlow } from "@/lib/SignupFlowContext";
+import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { useTranslations } from "@/i18n/useTranslations";
 
@@ -63,8 +64,8 @@ export function PricingPlans() {
         </motion.p>
       </Container>
 
-      <Container>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+      <Container width="wide">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {PLANS.map((plan, index) => {
             const text = raw<PlanText>(`plans.${plan.id}`);
             return (
@@ -97,8 +98,10 @@ export function PricingPlans() {
                   {text.credits}
                 </p>
 
-                <button
-                  type="button"
+                <Button
+                  variant={plan.featured ? "primary" : "secondary"}
+                  size="md"
+                  className="mt-5 w-full"
                   onClick={() =>
                     openSignup({
                       cta_text: plan.ctaAnalytics,
@@ -106,14 +109,9 @@ export function PricingPlans() {
                       newTab: plan.newTab,
                     })
                   }
-                  className={`mt-5 inline-flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
-                    plan.featured
-                      ? "bg-brand-600 text-brand-on hover:bg-brand-700"
-                      : "bg-subtle text-ink-muted hover:text-brand-600"
-                  }`}
                 >
                   {text.cta}
-                </button>
+                </Button>
 
                 <p className="mt-6 text-sm text-ink-subtle">{text.intro}</p>
 

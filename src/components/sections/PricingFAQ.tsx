@@ -37,10 +37,10 @@ export function PricingFAQ() {
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
+                  className="flex w-full items-center justify-between gap-4 rounded-xl px-6 py-5 text-left focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base font-medium text-ink md:text-[17px]">
+                  <span className="text-base font-medium text-ink md:text-lg">
                     {faq.question}
                   </span>
                   <ChevronDown
@@ -59,7 +59,7 @@ export function PricingFAQ() {
                       transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
                       className="overflow-hidden"
                     >
-                      <p className="px-6 pb-5 text-sm leading-relaxed text-ink-muted md:text-[15px]">
+                      <p className="px-6 pb-5 text-sm leading-relaxed text-ink-muted md:text-prose">
                         {faq.answer}
                       </p>
                     </motion.div>

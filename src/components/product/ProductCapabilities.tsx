@@ -25,7 +25,7 @@ function renderTemplate(
 
 function Chip({ children }: { children: React.ReactNode }) {
   return (
-    <span className="rounded bg-brand-100 px-1.5 py-0.5 font-mono text-[10px] text-brand-600">
+    <span className="rounded-sm bg-brand-100 px-1.5 py-0.5 font-mono text-[10px] text-brand-600">
       {children}
     </span>
   );
@@ -89,7 +89,7 @@ export function ProductCapabilities() {
                   cta_location: "product_capabilities",
                 })
               }
-              className="w-fit text-[13px] font-semibold text-brand-600 transition-colors hover:text-brand-700"
+              className="w-fit rounded-sm text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
             >
               {t("capabilities.learnMore")}
             </button>
@@ -142,7 +142,7 @@ export function ProductCapabilities() {
                     <p className="text-[10px] leading-tight text-ink-muted">
                       {s.label}
                     </p>
-                    <p className="mt-0.5 font-mono text-[9px] text-ink-faint">
+                    <p className="mt-0.5 font-mono text-[10px] text-ink-faint">
                       {s.date}
                     </p>
                   </div>

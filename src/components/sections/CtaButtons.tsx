@@ -1,6 +1,7 @@
 "use client";
 
 import { LocaleLink } from "@/i18n/LocaleLink";
+import { Button, buttonClasses } from "@/components/ui/Button";
 import { useSignupFlow } from "@/lib/SignupFlowContext";
 import { useTranslations } from "@/i18n/useTranslations";
 
@@ -22,7 +23,8 @@ export function CtaButtons({
     <div
       className={`flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-5 ${className}`}
     >
-      <button
+      <Button
+        className="w-full sm:w-auto"
         onClick={() =>
           openSignup({
             cta_text: "Start for free",
@@ -30,13 +32,15 @@ export function CtaButtons({
             newTab: true,
           })
         }
-        className="btn-primary w-full whitespace-nowrap sm:w-auto"
       >
         {t("tryRagenta")}
-      </button>
+      </Button>
       <LocaleLink
         href="/contact"
-        className="btn-secondary w-full whitespace-nowrap sm:w-auto"
+        className={buttonClasses({
+          variant: "secondary",
+          className: "w-full sm:w-auto",
+        })}
       >
         {t("requestDemo")} →
       </LocaleLink>

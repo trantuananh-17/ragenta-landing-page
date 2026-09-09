@@ -14,7 +14,7 @@ function Bullets({ items }: { items: string[] }) {
       {items.map((bullet) => (
         <li
           key={bullet}
-          className="flex items-start gap-3 text-[0.9375rem] leading-6 text-ink-muted"
+          className="flex items-start gap-3 text-prose leading-6 text-ink-muted"
         >
           <span
             aria-hidden
@@ -109,7 +109,7 @@ export async function ChangelogTimeline({ lang }: { lang: Locale }) {
                         <h3 className="mb-1.5 text-base font-semibold text-ink">
                           {section.heading}
                         </h3>
-                        <p className="text-[0.9375rem] leading-7 text-ink-muted">
+                        <p className="text-prose leading-7 text-ink-muted">
                           {section.body}
                         </p>
                         {section.bullets && <Bullets items={section.bullets} />}

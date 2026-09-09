@@ -85,7 +85,7 @@ export function LanguageSwitcher({
         aria-haspopup="true"
         aria-expanded={open}
         aria-label={t("languageSwitcher.label")}
-        className="flex items-center gap-1.5 text-sm font-medium text-ink-subtle transition-colors hover:text-brand-600"
+        className="flex items-center gap-1.5 rounded-sm text-sm font-medium text-ink-subtle transition-colors hover:text-brand-600 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
       >
         <Globe size={16} aria-hidden="true" />
         <span>{localeLabels[locale]}</span>
@@ -98,7 +98,7 @@ export function LanguageSwitcher({
                 key={l}
                 type="button"
                 onClick={() => choose(l)}
-                className="flex w-full items-center justify-between rounded-lg px-3 py-1.5 text-sm font-medium text-ink-subtle transition-colors hover:text-brand-600"
+                className="flex w-full items-center justify-between rounded-lg px-3 py-1.5 text-sm font-medium text-ink-subtle transition-colors hover:text-brand-600 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
               >
                 <span>{localeLabels[l]}</span>
                 {l === locale && (

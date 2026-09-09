@@ -51,10 +51,10 @@ export function ProductLifecycle() {
                 </div>
               ))}
               <div className="mt-1 flex gap-1.5 border-t border-line-soft pt-2">
-                <span className="rounded border border-line px-2.5 py-1 text-[10px] font-semibold text-ink-faint">
+                <span className="rounded-sm border border-line px-2.5 py-1 text-[10px] font-semibold text-ink-faint">
                   {t("lifecycle.skip")}
                 </span>
-                <span className="rounded bg-brand-600 px-2.5 py-1 text-[10px] font-semibold text-brand-on">
+                <span className="rounded-sm bg-brand-600 px-2.5 py-1 text-[10px] font-semibold text-brand-on">
                   {t("lifecycle.continue")}
                 </span>
               </div>

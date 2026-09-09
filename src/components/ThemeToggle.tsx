@@ -26,7 +26,7 @@ export function ThemeToggle({
       <button
         type="button"
         onClick={toggle}
-        className="flex w-full items-center justify-between border-b border-line-soft py-2 text-base font-medium text-ink-muted"
+        className="flex w-full items-center justify-between rounded-sm border-b border-line-soft py-2 text-base font-medium text-ink-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
       >
         <span>{t("theme.label")}</span>
         <span className="flex items-center gap-2 text-sm text-ink-subtle">
@@ -45,7 +45,7 @@ export function ThemeToggle({
       onClick={toggle}
       aria-label={t("theme.toggle")}
       title={t("theme.toggle")}
-      className="flex h-8 w-8 items-center justify-center rounded-lg text-ink-subtle transition-colors hover:bg-subtle hover:text-brand-600"
+      className="flex size-8 items-center justify-center rounded-lg text-ink-subtle transition-colors hover:bg-subtle hover:text-brand-600 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
     >
       <Sun size={16} aria-hidden="true" className="dark:hidden" />
       <Moon size={16} aria-hidden="true" className="hidden dark:block" />

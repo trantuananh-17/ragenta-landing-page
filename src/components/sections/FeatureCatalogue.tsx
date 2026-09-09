@@ -164,7 +164,7 @@ export function FeatureCatalogue({ initial }: { initial: CatalogueResult }) {
                               {item.name}
                             </span>
                             {item.featured && (
-                              <span className="shrink-0 rounded-full bg-brand-600 px-1.5 py-0.5 text-[9px] font-semibold text-brand-on">
+                              <span className="shrink-0 rounded-full bg-brand-600 px-1.5 py-0.5 text-[10px] font-semibold text-brand-on">
                                 {t("featured")}
                               </span>
                             )}
@@ -176,7 +176,7 @@ export function FeatureCatalogue({ initial }: { initial: CatalogueResult }) {
                             {item.tags.map((tag) => (
                               <span
                                 key={tag}
-                                className="rounded-full border border-line px-1.5 py-0.5 text-[9px] font-medium text-ink-subtle"
+                                className="rounded-full border border-line px-1.5 py-0.5 text-[10px] font-medium text-ink-subtle"
                               >
                                 {tag}
                               </span>
@@ -229,7 +229,7 @@ export function FeatureCatalogue({ initial }: { initial: CatalogueResult }) {
                           type="button"
                           onClick={() => goToPage(page - 1)}
                           disabled={page <= 1 || loading}
-                          className="rounded-md border border-line bg-window px-2 py-1 transition-colors hover:border-brand-300 disabled:cursor-not-allowed disabled:opacity-40"
+                          className="rounded-md border border-line bg-window px-2 py-1 transition-colors hover:border-brand-300 disabled:cursor-not-allowed disabled:opacity-40 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                         >
                           {t("prev")}
                         </button>
@@ -240,7 +240,7 @@ export function FeatureCatalogue({ initial }: { initial: CatalogueResult }) {
                           type="button"
                           onClick={() => goToPage(page + 1)}
                           disabled={page >= totalPages || loading}
-                          className="rounded-md border border-line bg-window px-2 py-1 transition-colors hover:border-brand-300 disabled:cursor-not-allowed disabled:opacity-40"
+                          className="rounded-md border border-line bg-window px-2 py-1 transition-colors hover:border-brand-300 disabled:cursor-not-allowed disabled:opacity-40 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                         >
                           {t("next")}
                         </button>
@@ -262,7 +262,7 @@ export function FeatureCatalogue({ initial }: { initial: CatalogueResult }) {
               <h2 className="mb-4 text-2xl leading-snug font-bold tracking-tight text-ink sm:text-3xl">
                 {t("heading")}
               </h2>
-              <p className="mb-6 text-[17px] leading-relaxed text-ink-muted">
+              <p className="mb-6 text-lg leading-relaxed text-ink-muted">
                 {t("description")}
               </p>
               <LocaleLink
@@ -270,7 +270,7 @@ export function FeatureCatalogue({ initial }: { initial: CatalogueResult }) {
                 onClick={() =>
                   trackCTA("Browse the catalogue", "feature_catalogue", "/catalogue")
                 }
-                className="w-fit text-[15px] font-semibold text-brand-600 transition-colors hover:text-brand-700"
+                className="w-fit text-prose font-semibold text-brand-600 transition-colors hover:text-brand-700"
               >
                 {t("cta")}
               </LocaleLink>

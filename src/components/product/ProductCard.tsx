@@ -47,7 +47,7 @@ export function ProductCard({
         onClick={() =>
           openSignup({ cta_text: "Learn more", cta_location: ctaLocation })
         }
-        className="w-fit text-[13px] font-semibold text-brand-600 transition-colors hover:text-brand-700"
+        className="w-fit rounded-sm text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
       >
         {learnMore}
       </button>

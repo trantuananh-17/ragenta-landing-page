@@ -66,7 +66,7 @@ function RetrievalTrace() {
               </td>
               <td className="py-2.5">
                 <span
-                  className={`rounded px-1.5 py-0.5 text-[10px] font-semibold ${
+                  className={`rounded-sm px-1.5 py-0.5 text-[10px] font-semibold ${
                     row.used
                       ? "bg-ok-soft text-ok"
                       : "bg-panel text-ink-faint"
@@ -167,7 +167,7 @@ export function FeatureOrchestration() {
               <h2 className="mb-4 text-2xl leading-snug font-bold tracking-tight text-ink sm:text-3xl">
                 {t("heading")}
               </h2>
-              <p className="mb-6 text-[17px] leading-relaxed text-ink-muted">
+              <p className="mb-6 text-lg leading-relaxed text-ink-muted">
                 {t("description")}
               </p>
               <button
@@ -178,7 +178,7 @@ export function FeatureOrchestration() {
                     newTab: true,
                   })
                 }
-                className="w-fit text-[15px] font-semibold text-brand-600 transition-colors hover:text-brand-700"
+                className="w-fit text-prose font-semibold text-brand-600 transition-colors hover:text-brand-700"
               >
                 {t("cta")}
               </button>
@@ -212,7 +212,7 @@ export function FeatureOrchestration() {
                       <button
                         key={step.tool}
                         onClick={() => setOpenStep(i)}
-                        className="flex w-full items-start gap-3 rounded-lg px-3 py-3 text-left transition-colors hover:bg-black/[0.04] dark:hover:bg-white/[0.04]"
+                        className="flex w-full items-start gap-3 rounded-lg px-3 py-3 text-left transition-colors hover:bg-black/[0.04] dark:hover:bg-white/[0.04] focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                       >
                         <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-brand-200 bg-brand-50">
                           {STEP_DONE[i] ? (
@@ -300,7 +300,7 @@ export function FeatureOrchestration() {
                           </span>
                           <button
                             onClick={() => setOpenStep(null)}
-                            className="text-xs leading-none text-ink-faint transition-colors hover:text-ink-muted"
+                            className="rounded-sm text-xs leading-none text-ink-faint transition-colors hover:text-ink-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                             aria-label="Close"
                           >
                             ✕

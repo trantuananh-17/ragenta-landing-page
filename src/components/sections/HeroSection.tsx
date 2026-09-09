@@ -41,7 +41,7 @@ function HeroAnswerPreview() {
             <div className="space-y-1.5">
               {sources.map((source, i) => (
                 <div key={source} className="flex items-center gap-2">
-                  <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded bg-brand-100 font-mono text-[9px] font-semibold text-brand-600">
+                  <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-sm bg-brand-100 font-mono text-[10px] font-semibold text-brand-600">
                     {i + 1}
                   </span>
                   <span className="truncate text-[11px] text-ink-subtle">

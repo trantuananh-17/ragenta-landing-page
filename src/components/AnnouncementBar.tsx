@@ -63,7 +63,7 @@ export const AnnouncementBar = forwardRef<HTMLDivElement, AnnouncementBarProps>(
             type="button"
             onClick={onDismiss}
             aria-label={dismissLabel}
-            className="absolute top-1/2 right-2 -translate-y-1/2 rounded-md p-1 transition-colors hover:bg-white/10"
+            className="absolute top-1/2 right-2 -translate-y-1/2 rounded-md p-1 transition-colors hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
           >
             <X size={16} aria-hidden="true" />
           </button>

@@ -81,7 +81,7 @@ function DocSearchDemo() {
         <p className="font-mono text-[10px] tracking-widest text-ink-faint uppercase">
           {t("docSearch.eyebrow")}
         </p>
-        <div className="flex items-center gap-3 font-mono text-[9px] text-ink-faint">
+        <div className="flex items-center gap-3 font-mono text-[10px] text-ink-faint">
           <span className="flex items-center gap-1">
             <span className="inline-block h-2 w-2 rounded-full bg-brand-500" />
             {t("docSearch.legendVector")}
@@ -113,11 +113,11 @@ function DocSearchDemo() {
                 </span>
                 <div className="flex shrink-0 items-center gap-2">
                   {split.superseded && (
-                    <span className="rounded bg-warn-soft px-1.5 py-0.5 text-[9px] font-semibold text-warn">
+                    <span className="rounded-sm bg-warn-soft px-1.5 py-0.5 text-[10px] font-semibold text-warn">
                       {t("docSearch.supersededLabel")}
                     </span>
                   )}
-                  <span className="font-mono text-[9px] text-ink-faint">
+                  <span className="font-mono text-[10px] text-ink-faint">
                     {row.system}
                   </span>
                   <span className="font-mono text-[10px] font-semibold text-brand-600">
@@ -186,7 +186,7 @@ function ResearchAssistantDemo() {
           {t("researchAssistant.eyebrow")}
         </p>
         <motion.span
-          className="font-mono text-[9px] text-brand-600"
+          className="font-mono text-[10px] text-brand-600"
           animate={{ opacity: [1, 0.35, 1] }}
           transition={{ duration: 1.8, repeat: Infinity }}
         >
@@ -198,7 +198,7 @@ function ResearchAssistantDemo() {
         {columns.map((col) => (
           <div
             key={col}
-            className="flex-1 text-center font-mono text-[9px] text-ink-faint"
+            className="flex-1 text-center font-mono text-[10px] text-ink-faint"
           >
             {t(`researchAssistant.columns.${col}`)}
           </div>
@@ -245,7 +245,7 @@ function ResearchAssistantDemo() {
                   )}
                   {isHovered && (
                     <motion.div
-                      className="pointer-events-none absolute -top-6 left-1/2 z-10 -translate-x-1/2 rounded px-1.5 py-0.5 font-mono text-[9px] whitespace-nowrap text-white"
+                      className="pointer-events-none absolute -top-6 left-1/2 z-10 -translate-x-1/2 rounded-sm px-1.5 py-0.5 font-mono text-[10px] whitespace-nowrap text-white"
                       style={{ backgroundColor: coverageColor(score) }}
                       initial={{ opacity: 0, y: 3 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -262,7 +262,7 @@ function ResearchAssistantDemo() {
       </div>
 
       <div className="mt-2.5 flex shrink-0 items-center gap-2 border-t border-line-soft pt-2">
-        <span className="shrink-0 font-mono text-[9px] text-ink-faint">
+        <span className="shrink-0 font-mono text-[10px] text-ink-faint">
           {t("status.low")}
         </span>
         <div className="flex items-center gap-0.5">
@@ -281,10 +281,10 @@ function ResearchAssistantDemo() {
             );
           })}
         </div>
-        <span className="shrink-0 font-mono text-[9px] text-ink-faint">
+        <span className="shrink-0 font-mono text-[10px] text-ink-faint">
           {t("status.high")}
         </span>
-        <span className="ml-auto font-mono text-[9px] text-ink-faint">
+        <span className="ml-auto font-mono text-[10px] text-ink-faint">
           {t("researchAssistant.coverage")}
         </span>
       </div>
@@ -315,8 +315,8 @@ function SupportAgentDemo() {
             transition={{ delay: i * 0.07, duration: 0.2 }}
             className="rounded-lg bg-panel px-2 py-2.5 text-center"
           >
-            <p className="mb-0.5 text-[9px] text-ink-subtle">{metric.label}</p>
-            <p className="text-[13px] font-bold text-brand-600">{metric.value}</p>
+            <p className="mb-0.5 text-[10px] text-ink-subtle">{metric.label}</p>
+            <p className="text-sm font-bold text-brand-600">{metric.value}</p>
           </motion.div>
         ))}
       </div>
@@ -337,12 +337,12 @@ function SupportAgentDemo() {
                 <p className="truncate text-[11px] font-medium text-ink-muted">
                   {row.topic}
                 </p>
-                <p className="truncate font-mono text-[9px] text-ink-faint">
+                <p className="truncate font-mono text-[10px] text-ink-faint">
                   {row.detail}
                 </p>
               </div>
               <span
-                className={`shrink-0 rounded px-1.5 py-0.5 text-[9px] font-semibold ${
+                className={`shrink-0 rounded-sm px-1.5 py-0.5 text-[10px] font-semibold ${
                   resolved ? "bg-ok-soft text-ok" : "bg-warn-soft text-warn"
                 }`}
               >
@@ -378,7 +378,7 @@ function SalesEnablementDemo() {
           {t("salesEnablement.eyebrow")}
         </p>
         <motion.span
-          className="font-mono text-[9px] text-warn"
+          className="font-mono text-[10px] text-warn"
           animate={{ opacity: [1, 0.35, 1] }}
           transition={{ duration: 1.6, repeat: Infinity }}
         >
@@ -409,7 +409,7 @@ function SalesEnablementDemo() {
       </div>
 
       <div className="shrink-0 border-t border-line-soft pt-3">
-        <p className="mb-2 font-mono text-[9px] tracking-widest text-ink-faint uppercase">
+        <p className="mb-2 font-mono text-[10px] tracking-widest text-ink-faint uppercase">
           {t("salesEnablement.topLabel")}
         </p>
         <table className="w-full text-xs">
@@ -466,8 +466,10 @@ function HelpdeskDemo() {
         {(["policies", "tickets"] as const).map((tabId) => (
           <button
             key={tabId}
+            type="button"
+            aria-pressed={tab === tabId}
             onClick={() => setTab(tabId)}
-            className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
+            className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none ${
               tab === tabId
                 ? "bg-brand-100 text-brand-600"
                 : "text-ink-faint hover:text-ink-subtle"
@@ -504,10 +506,10 @@ function HelpdeskDemo() {
                         {policy.name}
                       </span>
                       <div className="ml-2 flex shrink-0 items-center gap-2">
-                        <span className="font-mono text-[9px] text-ink-faint">
+                        <span className="font-mono text-[10px] text-ink-faint">
                           {policy.freshness}
                         </span>
-                        <span className="text-[9px] text-ink-faint">
+                        <span className="text-[10px] text-ink-faint">
                           {policy.sources}×
                         </span>
                       </div>
@@ -553,7 +555,7 @@ function HelpdeskDemo() {
               {legend.map((team) => (
                 <span
                   key={team}
-                  className="flex items-center gap-1 font-mono text-[9px] text-ink-faint"
+                  className="flex items-center gap-1 font-mono text-[10px] text-ink-faint"
                 >
                   <span
                     className="inline-block h-2 w-2 rounded-sm"
@@ -577,11 +579,11 @@ function HelpdeskDemo() {
                   >
                     <div className="mb-1.5 flex items-center justify-between gap-2">
                       <div className="flex min-w-0 items-center gap-2">
-                        <span className="truncate text-[12px] font-semibold text-ink-muted">
+                        <span className="truncate text-xs font-semibold text-ink-muted">
                           {ticket.topic}
                         </span>
                         <span
-                          className="shrink-0 rounded px-1.5 py-0.5 font-mono text-[9px]"
+                          className="shrink-0 rounded-sm px-1.5 py-0.5 font-mono text-[10px]"
                           style={{ backgroundColor: `${color}20`, color }}
                         >
                           {ticket.team}
@@ -638,7 +640,7 @@ function DataAnalystDemo() {
         <p className="font-mono text-[10px] tracking-widest text-ink-faint uppercase">
           {t("dataAnalyst.eyebrow")}
         </p>
-        <span className="font-mono text-[9px] text-ink-faint">
+        <span className="font-mono text-[10px] text-ink-faint">
           {t("dataAnalyst.queryLabel")}
         </span>
       </div>
@@ -649,7 +651,7 @@ function DataAnalystDemo() {
         ))}
       </div>
 
-      <p className="mb-2 shrink-0 font-mono text-[9px] tracking-widest text-ink-faint uppercase">
+      <p className="mb-2 shrink-0 font-mono text-[10px] tracking-widest text-ink-faint uppercase">
         {t("dataAnalyst.chartLabel")}
       </p>
 
@@ -666,7 +668,7 @@ function DataAnalystDemo() {
               transition={{ delay: i * 0.08, duration: 0.5, ease: "easeOut" }}
               style={{ minHeight: 4 }}
             />
-            <span className="font-mono text-[9px] text-ink-faint">
+            <span className="font-mono text-[10px] text-ink-faint">
               {quarters[i]}
             </span>
           </div>
@@ -724,11 +726,11 @@ function ContractReviewDemo() {
           <div className="absolute inset-x-0 top-1/2 border-t border-window/70" />
         </div>
 
-        <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 font-mono text-[8px] text-ink-faint">
+        <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 font-mono text-[10px] text-ink-faint">
           {t("contractReview.likelihood")}
         </span>
         <span
-          className="absolute top-1/2 left-1.5 font-mono text-[8px] text-ink-faint"
+          className="absolute top-1/2 left-1.5 font-mono text-[10px] text-ink-faint"
           style={{
             writingMode: "vertical-rl",
             transform: "translateY(-50%) rotate(180deg)",
@@ -736,10 +738,10 @@ function ContractReviewDemo() {
         >
           {t("contractReview.severity")}
         </span>
-        <span className="absolute top-1.5 right-2 font-mono text-[8px] text-bad">
+        <span className="absolute top-1.5 right-2 font-mono text-[10px] text-bad">
           {t("contractReview.highRisk")}
         </span>
-        <span className="absolute bottom-1.5 left-8 font-mono text-[8px] text-ok">
+        <span className="absolute bottom-1.5 left-8 font-mono text-[10px] text-ok">
           {t("contractReview.acceptable")}
         </span>
 
@@ -785,7 +787,7 @@ function ContractReviewDemo() {
                 <p className="text-[10px] font-semibold text-page">
                   {t(`contractReview.findings.${finding.id}.label`)}
                 </p>
-                <p className="text-[9px] text-page/70">
+                <p className="text-[10px] text-page/70">
                   {t(`contractReview.findings.${finding.id}.sub`)}
                 </p>
               </motion.div>
@@ -837,7 +839,7 @@ function ComplianceReportDemo() {
             transition={{ delay: i * 0.07, duration: 0.2 }}
             className="rounded-lg bg-panel px-2 py-2.5 text-center"
           >
-            <p className="mb-0.5 text-[9px] text-ink-subtle">{metric.label}</p>
+            <p className="mb-0.5 text-[10px] text-ink-subtle">{metric.label}</p>
             <p className="text-[11px] font-bold text-brand-600">{metric.value}</p>
           </motion.div>
         ))}
@@ -861,7 +863,7 @@ function ComplianceReportDemo() {
               {doc.name}
             </p>
             <span
-              className={`rounded px-1.5 py-0.5 font-mono text-[9px] font-semibold ${
+              className={`rounded-sm px-1.5 py-0.5 font-mono text-[10px] font-semibold ${
                 doc.state === "done"
                   ? "bg-ok-soft text-ok"
                   : doc.state === "running"

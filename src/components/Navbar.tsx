@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
 import { useSignupFlow } from "@/lib/SignupFlowContext";
@@ -9,6 +9,7 @@ import { fetchAnnouncementClient, fetchSiteMetadataClient } from "@/content/clie
 import type { Announcement } from "@/content/types";
 import { AnnouncementBar } from "@/components/AnnouncementBar";
 import { RagentaWordmark } from "@/components/brand/RagentaLogo";
+import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { LocaleLink } from "@/i18n/LocaleLink";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -36,6 +37,7 @@ export function Navbar() {
   );
   const announcementRef = useRef<HTMLDivElement>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const resourcesTriggerRef = useRef<HTMLButtonElement>(null);
   const { openSignup } = useSignupFlow();
   const { t, locale } = useTranslations("nav");
   const { t: tc } = useTranslations("common");
@@ -101,6 +103,24 @@ export function Navbar() {
     closeTimer.current = setTimeout(() => setIsResourcesOpen(false), 120);
   };
 
+  // The menu used to open on hover alone, which left every destination inside
+  // it unreachable by keyboard. Escape closes it, and focus leaving the group
+  // closes it too — `relatedTarget` is the element focus is moving *to*, so a
+  // Tab from the trigger into the menu keeps it open.
+  const handleResourcesKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === "Escape" && isResourcesOpen) {
+      event.stopPropagation();
+      setIsResourcesOpen(false);
+      resourcesTriggerRef.current?.focus();
+    }
+  };
+
+  const handleResourcesBlur = (event: React.FocusEvent<HTMLDivElement>) => {
+    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+      setIsResourcesOpen(false);
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
@@ -154,22 +174,42 @@ export function Navbar() {
                 {t("pricing")}
               </LocaleLink>
 
-              {/* Resources dropdown — the label itself goes to the blog, hovering
-                  the wrapper opens the section list. */}
+              {/* Resources — the label goes to the blog; the list beside it is
+                  opened by hover, by focus, or by the disclosure button. The
+                  link cannot carry `aria-haspopup` itself: it navigates, and a
+                  keyboard user pressing Enter on it would leave the page rather
+                  than open the menu. So the two jobs are two elements. */}
               <div
-                className="relative"
+                className="relative flex items-center gap-1"
                 onMouseEnter={openResources}
                 onMouseLeave={closeResources}
+                onFocus={openResources}
+                onBlur={handleResourcesBlur}
+                onKeyDown={handleResourcesKeyDown}
               >
                 <LocaleLink
                   href="/blog"
-                  className="transition-colors hover:text-brand-600"
-                  aria-haspopup="true"
-                  aria-expanded={isResourcesOpen}
+                  className="rounded-sm transition-colors hover:text-brand-600 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                   onClick={() => setIsResourcesOpen(false)}
                 >
                   {t("resources")}
                 </LocaleLink>
+                <button
+                  ref={resourcesTriggerRef}
+                  type="button"
+                  aria-haspopup="true"
+                  aria-expanded={isResourcesOpen}
+                  aria-label={t("resources")}
+                  className="rounded-sm p-0.5 text-ink-faint transition-colors hover:text-brand-600 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+                  onClick={() => setIsResourcesOpen((open) => !open)}
+                >
+                  <ChevronDown
+                    className={`size-3.5 transition-transform motion-reduce:transition-none ${
+                      isResourcesOpen ? "rotate-180" : ""
+                    }`}
+                    aria-hidden="true"
+                  />
+                </button>
 
                 <AnimatePresence>
                   {isResourcesOpen && (
@@ -235,7 +275,8 @@ export function Navbar() {
               >
                 {tc("contactUs")}
               </LocaleLink>
-              <button
+              <Button
+                size="md"
                 onClick={() =>
                   openSignup({
                     cta_text: "Start for free",
@@ -243,10 +284,9 @@ export function Navbar() {
                     newTab: true,
                   })
                 }
-                className="btn-primary px-5 py-2.5 text-sm"
               >
                 {tc("tryRagenta")}
-              </button>
+              </Button>
             </div>
 
             {/* Mobile toggle */}
@@ -329,7 +369,8 @@ export function Navbar() {
               </LocaleLink>
               <ThemeToggle variant="mobile" />
               <LanguageSwitcher variant="mobile" />
-              <button
+              <Button
+                className="w-full"
                 onClick={() => {
                   openSignup({
                     cta_text: "Start for free",
@@ -338,10 +379,9 @@ export function Navbar() {
                   });
                   setIsMobileMenuOpen(false);
                 }}
-                className="btn-primary w-full justify-center"
               >
                 {tc("tryRagenta")}
-              </button>
+              </Button>
             </div>
           )}
         </nav>
